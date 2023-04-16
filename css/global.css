@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+:root {
+  --card-radius: 8px;
+  --btn-h: 2.2rem;
+  --btn-radius: calc(var(--card-radius) / 2);
+}

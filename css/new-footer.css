@@ -1,0 +1,80 @@
+footer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-sponsor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 25px;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  color: #00519c;
+  padding: 0 15px;
+  width: calc(var(--container) / 1.25);
+}
+
+footer .container .footer-box {
+  flex-basis: auto;
+}
+
+footer p,
+li,
+h4,
+a {
+  font-size: small;
+  color: var(--primary-color);
+}
+
+footer .footer-copyright {
+  margin: 30px auto;
+  background-color: #ddd;
+  display: flex;
+
+  width: 100%;
+}
+
+footer .footer-copyright .container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 10px 0;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-roboticket-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 910px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacts {
+    padding: 0;
+  }
+  .footer-subtitle {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .powered-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+  }
+  .footer-lang {
+    text-align: center;
+  }
+}
