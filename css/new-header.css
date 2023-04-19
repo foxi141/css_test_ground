@@ -44,9 +44,8 @@ header .container {
   display: flex;
   justify-content: space-between;
   padding: 8px 0 15px;
-  overflow: hidden;
-  width: var(--container);
   overflow: visible;
+  width: var(--container);
 }
 
 header .top-right {
@@ -55,7 +54,13 @@ header .top-right {
   justify-content: space-between;
 }
 
-header .container a > img {
+header .logo-top {
+  display: flex;
+  align-items: center;
+  font-size: calc(1em + 2vw);
+}
+
+header .logo-top > img {
   height: clamp(130px, 12vh, 300px);
   width: auto;
 }
@@ -131,24 +136,7 @@ select {
 }
 
 @media screen and (max-width: 768px) {
-  .header,
-  .header-content,
-  .header-logo {
-    background: #fff;
-  }
-  .header-logo img {
-    height: 55px;
-    width: 55px;
-  }
 }
 
 @media screen and (max-width: 450px) {
-  .header-login,
-  .header-registration {
-    padding: 5px 10px;
-  }
-  .header-auth-options {
-    padding: 5px;
-    gap: 5px;
-  }
 }
