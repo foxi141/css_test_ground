@@ -4,7 +4,7 @@
   --card-radius: 6px;
   --btn-h: 2rem;
   --btn-radius: calc(var(--card-radius) / 2);
-  --container: 86vw;
+  --container-content: 86vw;
 }
 
 body a:link {
@@ -35,17 +35,25 @@ body a:link {
 header {
   background: linear-gradient(90deg, #eee, #fff);
   margin-bottom: 70px;
-  height: clamp(auto, 190px, auto);
+  height: clamp(auto, 180px, 200px);
   border-bottom: 20px solid rgba(0, 0, 0, 0.8);
   padding: 0 5vw;
 }
 
 header .container {
-  display: flex;
-  justify-content: space-between;
+  /*display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: 2fr auto auto;
+  grid-template-rows: 1fr 1fr;
+
   padding: 8px 0 15px;
   overflow: visible;
-  width: var(--container);
+  width: var(--container-content);
 }
 
 header .top-right {
@@ -58,6 +66,7 @@ header .logo-top {
   display: flex;
   align-items: center;
   font-size: calc(1em + 2vw);
+  grid-row: span 2;
 }
 
 header .logo-top > img {
@@ -67,11 +76,12 @@ header .logo-top > img {
 
 .flags {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-self: end;
   gap: 25px;
   font-size: 1rem;
   margin: 0 20px;
+  grid-column: span 2;
 }
 
 #headerCardPanel {
