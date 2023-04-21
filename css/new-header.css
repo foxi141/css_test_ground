@@ -5,19 +5,19 @@
   --btn-h: 2rem;
   --btn-radius: calc(var(--card-radius) / 2);
   --container-content: 86vw;
+  --header-bottom-margin: 4vh;
 }
 
 body a:link {
   color: black;
 }
 
-.btn-flat {
+.btn-ro {
   background: linear-gradient(rgba(70, 70, 70, 1), rgba(5, 5, 5, 1));
   color: white;
   font-size: x-small;
   height: var(--btn-h);
   border-radius: var(--btn-radius);
-  border: none;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -28,45 +28,30 @@ body a:link {
   cursor: pointer;
 }
 
-.btn-flat:hover {
+.btn-ro:hover {
   background: linear-gradient(rgba(100, 100, 100, 1), rgba(30, 30, 30, 1));
 }
 
 header {
   background: linear-gradient(90deg, #eee, #fff);
-  margin-bottom: 70px;
+  margin-bottom: var(--header-bottom-margin);
   height: clamp(auto, 180px, 200px);
   border-bottom: 20px solid rgba(0, 0, 0, 0.8);
-  padding: 0 5vw;
-}
-
-header .container {
-  /*display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  align-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap; */
+  padding: clamp(12px, 1vh, 25px) 5vw;
   display: grid;
   grid-template-columns: 2fr auto auto;
-  grid-template-rows: 1fr 1fr;
-
-  padding: 8px 0 15px;
+  grid-template-rows: 1fr auto;
   overflow: visible;
-  width: var(--container-content);
-}
-
-header .top-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 header .logo-top {
   display: flex;
   align-items: center;
-  font-size: calc(1em + 2vw);
   grid-row: span 2;
+}
+
+header .logo-top label {
+  font-size: calc(0.7em + 2vw);
 }
 
 header .logo-top > img {
@@ -80,69 +65,33 @@ header .logo-top > img {
   justify-self: end;
   gap: 25px;
   font-size: 1rem;
-  margin: 0 20px;
+  margin: 0 10px;
   grid-column: span 2;
+}
+
+.flags select {
+  border: var(--primary-color) 1px solid;
+  padding: 7px 15px;
+  background-color: transparent;
+  color: var(--primary-color);
+  border-radius: 2px;
+  min-width: 180px;
 }
 
 #headerCardPanel {
   border-bottom: 1px solid #ddd;
   background: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 15px;
   padding: 18px 25px;
-  margin-top: 15px;
+  margin: 15px;
   border-radius: var(--card-radius);
   box-shadow: 0 0 10px 0px #ccc;
 }
 
-#headerCardPanel .auth-buttons {
-  display: flex;
-  gap: 20px;
-}
-
-select {
-  border: var(--primary-color) 1px solid;
-  padding: 7px 15px;
-  background-color: transparent;
-  color: var(--primary-color);
-  border-radius: 2px;
-}
-
 @media screen and (max-width: 768px) {
-  .header-navigation,
-  .header-lang-info,
-  .header-info-link,
-  .header-toggle-lang {
-    background-color: #fff;
-  }
-
-  .header-auth-options,
-  .header-login,
-  .header-registration {
-    box-shadow: none;
-  }
-  .login-icon,
-  .registration-icon {
-    fill: #001f95;
-  }
-  .login-text,
-  .registration-text {
-    display: none;
-  }
-  .header-auth-options {
-    margin-top: 0;
-  }
-  .header-info-link {
-    display: none;
-  }
-
-  .header-navigation {
-    display: flex;
-    align-items: center;
-    background-color: aqua;
-  }
 }
 
 @media screen and (max-width: 768px) {
