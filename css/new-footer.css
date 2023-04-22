@@ -1,8 +1,10 @@
 footer {
   margin-top: 30px;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  min-height: 300px;
 }
 
 footer .footer-sponsor {
@@ -11,18 +13,20 @@ footer .footer-sponsor {
   align-items: center;
   gap: 30px;
   padding: 25px;
+  background-color: aliceblue;
 }
 
-footer .container {
+footer .address {
   display: flex;
+  gap: 50px;
   justify-content: space-evenly;
   color: #00519c;
-  padding: 0 15px;
-  width: calc(var(--container) / 1.25);
+  padding: var(--container-padding);
+  ;
 }
 
 footer .footer-box {
-  flex-basis: auto;
+  min-width: max-content;
 }
 
 footer p,

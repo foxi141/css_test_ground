@@ -3,10 +3,18 @@ main {
   margin: 0 10vw;
   display: flex;
   flex-wrap: nowrap;
-  gap:20px;
+  gap: 20px;
+  height: auto;
+  align-self: stretch;
+  background-color: brown;
 }
 
-
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: blueviolet;
+}
 
 .f_100 {
   flex-basis: 80%;

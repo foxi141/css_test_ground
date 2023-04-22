@@ -5,6 +5,7 @@
   --btn-h: 2rem;
   --btn-radius: calc(var(--card-radius) / 2);
   --container-content: 86vw;
+  --container-padding: 3vh 5vw;
   --header-bottom-margin: 4vh;
 }
 
