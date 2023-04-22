@@ -8,15 +8,16 @@
   --header-bottom-margin: 4vh;
 }
 
-body a:link {
-  color: black;
+body {
+  text-rendering: geometricPrecision;
 }
 
 .btn-ro {
   background: linear-gradient(rgba(70, 70, 70, 1), rgba(5, 5, 5, 1));
   color: white;
-  font-size: x-small;
+  font-size: auto;
   height: var(--btn-h);
+  width: max-content;
   border-radius: var(--btn-radius);
   text-transform: uppercase;
   display: flex;
@@ -35,7 +36,7 @@ body a:link {
 header {
   background: linear-gradient(90deg, #eee, #fff);
   margin-bottom: var(--header-bottom-margin);
-  height: clamp(auto, 180px, 200px);
+  height: clamp(auto, 10vh, 200px);
   border-bottom: 20px solid rgba(0, 0, 0, 0.8);
   padding: clamp(12px, 1vh, 25px) 5vw;
   display: grid;
@@ -49,14 +50,11 @@ header .logo-top {
   align-items: center;
   grid-row: span 2;
 }
-
+header .logo-top img {
+  height: 175px;
+}
 header .logo-top label {
   font-size: calc(0.7em + 2vw);
-}
-
-header .logo-top > img {
-  height: clamp(130px, 12vh, 300px);
-  width: auto;
 }
 
 .flags {
@@ -81,14 +79,14 @@ header .logo-top > img {
 #headerCardPanel {
   border-bottom: 1px solid #ddd;
   background: white;
+  border-radius: var(--card-radius);
+  box-shadow: 0 0 10px 0px #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 15px;
   padding: 18px 25px;
-  margin: 15px;
-  border-radius: var(--card-radius);
-  box-shadow: 0 0 10px 0px #ccc;
+  margin: 13px;
 }
 
 @media screen and (max-width: 768px) {
