@@ -1,66 +1,58 @@
 footer {
-  margin-top: 30px;
-  bottom: 0;
+  margin: 30px 0 0;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  align-content: stretch;
   min-height: 300px;
+  box-shadow: 0 -12px 20px #eee;
 }
 
-footer .footer-sponsor {
+footer .sponsors {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  padding: 25px;
-  background-color: aliceblue;
+  gap: 10px;
+  padding: var(--footer-content-width);
+  background-color: var(--footer-sponsors-bg-color);
 }
 
 footer .address {
   display: flex;
   gap: 50px;
   justify-content: space-evenly;
-  color: #00519c;
-  padding: var(--container-padding);
-  ;
+  padding: var(--footer-content-width);
+  background: var(--footer-address-bg-color);
+  color: lightgray;
 }
 
-footer .footer-box {
-  min-width: max-content;
+footer .address h4 {
+  margin-bottom: 10px;
 }
 
-footer p,
-li,
-h4,
-a {
-  font-size: small;
-  color: var(--primary-color);
+footer .address ul {
+  text-indent: 12px;
+  list-style-position: inside;
+  line-height: 1.2em;
 }
 
-footer .footer-copyright {
-  margin: 30px 0 0;
-  padding: 15px 0;
-  background-color: #ddd;
+footer .address ul li > a {
+  color: lightgray;
+}
+
+footer .copyright {
+  padding: var(--footer-content-width);
+  background: var(--footer-copyright-bg-color);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  align-content: center;
-  width: 100vw;
-}
-
-footer .footer-copyright .container {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  padding: 10px 0;
-  margin: 0 auto;
   gap: 30px;
 }
 
-.footer-roboticket-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+footer .copyright img {
+  height: 5vh;
+  max-width: 220px;
 }
 
 @media screen and (max-width: 910px) {
