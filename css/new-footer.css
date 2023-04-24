@@ -6,6 +6,7 @@ footer {
   align-content: stretch;
   min-height: 300px;
   box-shadow: 0 -12px 20px #eee;
+  font-size: small;
 }
 
 footer .sponsors {
@@ -51,7 +52,7 @@ footer .copyright {
 }
 
 footer .copyright img {
-  height: 5vh;
+  height: 4vh;
   max-width: 220px;
 }
 

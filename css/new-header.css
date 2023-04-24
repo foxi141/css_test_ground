@@ -1,19 +1,20 @@
 :root {
   --primary-color: #111000;
   --secondary-color: #005923;
-  --card-radius: 6px;
+  --body-bg: #efefef;
+  --card-radius: 8px;
   --btn-h: 2rem;
   --btn-radius: calc(var(--card-radius) / 2);
 
   --header-content-width: clamp(12px, 1vh, 25px) calc(10px + 4vw);
-  --main-content-width: 0 15vw;
+  --main-content-width: 0 10vw;
   --footer-content-width: 2vh 5vw;
 
   --footer-address-bg-color: var(--primary-color);
   --footer-sponsors-bg-color: white;
   --footer-copyright-bg-color: white;
   --header-title-color: var(--primary-color);
-  --header-bottom-margin: 4vh;
+  --header-bottom-margin: 3vh;
 }
 
 .btn-ro {
@@ -55,10 +56,11 @@ header .logo-top {
   grid-row: span 2;
 }
 header .logo-top img {
-  height: clamp(150px, calc(140px + 3vw), 200px);
+  height: clamp(150px, calc(70px + 3vw + 4vh), 200px);
 }
 header .logo-top label {
   font-size: clamp(1.5em, calc(0.7em + 2.2vw), 3em);
+  font-weight: 500;
   color: var(--header-title-color);
   width: max-content;
 }
