@@ -16,7 +16,7 @@ main section {
   flex-wrap: wrap;
   align-content: stretch;
   align-items: stretch;
-  gap: 25px;
+  gap: calc(1vw + 1vh);
 }
 
 .card {
@@ -34,8 +34,9 @@ main section {
   width: 100%;
   height: max-content;
   min-height: 13vh;
+  max-height: 300px;
   background-color: rgba(41, 112, 112, 0.473);
-  padding: 18px;
+  padding: 18px 30px;
 }
 
 .card h2 {
@@ -43,16 +44,14 @@ main section {
 }
 
 .f_100 {
-  flex-basis: 100%;
+  flex: 1 1 100%;
   background-color: blue;
   aspect-ratio: 16 / 7;
-  
 }
 .f_50 {
-  flex-basis: 49%;
-  flex-grow: 1;
+  flex: 1 1 48%;
   background-color: rgb(149, 77, 190);
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
 }
 
 .pct_1 {
@@ -65,9 +64,8 @@ main section {
   background-blend-mode: overlay;
 }
 
-@media screen and (max-width: 800px) {
-  .cards {
-  }
-  .card-plug {
+@media screen and (max-width: 960px) {
+  .f_100 {
+    aspect-ratio: 16/10;
   }
 } ;

@@ -1,20 +1,20 @@
 :root {
-  --primary-color: #111000;
-  --secondary-color: #005923;
+  --first-color: #111000;
+  --second-color: #005923;
   --body-bg: #efefef;
   --card-radius: 8px;
-  --btn-h: 2rem;
+  --btn-h: calc(27px + 1vh);
   --btn-radius: calc(var(--card-radius) / 2);
 
-  --header-content-width: clamp(12px, 1vh, 25px) calc(10px + 4vw);
-  --main-content-width: 0 10vw;
-  --footer-content-width: 2vh 5vw;
+  --header-content-width: clamp(5px, 1vh, 20px) calc(10px + 4vw);
+  --header-title-color: var(--first-color);
+  --header-bottom-margin: 2vh;
+  --main-content-width: 0 clamp(5px, 12vw, 30vw);
 
-  --footer-address-bg-color: var(--primary-color);
+  --footer-address-bg-color: var(--first-color);
   --footer-sponsors-bg-color: white;
   --footer-copyright-bg-color: white;
-  --header-title-color: var(--primary-color);
-  --header-bottom-margin: 3vh;
+  --footer-content-width: 2vh 5vw;
 }
 
 .btn-ro {
@@ -56,10 +56,10 @@ header .logo-top {
   grid-row: span 2;
 }
 header .logo-top img {
-  height: clamp(150px, calc(70px + 3vw + 4vh), 200px);
+  height: clamp(160px, calc(75px + 3vw + 4vh), 230px);
 }
 header .logo-top label {
-  font-size: clamp(1.5em, calc(0.7em + 2.2vw), 3em);
+  font-size: clamp(1.3em, calc(0.8em + 2vw), 3em);
   font-weight: 500;
   color: var(--header-title-color);
   width: max-content;
@@ -76,10 +76,10 @@ header .logo-top label {
 }
 
 .flags select {
-  border: var(--primary-color) 1px solid;
+  border: var(--first-color) 1px solid;
   padding: 7px 15px;
   background-color: transparent;
-  color: var(--primary-color);
+  color: var(--first-color);
   border-radius: 2px;
   min-width: 180px;
 }
@@ -93,14 +93,42 @@ header .logo-top label {
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  padding: 18px 25px;
+  padding: 20px 25px;
   margin: 13px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
+  header {
+    padding: 15px 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header .logo-top {
+    order: 1;
+  }
+
+  #headerCardPanel {
+    order: 3;
+  }
+
+  .btn-ro {
+    height: calc(var(--btn-h) * 1.4);
+    width: 100%;
+  }
+
+  .flags {
+    align-self: flex-end;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  header .logo-top {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
 }
 
 @media screen and (max-width: 450px) {
