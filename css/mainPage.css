@@ -6,15 +6,15 @@
   --btn-h: calc(27px + 1vh);
   --btn-radius: calc(var(--card-radius) / 2);
 
-  --header-content-width: clamp(12px, 1vh, 25px) calc(10px + 4vw);
-  --main-content-width: 0 10vw;
-  --footer-content-width: 2vh 5vw;
+  --header-content-width: clamp(5px, 1vh, 20px) calc(10px + 4vw);
+  --header-title-color: var(--first-color);
+  --header-bottom-margin: 2vh;
+  --main-content-width: 0 clamp(5px, 12vw, 30vw);
 
   --footer-address-bg-color: var(--first-color);
   --footer-sponsors-bg-color: white;
   --footer-copyright-bg-color: white;
-  --header-title-color: var(--first-color);
-  --header-bottom-margin: 3vh;
+  --footer-content-width: 2vh 5vw;
 }
 
 /* GENERAL ELEMENTS (BUTTONS, IMPUTS ETC) */
@@ -40,14 +40,73 @@
   background: linear-gradient(rgba(100, 100, 100, 1), rgba(30, 30, 30, 1));
 }
 
+/* MAIN CONTENT AREA */
+
+main {
+  padding: var(--main-content-width);
+}
+
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  align-items: stretch;
+  gap: calc(1vw + 1vh);
+}
+
+.card {
+  background-color: #e7e7e7;
+  min-width: 400px;
+  border-radius: var(--card-radius);
+  object-fit: cover;
+  box-shadow: 0 0 26px #ccc;
+  display: flex;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+.card .txt-stripe {
+  width: 100%;
+  height: max-content;
+  min-height: 13vh;
+  max-height: 300px;
+  background-color: rgba(41, 112, 112, 0.473);
+  padding: 18px 30px;
+}
+
+.card h2 {
+  color: white;
+}
+
+.f_100 {
+  flex: 1 1 100%;
+  background-color: blue;
+  aspect-ratio: 16 / 7;
+}
+.f_50 {
+  flex: 1 0 48%;
+  background-color: rgb(149, 77, 190);
+  aspect-ratio: 16 / 10;
+}
+
+.pct_1 {
+  background-image: url('https://images.unsplash.com/photo-1652071645850-b4fa67a37853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=5070&q=80');
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.pct_1:hover {
+  background-blend-mode: overlay;
+}
+
 /* NAVBAR */
 
 header {
-  display: grid !important;
   margin-bottom: var(--header-bottom-margin);
   height: clamp(auto, 10vh, 200px);
   border-bottom: 20px solid rgba(0, 0, 0, 0.8);
   padding: var(--header-content-width);
+  display: grid;
   grid-template-columns: 2fr auto auto;
   grid-template-rows: 1fr auto;
   overflow: visible;
@@ -60,10 +119,10 @@ header .logo-top {
   grid-row: span 2;
 }
 header .logo-top img {
-  height: clamp(150px, calc(70px + 3vw + 4vh), 200px);
+  height: clamp(160px, calc(75px + 3vw + 4vh), 230px);
 }
 header .logo-top label {
-  font-size: clamp(1.5em, calc(0.7em + 2.2vw), 3em);
+  font-size: clamp(1.3em, calc(0.8em + 2vw), 3em);
   font-weight: 500;
   color: var(--header-title-color);
   width: max-content;
@@ -97,7 +156,7 @@ header .logo-top label {
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  padding: 18px 25px;
+  padding: 20px 25px;
   margin: 13px;
 }
 

@@ -5,3 +5,12 @@
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-rendering: geometricPrecision;
+  background: var(--body-bg);
+  min-height: 100vh;
+}
