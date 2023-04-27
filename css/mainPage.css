@@ -106,7 +106,7 @@ header {
   height: clamp(auto, 10vh, 200px);
   border-bottom: 20px solid rgba(0, 0, 0, 0.8);
   padding: var(--header-content-width);
-  display: grid;
+  display: grid !important;
   grid-template-columns: 2fr auto auto;
   grid-template-rows: 1fr auto;
   overflow: visible;
@@ -184,6 +184,9 @@ footer .sponsors {
 
 footer .address {
   display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 33%;
+  min-width: 500px;
   gap: 50px;
   justify-content: space-evenly;
   padding: var(--footer-content-width);
@@ -222,5 +225,36 @@ footer .copyright img {
 
 /* MEDIA */
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 980px) {
+  .btn-ro {
+    height: calc(var(--btn-h) * 1.4);
+    width: 100%;
+  }
+
+  header {
+    padding: 15px 8px 0;
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header .logo-top {
+    order: 1;
+  }
+
+  #headerCardPanel {
+    order: 3;
+  }
+
+  .flags {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .logo-top {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
 }
