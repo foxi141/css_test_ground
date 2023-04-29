@@ -160,6 +160,30 @@ header .logo-top label {
   margin: 13px;
 }
 
+i.avatar {
+  width: max(70px, 6vw);
+  height: max(70px, 6vw);
+  background-color: aqua;
+}
+.gg-user{
+  /* This value will multiple the actual size  */
+  --ggs: 3;
+}
+
+.user-menu {
+  background-color: yellow;
+  width: max-content;
+}
+
+.show-on-mobile {
+  visibility: hidden;
+}
+
+details {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 /* FOOTER */
 
 footer {

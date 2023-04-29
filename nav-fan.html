@@ -18,50 +18,20 @@
   >
 
   <div id="headerCardPanel">
-    <a
-      href="/Transaction2/Edit"
-      class="bucketBasket"
-      title="Transactions summary"
-    >
-      <i class="material-icons team-color">shopping_cart</i>
-      <div class="bucketStatus">
-        <span id="bucketCount" class="bucketAction">1</span>
-        <div class="sessionTimer">
-          <i class="material-icons">timer</i>
-          <div id="sessionTimeoutCounter">14 : 14</div>
-        </div>
-      </div> </a
-    ><a
-      class="bucketDelete bucketAction red lighten-2"
-      title="Delete transaction"
-      href="/Transaction2/Delete"
-      id="bucketDeleteTransaction"
-    >
-      <i class="material-icons tiny white-text">clear</i>
-    </a>
-
-    <div id="assignAccountContainer"></div>
-
-    <div class="user-menu hide-on-mobile">
+    <div class="user-menu">
       <a
-        class="dropdown-button account-button col s24 user-menu__activator"
+        class="dropdown-button"
         data-constrainwidth="false"
         data-activates="userMenu"
         data-alignment="right"
         data-beloworigin="true"
         href="#!"
+        ><i class="avatar gg-user"></i>
+        <span class="user-menu-name">John Mnemonic</span>
+
+        <i class="material-icons right">arrow_drop_down</i></a
       >
-        <span class="userAvatar">
-          <img
-            src="https://robostaticcontent.s3.amazonaws.com/Content/Images/defaultAvatar.png"
-            alt=""
-            class="circle"
-          />
-        </span>
-        <span class="user-menu__full-name">Mny Mny</span>
-        <i class="material-icons right">arrow_drop_down</i>
-      </a>
-      <ul id="userMenu" class="dropdown-content expand-menu">
+      <ul id="userMenu">
         <li>
           <a class="left-align" href="/Account/Tickets?userId=1330059"
             ><i class="material-icons left">subtitles</i>Your account</a
@@ -81,6 +51,29 @@
         </li>
       </ul>
     </div>
+    <a
+      class="bucketBasket"
+      href="/Transaction2/Edit"
+      title="Transactions summary"
+      ><i class="gg-shopping-cart">shopping_cart</i>
+
+      <div class="bucketStatus">
+        <span id="bucketCount" class="bucketAction">1</span>
+        <div class="sessionTimer">
+          <i class="material-icons">timer</i>
+          <div id="sessionTimeoutCounter">14 : 14</div>
+        </div>
+      </div>
+    </a>
+
+    <a
+      class="bucketDelete"
+      title="Delete transaction"
+      href="/Transaction2/Delete"
+      id="bucketDeleteTransaction"
+    >
+      <i class="gg-trash">clear</i>
+    </a>
 
     <div class="show-on-mobile">
       <nav class="header-mobile-sticky">
@@ -118,5 +111,15 @@
         </div>
       </nav>
     </div>
+
+    <div id="assignAccountContainer"></div>
   </div>
 </header>
+
+<div>
+  <details>
+    <summary>Top_Xman</summary>
+    <a href=""><i class="gg-trash"></i>object_x</a>
+    <a href="">object_y</a>
+  </details>
+</div>
