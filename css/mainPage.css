@@ -168,8 +168,14 @@ img.avatar {
 }
 
 .user-attr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   background-color: yellow;
   width: max-content;
+}
+.user-attr a {
+  background-color: magenta;
 }
 
 .show-on-mobile {
