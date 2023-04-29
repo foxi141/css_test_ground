@@ -160,14 +160,10 @@ header .logo-top label {
   margin: 13px;
 }
 
-i.avatar {
+img.avatar {
   width: max(70px, 6vw);
   height: max(70px, 6vw);
   background-color: aqua;
-}
-.gg-user{
-  /* This value will multiple the actual size  */
-  --ggs: 3;
 }
 
 .user-menu {
