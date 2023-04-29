@@ -164,9 +164,10 @@ img.avatar {
   width: max(70px, 6vw);
   height: max(70px, 6vw);
   background-color: aqua;
+  clip-path: circle();
 }
 
-.user-menu {
+.user-attr {
   background-color: yellow;
   width: max-content;
 }
