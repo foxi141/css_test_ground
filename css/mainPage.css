@@ -156,7 +156,7 @@ header .logo-top label {
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  padding: 20px 25px;
+  padding: 15px 20px;
   margin: 13px;
 }
 
@@ -169,10 +169,16 @@ img.avatar {
 
 .user-attr {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-basis: auto;
   align-items: flex-start;
   background-color: yellow;
   width: max-content;
+}
+#userMenu {
+  background-color: brown;
+  width: 99%;
+  visibility: ;
 }
 .user-attr a {
   background-color: magenta;
@@ -182,9 +188,11 @@ img.avatar {
   visibility: hidden;
 }
 
-details {
+.bucketStatus {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: orangered;
 }
 
 /* FOOTER */

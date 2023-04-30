@@ -22,47 +22,52 @@
       <img class="avatar" src="assets/icons/my_av.png" alt="" />
       <a class="user-name">John Mnemonic</a>
 
-      <a
+      <!--   <a
         class="dropdown-button"
         data-constrainwidth="false"
         data-activates="userMenu"
         data-alignment="right"
         data-beloworigin="true"
         href="#!"
-      ></a>
+      ></a> 
+
       <ul id="userMenu">
         <li>
-          <a class="" href="/Account/Tickets?userId=1330059"
-            ><i class="material-icons left">subtitles</i>Your account</a
+          <i class="gg-user"></i><a class="" href="/Account/Tickets?userId=1330059"
+            >Your account</a
           >
         </li>
         <li>
-          <a class="" href="/Account/Transactions?userId=1330059"><i class="gg-user"></i>Transactions list</a
+          <a class="" href="/Account/Transactions?userId=1330059"
+            ><i class="gg-transcript"></i>Transactions list</a
           >
         </li>
 
-        <li class="divider"></li>
+        <hr />
         <li>
-          <a class="left-align" href="/Account/LogOff">
-            <i class="material-icons left">power_settings_new</i>Logout
-          </a>
+          <a class="" href="/Account/LogOff"> <i class="gg-"></i>Logout </a>
         </li>
-      </ul>
+      </ul>-->
     </div>
-    <a
-      class="bucketBasket"
-      href="/Transaction2/Edit"
-      title="Transactions summary"
-      ><i class="gg-shopping-cart">shopping_cart</i>
 
-      <div class="bucketStatus">
-        <span id="bucketCount" class="bucketAction">1</span>
-        <div class="sessionTimer">
-          <i class="material-icons">timer</i>
-          <div id="sessionTimeoutCounter">14 : 14</div>
+    <div>
+      <a
+        class="bucketBasket"
+        href="/Transaction2/Edit"
+        title="Transactions summary"
+      >
+        <i class="gg-shopping-cart">shopping_cart</i>
+
+        <div class="bucketStatus">
+          <span id="bucketCount" class="bucketAction">1</span>
+          <div class="">
+            <i class="gg-timer"></i>Time for buying
+
+            <div id="sessionTimeoutCounter">14 : 14</div>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
 
     <a
       class="bucketDelete"
@@ -73,14 +78,16 @@
       <i class="gg-trash">clear</i>
     </a>
 
+    <!--
     <div class="show-on-mobile">
+
       <nav class="header-mobile-sticky">
         <div class="header-mobile-sticky-item">
           <a class="header-mobile-sticky-link active" href="/"
             ><i class="material-icons-outlined">home</i
             ><span class="header-mobile-sticky-label">Home</span></a
           >
-        </div>
+        </div> 
 
         <div class="header-mobile-sticky-item">
           <a
@@ -90,6 +97,7 @@
             ><span class="header-mobile-sticky-label">Upcoming events</span></a
           >
         </div>
+       
         <div class="header-mobile-sticky-item">
           <a
             class="header-mobile-sticky-link"
@@ -108,7 +116,9 @@
           >
         </div>
       </nav>
+
     </div>
+    -->
 
     <div id="assignAccountContainer"></div>
   </div>
