@@ -7,10 +7,5 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-rendering: geometricPrecision;
-  background: var(--body-bg);
-  min-height: 100vh;
+  box-sizing: border-box;
 }
