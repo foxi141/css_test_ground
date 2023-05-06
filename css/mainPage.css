@@ -126,17 +126,18 @@ main section {
 /* NAVBAR */
 
 header {
+  width: 100%;
   display: grid !important;
-  grid-template-columns: 1fr auto auto;
-  grid-template-rows: 1fr auto;
-  align-content: end;
+  grid-template-columns: 2fr 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  gap: 8px;
+
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, 220px, auto);
   border-bottom: 18px solid rgba(0, 0, 0, 0.8);
   padding: calc(10px + 0.5vw) var(--header-content-width) 8px;
   overflow: hidden;
   background: linear-gradient(90deg, #fff, #eee);
-  gap: 8px;
 }
 
 header * {
@@ -146,7 +147,8 @@ header * {
 header .logo-top {
   display: flex;
   align-items: flex-start;
-  grid-row: span 3;
+  grid-row: 1 / 4;
+  width: min-content;
 }
 header .logo-top img {
   height: clamp(100px, calc(50px + 5vw + 4vh), 200px);
@@ -154,8 +156,8 @@ header .logo-top img {
 
 header .logo-top label {
   align-self: center;
-  font-size: clamp(1em, calc(0.5em + 2.8vw), 2.5em);
-  font-weight: 500;
+  font-size: clamp(1em, calc(0.5em + 2.5vw), 2.5em);
+  font-weight: 600;
   color: var(--header-title-color);
   width: max-content;
 }
@@ -173,17 +175,16 @@ header .logo-top label {
 
 #headerCardPanel {
   display: flex !important;
-  align-items: center;
-  align-self: flex-end;
-  grid-column: span 2;
+  align-self: end;
+  grid-column: 3 / 4;
   gap: 25px;
   padding: 24px;
-  height: max-content;
-  border-bottom: 1px solid #ddd;
+  //border-bottom: 1px solid #ddd;
   background: white;
   border-radius: var(--card-radius);
   box-shadow: 0 0 10px 0px #ccc;
   overflow: hidden;
+  width: min-content;
 }
 
 .user-attr {
@@ -300,14 +301,14 @@ footer .copyright img {
   }
 
   header {
-    width: fit-content;
   }
 
   #headerCardPanel {
+    grid-row: 4/4;
   }
 
   .lang {
-    align-self: flex-start;
+    grid-column: 3;
   }
 }
 
