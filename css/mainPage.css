@@ -28,10 +28,11 @@ a.btn-ro {
   flex: 1 0 auto;
   background: linear-gradient(
     90deg,
-    rgba(120, 110, 110, 1),
-    rgba(55, 55, 55, 1) 50%
+    rgba(110, 110, 110, 1),
+    rgba(50, 55, 55, 1) 50%
   );
-  border: 1px solid #111000;
+  border-top: 1px inset #111000;
+  border-left: 1px inset #363631;
   color: white;
   font-size: x-small;
   height: var(--btn-h);
@@ -138,7 +139,7 @@ header {
   gap: 15px 5px;
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, 210px, auto);
-  border-bottom: clamp(5px, 1.2vw, 15px) solid rgba(0, 0, 0, 0.8);
+  border-bottom: clamp(5px, 1.2vw, 15px) inset rgba(0, 0, 0, 0.8);
   padding: clamp(5px, 0.5vw, 12px) var(--header-content-width) 10px;
   background: linear-gradient(90deg, #fff, #eee);
 }
@@ -177,9 +178,11 @@ header .logo-top {
   align-items: center;
   gap: 0 1em;
   padding: calc(10px + 0.8vw) calc(10px + 1vw);
-  background: linear-gradient(0deg, #f3f3f3 30%, white);
+  background: linear-gradient(0deg, #e3e3e3 5%, white 70%);
   border-radius: var(--card-radius);
-  box-shadow: 0 0 23px 0px #bbb;
+  box-shadow: 0 0 13px 0px #bbb;
+  border-bottom: 1px inset #f2f2f2;
+  border-right: 2px inset #f2f2f2;
   overflow: hidden;
   width: max-content;
   height: max-content;
@@ -199,14 +202,14 @@ header .logo-top {
   width: clamp(70px, 6vw, 98px);
   clip-path: circle();
   background-color: aqua;
+  margin-right: 20px;
 }
 
 .user-name {
   display: flex;
   flex-direction: column;
   font-size: 0.9em;
-  margin: 8px;
-  gap: 10px;
+  gap: 12px;
   width: max-content;
   //background-color: blueviolet;
 }
