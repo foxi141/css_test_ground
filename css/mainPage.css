@@ -137,8 +137,8 @@ header {
   justify-content: start;
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, 210px, auto);
-  border-bottom: 1.5vw solid rgba(0, 0, 0, 0.8);
-  padding: calc(10px + 0.7vw) var(--header-content-width) 10px;
+  border-bottom: 1.2vw solid rgba(0, 0, 0, 0.8);
+  padding: calc(10px + 0.5vw) var(--header-content-width) 10px;
 
   background: linear-gradient(90deg, #fff, #eee);
 }
@@ -150,7 +150,7 @@ header .logo-top {
   display: flex;
 }
 .logo-top img {
-  height: clamp(70px, calc(30px + 6vw + 4vh), 200px);
+  height: clamp(70px, calc(25px + 6vw + 4vh), 200px);
 }
 
 .logo-top label {
@@ -175,7 +175,7 @@ header .logo-top {
   grid-row: 3 / span 4;
   display: flex;
   gap: 0 1em;
-  padding: calc(10px + 1vw);
+  padding: calc(10px + 1vw + 1vh) calc(10px + 1vw);
   background: linear-gradient(0deg, #f3f3f3 30%, white);
   border-radius: var(--card-radius);
   box-shadow: 0 0 23px 0px #bbb;
@@ -315,16 +315,19 @@ footer .copyright img {
   header .logo-top {
     grid-column: 1;
     grid-row: 2;
+    justify-content: center;
   }
 
   header .lang {
     grid-column: 1;
     grid-row: 1;
+    justify-content: space-between;
   }
   #headerCardPanel {
     grid-column: 1;
     grid-row: 5;
     width: auto;
+    padding: 60px auto;
   }
 
   a.btn-ro {
