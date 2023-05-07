@@ -9,7 +9,7 @@
   --header-content-width: clamp(20px, calc(10px + 4vw), 20vw);
   --header-title-color: var(--first-color);
   --header-bottom-margin: 3vh;
-  --main-content-width: clamp(20px, 8vw, 50vw);
+  --main-content-width: clamp(20px, 10vw, 160px);
 
   --footer-address-bg-color: var(--first-color);
   --footer-sponsors-bg-color: white;
@@ -138,10 +138,10 @@ header {
   justify-content: start;
   gap: 15px 5px;
   margin-bottom: var(--header-bottom-margin);
-  height: clamp(185px, 210px, auto);
+  height: clamp(185px, max-content, 280px);
   border-bottom: clamp(5px, 1.2vw, 15px) solid rgba(0, 0, 0, 0.8);
   padding: clamp(5px, 0.5vw, 10px) var(--header-content-width);
-  background: linear-gradient(90deg, #fff, #eee);
+  background: linear-gradient(155deg, #fff 50%, #d2d2d2);
 }
 
 header .logo-top {
@@ -156,7 +156,7 @@ header .logo-top img {
 }
 
 header .logo-top h1 {
-  font-size: clamp(1em, 4vw, 2.3em);
+  font-size: clamp(1em, 4vw, 2.2em);
   font-weight: 600;
   color: var(--header-title-color);
   width: max-content;
