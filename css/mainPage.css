@@ -139,8 +139,8 @@ header {
   gap: 15px 5px;
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, 210px, auto);
-  border-bottom: clamp(5px, 1.2vw, 15px) inset rgba(0, 0, 0, 0.8);
-  padding: clamp(5px, 0.5vw, 12px) var(--header-content-width) 10px;
+  border-bottom: clamp(5px, 1.2vw, 15px) solid rgba(0, 0, 0, 0.8);
+  padding: clamp(5px, 0.5vw, 10px) var(--header-content-width);
   background: linear-gradient(90deg, #fff, #eee);
 }
 
@@ -150,18 +150,19 @@ header .logo-top {
   gap: 0;
   display: flex;
 }
-.logo-top img {
+header .logo-top img {
   height: clamp(70px, calc(25px + 6vw + 4vh), 200px);
 }
 
-.logo-top label {
-  font-size: clamp(1em, calc(0.5em + 2vw), 2.5em);
-  font-weight: 500;
+header .logo-top h1 {
+  font-size: clamp(1em, 6vw, 2.5em);
+  font-weight: 600;
   color: var(--header-title-color);
   width: max-content;
+  text-transform: capitalize;
 }
 
-.lang {
+header .lang {
   grid-column: 5;
   display: flex;
   justify-content: flex-end;
