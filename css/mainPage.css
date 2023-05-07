@@ -139,7 +139,7 @@ header {
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, 220px, auto);
   border-bottom: 1.5vw solid rgba(0, 0, 0, 0.8);
-  padding: calc(10px + 0.7vw) var(--header-content-width) 30px;
+  padding: calc(10px + 0.7vw) var(--header-content-width) 10px;
   //overflow: hidden;
   background: linear-gradient(90deg, #fff, #eee);
 }
