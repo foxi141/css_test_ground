@@ -177,7 +177,7 @@ header .logo-top {
   display: flex;
   align-items: center;
   gap: 0 1em;
-  padding: calc(10px + 0.5vw + 1vh) calc(10px + 1vw);
+  padding: calc(10px + 0.5vw) calc(10px + 1vw);
   background: linear-gradient(0deg, #f3f3f3 30%, white);
   border-radius: var(--card-radius);
   box-shadow: 0 0 23px 0px #bbb;
@@ -333,7 +333,7 @@ footer .copyright img {
     grid-column: 1;
     grid-row: 5;
     width: auto;
-    padding: 60px auto;
+    padding: 70px auto;
   }
 
   a.btn-ro {
