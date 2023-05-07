@@ -299,6 +299,8 @@ footer .copyright img {
   header {
     grid-template-columns: 100%;
     grid-template-rows: min-content auto 1fr;
+    padding: 10px 8px;
+    gap: 5px 0;
   }
 
   header .logo-top {
@@ -313,6 +315,7 @@ footer .copyright img {
   #headerCardPanel {
     grid-column: 1;
     grid-row: 5;
+    width: auto;
   }
 
   a.btn-ro {
@@ -329,19 +332,16 @@ footer .copyright img {
   }
 
   a.btn-ro {
-    height: calc(var(--btn-h) * 1.3);
+    height: calc(var(--btn-h) * 1.2);
   }
 
   #headerCardPanel {
-    grid-row: 5;
   }
 
   .logo-top {
-    grid-row: 2;
   }
 
   .lang {
-    grid-row: 1;
     display: flex;
     flex-direction: row;
   }
