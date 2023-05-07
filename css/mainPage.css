@@ -125,27 +125,28 @@ main section {
 
 /* NAVBAR */
 header * {
-  border: 1px solid rgb(221, 109, 109);
+  //border: 1px solid rgb(221, 109, 109);
 }
 
 header {
   display: grid !important;
   grid-template-columns: 1fr 20px max-content;
-  grid-template-rows: auto fit-content 2fr;
+  grid-template-rows: min-content 2fr;
   justify-items: stretch;
-  align-items: start;
+  align-items: stretch;
+  gap: 15px 5px;
   justify-content: start;
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, 210px, auto);
   border-bottom: 1.2vw solid rgba(0, 0, 0, 0.8);
-  padding: calc(10px + 0.5vw) var(--header-content-width) 10px;
+  padding: calc(5px + 0.5vw) var(--header-content-width) 10px;
 
   background: linear-gradient(90deg, #fff, #eee);
 }
 
 header .logo-top {
   grid-column: 1;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 3;
   gap: 0;
   display: flex;
 }
@@ -172,10 +173,11 @@ header .logo-top {
 
 #headerCardPanel {
   grid-column: 2 / span 4;
-  grid-row: 3 / span 4;
+  grid-row: 2 / span 3;
   display: flex;
+  align-items: center;
   gap: 0 1em;
-  padding: calc(10px + 1vw + 1vh) calc(10px + 1vw);
+  padding: calc(10px + 0.5vw + 1vh) calc(10px + 1vw);
   background: linear-gradient(0deg, #f3f3f3 30%, white);
   border-radius: var(--card-radius);
   box-shadow: 0 0 23px 0px #bbb;
@@ -316,6 +318,10 @@ footer .copyright img {
     grid-column: 1;
     grid-row: 2;
     justify-content: center;
+  }
+  header .logo-top img {
+    width: 20vw;
+    height: auto;
   }
 
   header .lang {
