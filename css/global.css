@@ -6,6 +6,6 @@
   text-decoration: none;
 }
 
-body {
-  overflow: hidden;
+html {
+  width: 100%;
 }
