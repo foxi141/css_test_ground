@@ -80,7 +80,7 @@ main section {
 
 .card {
   background-color: #e7e7e7;
-  min-width: 400px;
+  min-width: 300px;
   border-radius: var(--card-radius);
   object-fit: cover;
   box-shadow: 0 0 26px #ccc;
@@ -248,6 +248,10 @@ footer .sponsors {
   background-color: var(--footer-sponsors-bg-color);
 }
 
+footer .sponsors img {
+  width: 80%;
+}
+
 footer .address {
   display: flex;
   flex-wrap: wrap;
@@ -322,6 +326,8 @@ footer .copyright img {
     height: calc(var(--btn-h) * 1.2);
   }
 }
+
+/*------------------------------------------*/
 
 @media screen and (max-width: 750px) {
   body {
