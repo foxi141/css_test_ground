@@ -2,7 +2,7 @@
   --first-color: #111000;
   --second-color: #005923;
   --body-bg: #efefef;
-  --card-radius: 0.4em;
+  --card-radius: 0.45em;
   --btn-h: calc(30px + 0.5vh + 0.5vw);
   --btn-radius: var(--card-radius);
 
@@ -133,14 +133,14 @@ header {
   grid-template-columns: 1fr 20px max-content;
   grid-template-rows: min-content 2fr;
   justify-items: stretch;
-  align-items: stretch;
-  gap: 15px 5px;
+  align-items: center;
   justify-content: start;
+  gap: 15px 5px;
+
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, 210px, auto);
-  border-bottom: 1.2vw solid rgba(0, 0, 0, 0.8);
-  padding: calc(5px + 0.5vw) var(--header-content-width) 10px;
-
+  border-bottom: clamp(5px, 1.2vw, 15px) solid rgba(0, 0, 0, 0.8);
+  padding: calc(5px + 0.7vw) var(--header-content-width) 10px;
   background: linear-gradient(90deg, #fff, #eee);
 }
 
@@ -177,12 +177,13 @@ header .logo-top {
   display: flex;
   align-items: center;
   gap: 0 1em;
-  padding: calc(10px + 0.5vw) calc(10px + 1vw);
+  padding: calc(10px + 0.8vw) calc(10px + 1vw);
   background: linear-gradient(0deg, #f3f3f3 30%, white);
   border-radius: var(--card-radius);
   box-shadow: 0 0 23px 0px #bbb;
   overflow: hidden;
-  width: min-content;
+  width: max-content;
+  height: max-content;
 }
 
 .user-attr {
