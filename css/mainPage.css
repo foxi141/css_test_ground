@@ -26,7 +26,11 @@ a.btn-ro {
   justify-content: center;
   gap: 15px;
   flex: 1 0 auto;
-  background: linear-gradient(90deg, rgba(80, 80, 80, 1), rgba(5, 5, 5, 1));
+  background: linear-gradient(
+    90deg,
+    rgba(120, 110, 110, 1),
+    rgba(55, 55, 55, 1) 50%
+  );
   border: 1px solid #111000;
   color: white;
   font-size: x-small;
@@ -126,22 +130,18 @@ header * {
 
 header {
   display: grid !important;
-  grid-template-columns: 2fr auto 2fr;
-  grid-template-rows: 1fr fit-content 2fr;
-  justify-items: end;
-
+  grid-template-columns: 1fr 20px max-content;
+  grid-template-rows: auto fit-content 2fr;
+  justify-items: stretch;
   align-items: start;
-  align-content: space-between;
-  gap: 8px;
+  justify-content: start;
+  //gap: 8px;
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, 220px, auto);
   border-bottom: 1.5vw solid rgba(0, 0, 0, 0.8);
   padding: calc(10px + 0.7vw) var(--header-content-width) 30px;
-  overflow: hidden;
+  //overflow: hidden;
   background: linear-gradient(90deg, #fff, #eee);
-
-  //filter: blur(1px);
-  //transform: translateZ(0);
 }
 
 header .logo-top {
@@ -161,29 +161,24 @@ header .logo-top {
 }
 
 .lang {
+  grid-column: 5;
   display: flex;
-  grid-column: 4;
   justify-content: flex-end;
   align-items: center;
   align-content: center;
-  gap: calc(8px + 1vw);
-  font-size: 1rem;
+  gap: calc(5px + 1vw);
+  font-size: 1em;
 }
 
 #headerCardPanel {
   grid-column: 2 / span 4;
-  grid-row: 4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-
-  gap: 25px;
-
+  grid-row: 3 / span 4;
+  display: flex;
+  gap: 0 25px;
   padding: calc(10px + 1vw);
-  //border-bottom: 1px solid #ddd;
-  background: white;
+  background: linear-gradient(0deg, #f3f3f3 30%, white);
   border-radius: var(--card-radius);
-  box-shadow: 0 0 10px 0px #ccc;
+  box-shadow: 0 0 23px 0px #bbb;
   overflow: hidden;
   width: min-content;
 }
