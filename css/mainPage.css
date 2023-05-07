@@ -136,11 +136,10 @@ header {
   align-items: center;
   justify-content: start;
   gap: 15px 5px;
-
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, 210px, auto);
   border-bottom: clamp(5px, 1.2vw, 15px) solid rgba(0, 0, 0, 0.8);
-  padding: calc(5px + 0.7vw) var(--header-content-width) 10px;
+  padding: clamp(5px, 0.5vw, 12px) var(--header-content-width) 10px;
   background: linear-gradient(90deg, #fff, #eee);
 }
 
@@ -197,7 +196,7 @@ header .logo-top {
 }
 
 .avatar {
-  width: max(75px, clamp(80px, 6vw, 110px));
+  width: clamp(70px, 6vw, 98px);
   clip-path: circle();
   background-color: aqua;
 }
