@@ -8,6 +8,7 @@
 
   --header-content-width: clamp(20px, calc(10px + 4vw), 20vw);
   --header-title-color: var(--first-color);
+  --header-subtitle-color: #a99861;
   --header-bottom-margin: 3vh;
   --main-content-width: clamp(20px, 10vw, 160px);
 
@@ -55,8 +56,8 @@ a.btn-ro {
 
 .chips {
   border: 1px solid var(--second-color);
-  border-radius: 0.8em;
-  padding: 0.2em 0.7em;
+  border-radius: 1em;
+  padding: 0.35em 0.7em;
 }
 
 select {
@@ -66,6 +67,12 @@ select {
   color: var(--first-color);
   border-radius: calc(var(--btn-radius) / 1.5);
   min-width: 100px;
+}
+
+.ico {
+  width: 26px;
+  display: flex;
+  justify-content: center;
 }
 
 /* NAVBAR --------------------------------------------------- */
@@ -112,7 +119,7 @@ header .logo-top h1 {
 }
 
 header .logo-top p {
-  color: #a99861;
+  color: var(--header-subtitle-color);
   font-size: clamp(1em, 2vw, 1.5em);
 }
 
@@ -147,7 +154,8 @@ header .lang {
 
 #user-attr {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
   background-color: #64eb9a;
 }
 
@@ -159,27 +167,27 @@ header .lang {
   width: clamp(70px, 6vw, 98px);
   clip-path: circle();
   background-color: aqua;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .user-name {
   display: flex;
   flex-direction: column;
   font-size: 0.85em;
-  gap: 12px 0;
+  gap: 16px 0;
   width: max-content;
 }
 
 .user-name div:nth-child(2) {
   display: flex;
-  background-color: blueviolet;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
 }
 .user-name div:nth-child(2) > a {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 12px;
+  gap: 5px;
 }
 
 .bucketStatus {
