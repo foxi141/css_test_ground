@@ -140,14 +140,16 @@ header .lang {
   height: max-content;
 }
 
-.user-attr {
+/*--- AFTER LOGGED -- */
+
+#user-attr {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: #64eb9a;
+  //background-color: #64eb9a;
 }
 
-.user-attr * {
+#user-attr * {
   //border: 1px solid red;
 }
 
@@ -280,7 +282,7 @@ footer .address {
 }
 
 footer .address > div,
-a {
+footer .address > div a {
   // border: 1px solid red;
   flex: 1 0 auto;
   color: var(--footer-address-txt-color);
