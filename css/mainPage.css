@@ -156,7 +156,6 @@ header .lang {
   display: flex;
   align-items: center;
   align-content: center;
-  background-color: #64eb9a;
 }
 
 #user-attr * {
@@ -164,7 +163,7 @@ header .lang {
 }
 
 .avatar {
-  width: clamp(70px, 6vw, 98px);
+  width: clamp(70px, 6vw, 95px);
   clip-path: circle();
   background-color: aqua;
   margin-right: 10px;
@@ -190,9 +189,9 @@ header .lang {
   gap: 5px;
 }
 
-.bucketStatus {
+#cart {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-start;
   flex-direction: column;
   background-color: orangered;
 }
