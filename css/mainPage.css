@@ -166,7 +166,7 @@ header .lang {
 }
 
 .avatar {
-  width: clamp(70px, 6vw, 90px);
+  width: clamp(70px, 6vw, 88px);
   clip-path: circle();
   background-color: aqua;
 }
@@ -211,10 +211,19 @@ header .lang {
 }
 
 #cart > div:nth-child(1) label {
-  background-color: lightgreen;
+  background-color: var(--header-subtitle-color);
   padding: 0.35em;
+  width: 2em;
   clip-path: circle();
   font-size: small;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+#cart > div:nth-child(2) {
+  font-size: 0.9em;
+  color: red;
 }
 
 /* MAIN CONTENT AREA */
@@ -362,7 +371,7 @@ footer .copyright img {
     justify-content: center;
   }
   header .logo-top img {
-    width: 15vw;
+    width: 13vw;
     height: auto;
   }
 
