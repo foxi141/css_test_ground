@@ -93,9 +93,10 @@ header {
   gap: 15px 5px;
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, max-content, 280px);
-  border-bottom: clamp(8px, 1.2vw, 15px) solid rgba(0, 0, 0, 0.8);
-  padding: clamp(5px, 1vw, 15px) var(--header-content-width);
+  border-bottom: clamp(12px, 2vw, 20px) solid rgba(0, 0, 0, 0.8);
+  padding: clamp(10px, 5vw, 20px) var(--header-content-width);
   background: linear-gradient(155deg, #fff 50%, #b0b0b0);
+  box-shadow: 0 -6px 0 inset lightgrey;
 }
 
 header .logo-top {
@@ -109,7 +110,7 @@ header .logo-top > * {
 }
 
 header .logo-top img {
-  height: clamp(70px, calc(7vw + 4vh), 180px);
+  height: clamp(70px, calc(6vw + 4vh), 170px);
 }
 
 header .logo-top h1 {
@@ -159,7 +160,7 @@ header .lang {
 .avatar {
   width: clamp(66px, 5vw, 85px);
   clip-path: circle();
-  background-color: aqua;
+  background-color: lightgrey;
 }
 
 #user-attr {
@@ -375,7 +376,7 @@ footer .copyright img {
     grid-template-rows: min-content auto 1fr;
     padding: 8px;
     gap: 10px;
-    border: none;
+    
   }
 
   header .logo-top {
