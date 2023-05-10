@@ -118,6 +118,7 @@ header .logo-top h1 {
   color: var(--header-title-color);
   width: max-content;
   text-transform: uppercase;
+  line-height: 1.5;
 }
 
 header .logo-top p {
@@ -140,8 +141,9 @@ header .lang {
   grid-row: 2 / span 3;
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
   gap: 0 1em;
-  padding: calc(8px + 0.8vw) calc(5px + 1vw);
+  padding: calc(10px + 0.8vw) calc(7px + 1vw);
   background: linear-gradient(250deg, #e3e3e3 5%, white 70%);
   border-radius: var(--card-radius);
   box-shadow: 0 0 13px 0px #bbb;
@@ -154,39 +156,38 @@ header .lang {
 
 /*--- AFTER LOGGED ---------------- */
 
-#user-attr {
-  display: flex;
-  //align-items: center;
-  align-content: stretch;
-  gap: 8px;
-  border: 1px solid;
-}
-
-#user-attr * {
-  //border: 1px solid red;
-}
-
 .avatar {
   width: clamp(66px, 5vw, 85px);
   clip-path: circle();
   background-color: aqua;
 }
 
+#user-attr {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  //border: 1px solid red;
+}
+
+#user-attr * {
+  //border: 1px solid red;
+}
+
 .user-name {
   display: flex;
   flex-direction: column;
+  align-content: space-between;
   font-size: 0.85em;
-  gap: 16px 0;
-  width: max-content;
-  position: relative;
-  margin: -5px;
+  height: 100%;
+  padding: 8px 0;
+  gap: 18px;
 }
 
 .user-name div:nth-child(2) {
   display: flex;
-  align-items: flex-start;
   gap: 8px;
 }
+
 .user-name div:nth-child(2) > a {
   display: flex;
   align-items: center;
@@ -199,7 +200,8 @@ header .lang {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 8px;
+  gap: 10px;
+  //border: 1px solid red;
 }
 
 #cart img {
@@ -210,13 +212,13 @@ header .lang {
 #cart > div:nth-child(1) {
   display: flex;
   align-items: center;
-  gap: 1px;
+  gap: 5px;
 }
 
 #cart > div:nth-child(1) label {
   background-color: var(--header-subtitle-color);
   padding: 0.35em;
-  width: 1.7em;
+  width: 1.8em;
   clip-path: circle();
   font-size: small;
   font-weight: 600;
@@ -225,14 +227,15 @@ header .lang {
 }
 
 #cart > div:nth-child(2) {
-  color: red;
+  color: darkred;
 }
 
 #cart > div:nth-child(2) p:nth-child(1) {
-  font-size: 0.8em;
+  font-size: 0.85em;
 }
 #cart > div:nth-child(2) p:nth-child(2) {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
 /* MAIN CONTENT AREA -------------------------- */
@@ -360,7 +363,7 @@ footer .copyright img {
 
 @media screen and (max-width: 960px) {
   body {
-    background-color: rgb(214, 181, 207);
+    //background-color: rgb(214, 181, 207);
   }
 
   a.btn-ro {
@@ -370,8 +373,9 @@ footer .copyright img {
   header {
     grid-template-columns: 100%;
     grid-template-rows: min-content auto 1fr;
-    padding: 12px;
-    gap: 5px 0;
+    padding: 8px;
+    gap: 10px;
+    border: none;
   }
 
   header .logo-top {
@@ -379,6 +383,7 @@ footer .copyright img {
     grid-row: 2;
     justify-content: center;
   }
+
   header .logo-top img {
     width: 13vw;
     height: auto;
@@ -394,6 +399,12 @@ footer .copyright img {
     grid-column: 1;
     grid-row: 5;
     width: auto;
+    flex-direction: column;
+  }
+
+  #cart {
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   footer .address {
@@ -415,7 +426,7 @@ footer .copyright img {
 
 @media screen and (max-width: 750px) {
   body {
-    background-color: rgb(247, 248, 157);
+    //background-color: rgb(247, 248, 157);
   }
 
   header {
