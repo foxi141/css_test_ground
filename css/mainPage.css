@@ -96,7 +96,7 @@ header {
   border-bottom: clamp(12px, 2vw, 20px) solid rgba(0, 0, 0, 0.8);
   padding: clamp(10px, 5vw, 20px) var(--header-content-width);
   background: linear-gradient(155deg, #fff 50%, #b0b0b0);
-  box-shadow: 0 -6px 0 inset lightgrey;
+  box-shadow: 0 -5px 0 inset lightgrey;
 }
 
 header .logo-top {
@@ -143,11 +143,11 @@ header .lang {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 0 1em;
+  gap: 1em;
   padding: calc(10px + 0.8vw) calc(7px + 1vw);
   background: linear-gradient(250deg, #e3e3e3 5%, white 70%);
   border-radius: var(--card-radius);
-  box-shadow: 0 0 13px 0px #bbb;
+  box-shadow: 0 0 17px 0px #bbb;
   border-bottom: 1px inset #f2f2f2;
   border-right: 2px inset #f2f2f2;
   overflow: hidden;
@@ -157,11 +157,24 @@ header .lang {
 
 /*--- AFTER LOGGED ---------------- */
 
-.avatar {
+.avatar img {
   width: clamp(66px, 5vw, 85px);
   clip-path: circle();
   background-color: lightgrey;
 }
+
+/*
+.avatar-edit {
+  padding: 0.7em;
+  background-color: white;
+  z-index: 1001;
+  position: relative;
+  left: -5px;
+  bottom: 25px;
+  width: min-content;
+  clip-path: circle();
+}
+*/
 
 #user-attr {
   display: flex;
@@ -186,14 +199,17 @@ header .lang {
 
 .user-name div:nth-child(2) {
   display: flex;
-  gap: 8px;
+  gap: 15px;
 }
 
 .user-name div:nth-child(2) > a {
   display: flex;
   align-items: center;
-  gap: 5px;
   color: #333;
+}
+
+.user-name div:nth-child(2) > a:hover {
+  color: green;
 }
 
 #cart {
@@ -235,7 +251,6 @@ header .lang {
   font-size: 0.85em;
 }
 #cart > div:nth-child(2) p:nth-child(2) {
-  font-size: 1.1em;
   font-weight: 600;
 }
 
@@ -376,7 +391,6 @@ footer .copyright img {
     grid-template-rows: min-content auto 1fr;
     padding: 8px;
     gap: 10px;
-    
   }
 
   header .logo-top {
