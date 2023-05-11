@@ -165,20 +165,24 @@ header .lang {
   width: clamp(66px, 5vw, 85px);
   clip-path: circle();
   background-color: lightgrey;
+  opacity: 0.9;
 }
 
-/*
 .avatar-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  aspect-ratio: 1 / 1;
   padding: 0.7em;
   background-color: white;
   z-index: 1001;
   position: relative;
-  left: -5px;
-  bottom: 25px;
-  width: min-content;
-  clip-path: circle();
+  left: -10px;
+  bottom: 20px;
+  border-radius: 90%;
+  box-shadow: 0 0 2px;
 }
-*/
 
 #user-attr {
   display: flex;
@@ -194,12 +198,12 @@ header .lang {
 .user-name {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  //justify-content: space-around;
   align-content: space-between;
   font-size: clamp(0.5em, 0.85em, 1em);
   height: 100%;
   padding: 8px 0;
-  gap: 18px;
+  gap: 26px;
 }
 
 .user-name div:nth-child(2) {
@@ -222,7 +226,7 @@ header .lang {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 10px;
+  gap: 22px;
   //border: 1px solid red;
 }
 
@@ -395,7 +399,7 @@ footer .address > div a {
 }
 
 footer .copyright {
-  padding: var(--footer-content-width);
+  padding: 3vh var(--footer-content-width);
   background: var(--footer-copyright-bg-color);
   display: flex;
   flex-wrap: wrap;
@@ -486,6 +490,10 @@ footer .copyright img {
     margin-left: 20px;
   }
 
+  footer .copyright img {
+    max-width: 160px;
+  }
+
   main {
     padding: 0 2vw;
   }
@@ -500,7 +508,7 @@ footer .copyright img {
 
 @media screen and (max-width: 750px) {
   #headerCardPanel {
-    //flex-direction: column;
+    flex-direction: column;
   }
 
   .logo-top {
