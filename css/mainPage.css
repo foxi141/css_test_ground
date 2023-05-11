@@ -12,12 +12,11 @@
   --header-bottom-margin: 3vh;
   --main-content-width: clamp(20px, 13vw, 360px);
 
+  --footer-content-width: clamp(20px, calc(10px + 7vw), 20vw);
   --footer-address-bg-color: var(--first-color);
   --footer-address-txt-color: whitesmoke;
   --footer-sponsors-bg-color: white;
   --footer-copyright-bg-color: white;
-
-  --footer-content-width: 2vh 5vw;
 
   --ggs: 0.74; /* size of icons */
 }
@@ -195,6 +194,7 @@ header .lang {
 .user-name {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-content: space-between;
   font-size: clamp(0.5em, 0.85em, 1em);
   height: 100%;
@@ -327,9 +327,14 @@ footer {
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
-  min-height: 300px;
+  min-height: 200px;
   box-shadow: 0 -12px 20px #ccc;
+  font-size: x-small;
+}
+
+footer .address h4 {
   font-size: small;
+  margin-bottom: 10px;
 }
 
 footer .sponsors {
@@ -337,7 +342,7 @@ footer .sponsors {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: var(--footer-content-width);
+  padding: 0 var(--footer-content-width);
   background-color: var(--footer-sponsors-bg-color);
 }
 
@@ -347,27 +352,46 @@ footer .sponsors img {
 
 footer .address {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: space-evenly;
-  padding: var(--footer-content-width);
+  padding: 3vh var(--footer-content-width);
   background: var(--footer-address-bg-color);
 }
 
-footer .address > div,
+footer .address > div {
+  flex: 0 0 20%;
+  color: var(--footer-address-txt-color);
+  align-content: center;
+  //border: 1px solid red;
+  margin-left: auto;
+}
+
 footer .address > div a {
-  // border: 1px solid red;
-  flex: 1 0 auto;
   color: var(--footer-address-txt-color);
 }
 
-img.ico-social {
-  width: 28px;
-  height: auto;
+.social {
+  display: flex;
+  flex-direction: column;
 }
 
-footer .address h4 {
-  margin-bottom: 10px;
+.social > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ico-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+
+.ico-social img {
+  object-fit: contain;
+  width: 28px;
+  height: auto;
 }
 
 footer .copyright {
@@ -421,7 +445,7 @@ footer .copyright img {
   }
 
   header .logo-top img {
-    width: calc(50px + 8vw);
+    width: calc(40px + 7vw);
     height: auto;
   }
 
@@ -434,11 +458,13 @@ footer .copyright img {
   #headerCardPanel {
     grid-column: 1;
     grid-row: 5;
+    display: flex;
+    flex-direction: column;
     width: auto;
   }
 
   #user-attr {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .user-name {
@@ -452,7 +478,12 @@ footer .copyright img {
 
   footer .address {
     flex-direction: column;
-    align-items: center;
+  }
+
+  footer .address > div {
+    flex: 0 0 auto;
+    align-content: center;
+    margin-left: 20px;
   }
 
   main {
