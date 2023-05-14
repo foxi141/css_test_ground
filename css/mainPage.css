@@ -145,7 +145,7 @@ header .lang {
   grid-row: 2 / span 3;
   display: flex;
   align-items: stretch;
-
+  justify-content: stretch;
   flex-direction: unset;
   width: max-content;
   height: min-content;
@@ -178,8 +178,8 @@ header .lang {
   background-color: white;
   z-index: 1001;
   position: relative;
-  left: -10px;
-  bottom: 20px;
+  left: -8px;
+  bottom: 25px;
   border-radius: 90%;
   box-shadow: 0 0 2px;
 }
@@ -238,10 +238,10 @@ header .lang {
 #cart > div:nth-child(1) {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 2px;
 }
 
-#cart > div:nth-child(1) label {
+#cart > div:nth-child(1) p {
   background-color: var(--header-subtitle-color);
   padding: 0.3em;
   width: 1.8em;
@@ -250,6 +250,12 @@ header .lang {
   font-weight: 600;
   color: white;
   text-align: center;
+}
+
+.cancel {
+  font-size: medium;
+  padding: 0 8px;
+  text-transform: ;
 }
 
 #cart > div:nth-child(2) {
@@ -336,6 +342,10 @@ footer {
   font-size: x-small;
 }
 
+footer > div {
+  min-height: 180px;
+}
+
 footer .address h4 {
   font-size: small;
   margin-bottom: 10px;
@@ -346,7 +356,7 @@ footer .sponsors {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 0 var(--footer-content-width);
+  padding: 15px var(--footer-content-width);
   background-color: var(--footer-sponsors-bg-color);
 }
 
