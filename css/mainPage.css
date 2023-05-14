@@ -27,23 +27,22 @@ a.btn-ro {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  flex: 1 0 auto;
+  gap: 7px;
+  flex: 1 1 auto;
   background: linear-gradient(
-    90deg,
-    rgba(110, 110, 110, 1),
-    rgba(50, 45, 55, 1) 70%
+    99deg,
+    rgba(110, 113, 110, 1),
+    rgba(50, 45, 55, 0.95) 50%
   );
   border-top: 1px inset #111000;
   border-left: 1px inset #363631;
   color: white;
   font-size: x-small;
   height: var(--btn-h);
-  width: max-content;
+  width: min-content;
   border-radius: calc(var(--btn-radius) / 1.5);
   text-transform: uppercase;
-  overflow: hidden;
-  padding: 0 calc(var(--btn-h) / 2);
+  padding: 0 calc(var(--btn-h) / 2.2);
   cursor: pointer;
   word-break: keep-all;
   white-space: nowrap;
@@ -70,17 +69,18 @@ select {
   min-width: 100px;
 }
 
-.ico {
-  width: 26px;
-  display: flex;
-}
-
 a:has(i) {
-  background-color: red;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 a {
   color: #333;
+}
+
+a:hover:not(.btn-ro, .chips) {
+  color: green;
 }
 
 /* NAVBAR --------------------------------------------------- */
@@ -96,7 +96,7 @@ header {
   justify-items: stretch;
   align-items: center;
   justify-content: start;
-  gap: 15px 5px;
+  gap: 15px;
   margin-bottom: var(--header-bottom-margin);
   height: clamp(185px, max-content, 280px);
   border-bottom: clamp(12px, 2vw, 20px) solid rgba(0, 0, 0, 0.8);
@@ -440,7 +440,7 @@ footer .copyright img {
   header {
     grid-template-columns: 100%;
     grid-template-rows: min-content auto 1fr;
-    padding: 15px;
+    padding: 10px 10px 25px;
     gap: 5px;
   }
 
@@ -476,7 +476,6 @@ footer .copyright img {
     grid-column: 1;
     grid-row: 5;
     display: flex;
-    flex-direction: column;
     width: auto;
   }
 
@@ -503,7 +502,8 @@ footer .copyright img {
     margin-left: 20px;
   }
 
-  footer .copyright img {
+  footer .copyright img,
+  footer .sponsors img {
     max-width: 160px;
   }
 
@@ -521,7 +521,7 @@ footer .copyright img {
 
 @media screen and (max-width: 750px) {
   #headerCardPanel {
-    flex-direction: column;
+    //flex-direction: column;
   }
 
   .logo-top {
