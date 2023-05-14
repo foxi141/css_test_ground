@@ -73,7 +73,10 @@ select {
 .ico {
   width: 26px;
   display: flex;
-  justify-content: center;
+}
+
+a:has(i) {
+  background-color: red;
 }
 
 a {
@@ -409,13 +412,13 @@ footer .address > div a {
 }
 
 footer .copyright {
-  padding: 3vh var(--footer-content-width);
+  padding: 15px var(--footer-content-width);
   background: var(--footer-copyright-bg-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 footer .copyright img {
