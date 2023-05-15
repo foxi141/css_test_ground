@@ -30,7 +30,7 @@ a.btn-ro {
   gap: 7px;
   flex: 1 1 auto;
   background: linear-gradient(
-    99deg,
+    115deg,
     rgba(110, 113, 110, 1),
     rgba(50, 45, 55, 0.95) 50%
   );
@@ -66,7 +66,7 @@ select {
   background-color: transparent;
   color: var(--first-color);
   border-radius: calc(var(--btn-radius) / 1.5);
-  min-width: 100px;
+  width: min-content;
 }
 
 a:has(i) {
@@ -84,10 +84,6 @@ a:hover:not(.btn-ro, .chips) {
 }
 
 /* NAVBAR --------------------------------------------------- */
-
-header * {
-  // border: 1px solid rgb(221, 109, 109);
-}
 
 header {
   display: grid !important;
@@ -147,12 +143,12 @@ header .lang {
   grid-column: 2 / span 4;
   grid-row: 2 / span 3;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: stretch;
   flex-direction: unset;
   width: max-content;
   height: min-content;
-  gap: 1em;
+  gap: clamp(12px, 1vw, 20px);
   padding: calc(10px + 0.8vw) calc(7px + 1vw);
   background: linear-gradient(250deg, #e3e3e3 5%, white 70%);
   border-radius: var(--card-radius);
@@ -162,7 +158,7 @@ header .lang {
   overflow: hidden;
 }
 
-/*--- AFTER LOGGED ---------------- */
+/*---------------- AFTER LOGGED ------------------------ */
 
 .avatar img {
   width: clamp(66px, 5vw, 85px);
@@ -181,32 +177,26 @@ header .lang {
   background-color: white;
   z-index: 1001;
   position: relative;
-  left: -8px;
-  bottom: 25px;
+  left: -4px;
+  bottom: 22px;
   border-radius: 90%;
   box-shadow: 0 0 2px;
 }
 
 #user-attr {
   display: flex;
-  align-items: center;
   gap: 8px;
-  //border: 1px solid red;
-}
-
-#user-attr * {
   //border: 1px solid red;
 }
 
 .user-name {
   display: flex;
   flex-direction: column;
-  //justify-content: space-around;
   align-content: space-between;
   font-size: clamp(0.5em, 0.85em, 1em);
   height: 100%;
   padding: 8px 0;
-  gap: 26px;
+  gap: 24px;
 }
 
 .user-name div:nth-child(2) {
@@ -258,7 +248,6 @@ header .lang {
 .cancel {
   font-size: medium;
   padding: 0 8px;
-  text-transform: ;
 }
 
 #cart > div:nth-child(2) {
@@ -313,7 +302,7 @@ main section {
 
 .f_100 {
   flex: 1 1 100%;
-  background-color: blue;
+  background-color: rgb(22, 77, 31);
   aspect-ratio: 16 / 7;
 }
 .f_50 {
@@ -430,11 +419,15 @@ footer .copyright img {
 
 @media screen and (max-width: 960px) {
   body {
-    //background-color: rgb(214, 181, 207);
+    background-color: rgb(214, 181, 207);
   }
 
   a.btn-ro {
     height: calc(var(--btn-h) * 1.2);
+  }
+
+  header select {
+    width: min-content;
   }
 
   header {
@@ -477,6 +470,7 @@ footer .copyright img {
     grid-row: 5;
     display: flex;
     width: auto;
+    min-height: 100px;
   }
 
   #user-attr {
