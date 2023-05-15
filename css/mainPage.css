@@ -177,8 +177,8 @@ header .lang {
   background-color: white;
   z-index: 1001;
   position: relative;
-  left: -4px;
-  bottom: 22px;
+  left: -2px;
+  bottom: 15px;
   border-radius: 90%;
   box-shadow: 0 0 2px;
 }
@@ -192,22 +192,12 @@ header .lang {
 .user-name {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
+  justify-content: space-around;
   font-size: clamp(0.5em, 0.85em, 1em);
-  height: 100%;
-  padding: 8px 0;
-  gap: 24px;
 }
 
 .user-name div:nth-child(2) {
-  display: flex;
   gap: 15px;
-}
-
-.user-name div:nth-child(2) > a {
-  display: flex;
-  align-items: center;
-  color: #333;
 }
 
 .user-name div:nth-child(2) > a:hover {
@@ -217,9 +207,8 @@ header .lang {
 #cart {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  gap: 22px;
+  justify-content: space-around;
+  gap: 13px;
   //border: 1px solid red;
 }
 
@@ -246,7 +235,7 @@ header .lang {
 }
 
 .cancel {
-  font-size: medium;
+  font-size: large;
   padding: 0 8px;
 }
 
@@ -470,7 +459,11 @@ footer .copyright img {
     grid-row: 5;
     display: flex;
     width: auto;
-    min-height: 100px;
+    min-height: 80px;
+  }
+
+  #headerCardPanel:has(#user-attr) {
+    background-color: #005923;
   }
 
   #user-attr {
