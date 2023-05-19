@@ -462,7 +462,11 @@ footer .copyright img {
     min-height: 80px;
   }
 
-  #headerCardPanel:has(#user-attr) {
+  #headerCardPanel:has([data-lgd]) {
+    background-color: #005923;
+  }
+
+  .pan:has([data-lgd]) {
     background-color: #005923;
   }
 
