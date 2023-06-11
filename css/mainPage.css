@@ -102,21 +102,20 @@ header {
 }
 
 header .logo-top {
-  grid-column: 1;
-  grid-row: 1 / span 3;
-}
-
-header .logo-top > * {
   display: flex;
   align-items: center;
+  grid-column: 1;
+  grid-row: 1 / 3;
 }
 
-header .logo-top img {
-  height: clamp(70px, calc(6vw + 4vh), 170px);
+header .logo-top .c_name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-header .logo-top h1 {
-  font-size: clamp(1em, 3.2vw, 2em);
+header .logo-top .c_name h1 {
+  font-size: clamp(1rem, 2rem, 3rem);
   font-weight: 600;
   color: var(--header-title-color);
   width: max-content;
@@ -124,9 +123,13 @@ header .logo-top h1 {
   line-height: 1.5;
 }
 
-header .logo-top p {
+header .logo-top .c_name p {
   color: var(--header-subtitle-color);
   font-size: clamp(1em, 2.6vw, 1.5em);
+}
+
+header .logo-top img {
+  height: clamp(70px, calc(6vw + 4vh), 170px);
 }
 
 header .lang {
@@ -140,28 +143,27 @@ header .lang {
 }
 
 #headerCardPanel {
-  grid-column: 2 / span 4;
-  grid-row: 2 / span 3;
+  grid-column: 2 / 6;
+  grid-row: 2 / 3;
   display: flex;
   align-items: center;
   justify-content: stretch;
-  flex-direction: unset;
   width: max-content;
   height: min-content;
   gap: clamp(12px, 1vw, 20px);
-  padding: calc(10px + 0.4vw) calc(7px + 1vw);
+  padding: calc(7px + 0.4vw) calc(7px + 1vw);
   background: linear-gradient(250deg, #e3e3e3 5%, white 70%);
   border-radius: var(--card-radius);
   box-shadow: 0 0 17px 0px #bbb;
   border-bottom: 1px inset #f2f2f2;
-  border-right: 2px inset #f2f2f2;
+  border-right: 1px inset #f2f2f2;
   overflow: hidden;
 }
 
 /*---------------- AFTER LOGGED ------------------------ */
 
 .avatar img {
-  width: clamp(66px, 5vw, 85px);
+  width: clamp(65px, 5vw, 84px);
   clip-path: circle();
   background-color: lightgrey;
   opacity: 0.9;
@@ -178,7 +180,7 @@ header .lang {
   z-index: 1001;
   position: relative;
   left: -2px;
-  bottom: 15px;
+  bottom: 20px;
   border-radius: 90%;
   box-shadow: 0 0 2px;
 }
@@ -186,7 +188,6 @@ header .lang {
 #user-attr {
   display: flex;
   gap: 8px;
-  //border: 1px solid red;
 }
 
 .user-name {
