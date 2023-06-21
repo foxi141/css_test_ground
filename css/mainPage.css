@@ -164,7 +164,7 @@ header .lang {
   overflow: hidden;
 }
 
-/*---------------- AFTER LOGGED ------------------------ */
+/*---------------- #NewheaderCardPanel AFTER LOGGED ------------------------ */
 
 .user-edit {
   display: flex;
@@ -523,4 +523,8 @@ footer .copyright img {
     display: flex;
     flex-direction: row;
   }
+}
+
+#assignAccountContainer:empty {
+  display: none;
 }
