@@ -101,6 +101,8 @@ header {
   box-shadow: 0 -8px 0 inset #ccc;
 }
 
+/*--------- LOGO TOP ------------------- */
+
 header .logo-top {
   display: flex;
   align-items: center;
@@ -131,6 +133,8 @@ header .logo-top .c_name p {
 header .logo-top img {
   height: clamp(70px, calc(6vw + 4vh), 170px);
 }
+
+/* ------------------------------------------ */
 
 header .lang {
   grid-column: 5;
