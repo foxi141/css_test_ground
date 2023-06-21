@@ -153,7 +153,7 @@ header .lang {
   align-items: center;
   justify-content: stretch;
   width: max-content;
-  height: min-content;
+  height: fit-content;
   gap: clamp(12px, 1vw, 20px);
   padding: calc(7px + 0.4vw) calc(7px + 1vw);
   background: linear-gradient(250deg, #e3e3e3 5%, white 70%);
@@ -162,6 +162,10 @@ header .lang {
   border-bottom: 1px inset #f2f2f2;
   border-right: 1px inset #f2f2f2;
   overflow: hidden;
+}
+
+#assignAccountContainer:empty {
+  display: none;
 }
 
 /*---------------- #NewheaderCardPanel AFTER LOGGED ------------------------ */
@@ -455,7 +459,7 @@ footer .copyright img {
     justify-content: space-between;
   }
 
-  #headerCardPanel {
+  #NewheaderCardPanel {
     grid-column: 1;
     grid-row: 5;
     display: flex;
@@ -463,7 +467,7 @@ footer .copyright img {
     min-height: 80px;
   }
 
-  #headerCardPanel:has([data-lgd]) {
+  #NewheaderCardPanel:has([data-lgd]) {
     background-color: #005923;
   }
 
@@ -511,9 +515,9 @@ footer .copyright img {
 
 /*------------------------------------------*/
 
-@media screen and (max-width: 750px) {
-  #headerCardPanel {
-    //flex-direction: column;
+@media screen and (max-width: 850px) {
+  #NewheaderCardPanel {
+    background-color: #005923;
   }
 
   .logo-top {
@@ -523,8 +527,4 @@ footer .copyright img {
     display: flex;
     flex-direction: row;
   }
-}
-
-#assignAccountContainer:empty {
-  display: none;
 }
