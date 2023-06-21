@@ -53,11 +53,11 @@ a.btn-ro {
 }
 
 .chips {
-  //border: 1px solid var(--second-color);
   background-color: var(--first-color);
   color: white;
   border-radius: 1em;
-  padding: 0.35em 0.7em;
+  padding: 0.35em 1em;
+  min-height: 32px;
 }
 
 select {
@@ -142,7 +142,7 @@ header .lang {
   font-size: 1em;
 }
 
-#headerCardPanel {
+#NewheaderCardPanel {
   grid-column: 2 / 6;
   grid-row: 2 / 3;
   display: flex;
@@ -162,54 +162,44 @@ header .lang {
 
 /*---------------- AFTER LOGGED ------------------------ */
 
-.avatar img {
-  width: clamp(65px, 5vw, 84px);
-  clip-path: circle();
-  background-color: lightgrey;
-  opacity: 0.9;
-}
-
-.avatar-edit {
+.user-edit {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 36px;
+  width: 32px;
   aspect-ratio: 1 / 1;
-  padding: 0.7em;
+  padding: 0.5em;
   background-color: white;
-  z-index: 1001;
-  position: relative;
-  left: -2px;
-  bottom: 20px;
   border-radius: 90%;
   box-shadow: 0 0 2px;
 }
 
 #user-attr {
   display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
 .user-name {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-size: clamp(0.5em, 0.85em, 1em);
-}
-
-.user-name div:nth-child(2) {
-  gap: 15px;
+  justify-content: stretch;
+  align-items: center;
+  gap: 3px;
+  font-size: clamp(0.5em, 0.88em, 1.1em);
 }
 
 .user-name div:nth-child(2) > a:hover {
   color: green;
 }
 
+.user-perks {
+}
+
 #cart_panel {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 12px;
+  gap: 6px;
 }
 
 #cart_panel .cart {
@@ -229,13 +219,13 @@ header .lang {
   padding: 0.4em;
   width: 1em;
   clip-path: circle();
-  font-size: small;
+  font-size: x-small;
   font-weight: 500;
   color: white;
   text-align: center;
   position: relative;
-  top: -18px;
-  left: 0;
+  top: -15px;
+  left: -2px;
 }
 
 #cart_panel .cart .cart_count:where([data-cart_count=''])::after {
