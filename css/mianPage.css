@@ -1,3 +1,6 @@
+@import url("new-header.css");
+@import url("new-footer.css");
+
 :root {
   --first-color: #333666;
   --second-color: #005923;
@@ -11,10 +14,9 @@
   --box-wrap-with-max: 1680px;
 }
 
-@import ./new-header.css;
-
 main {
   width: 100%;
   min-height: 100vh;
   padding: var(--main-top-padding) 10px;
+  background-color: #005923;
 }
