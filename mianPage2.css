@@ -1,0 +1,20 @@
+:root {
+  --first-color: #333666;
+  --second-color: #005923;
+  --body-bg: #efefef;
+  --main-top-padding: 3vh;
+
+  --basic-radius: 0.25rem; /* basic radius for card/boxes */
+  --btn-h: calc(1.4rem + 0.5vh + 0.6vw);
+  --btn-radius: var(--card-radius);
+  --box-wrap-width: 78vw;
+  --box-wrap-with-max: 1680px;
+}
+
+@import ./new-header.css;
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--main-top-padding) 10px;
+}

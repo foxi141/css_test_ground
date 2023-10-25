@@ -1,135 +1,71 @@
 :root {
-  --first-color: #111000;
-  --second-color: #005923;
-  --body-bg: #efefef;
-  --card-radius: 8px;
-  --btn-h: calc(27px + 1vh);
-  --btn-radius: calc(var(--card-radius) / 2);
-
-  --header-content-width: clamp(5px, 1vh, 20px) calc(10px + 4vw);
+  --header-content-wrap: clamp(20px, calc(10px + 5vw), 20vw);
   --header-title-color: var(--first-color);
-  --header-bottom-margin: 2vh;
-  --main-content-width: 0 clamp(5px, 12vw, 30vw);
-
-  --footer-address-bg-color: var(--first-color);
-  --footer-sponsors-bg-color: white;
-  --footer-copyright-bg-color: white;
-  --footer-content-width: 2vh 5vw;
-}
-
-.btn-ro {
-  background: linear-gradient(136deg, rgba(70, 70, 70, 1), rgba(5, 5, 5, 1));
-  color: white;
-  font-size: x-small;
-  height: var(--btn-h);
-  width: max-content;
-  border-radius: var(--btn-radius);
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  overflow: hidden;
-  padding: 0 calc(var(--btn-h) / 2);
-  cursor: pointer;
-}
-
-.btn-ro:hover {
-  background: linear-gradient(rgba(100, 100, 100, 1), rgba(30, 30, 30, 1));
+  --header-subtitle-color: #a99861;
 }
 
 header {
-  margin-bottom: var(--header-bottom-margin);
-  height: clamp(auto, 10vh, 200px);
-  border-bottom: 20px solid rgba(0, 0, 0, 0.8);
-  padding: var(--header-content-width);
   display: grid;
-  grid-template-columns: 2fr auto auto;
-  grid-template-rows: 1fr auto;
-  overflow: visible;
-  background: linear-gradient(90deg, #eee, #fff);
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: min-content 1fr;
+  justify-items: stretch;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+  height: clamp(185px, max-content, 280px);
+  padding: clamp(10px, 5vw, 20px) var(--header-content-wrap);
+  background: linear-gradient(155deg, #fff 60%, #c0c0c0);
+  box-shadow: 0 -8px 0 inset #ccc;
+  border-bottom: clamp(12px, 2vw, 20px) solid rgba(0, 0, 0, 0.8);
 }
 
 header .logo-top {
-  display: flex;
-  align-items: center;
+  grid-column: 1;
   grid-row: span 2;
-}
-header .logo-top img {
-  height: clamp(160px, calc(75px + 3vw + 4vh), 230px);
-}
-header .logo-top label {
-  font-size: clamp(1.3em, calc(0.8em + 2vw), 3em);
-  font-weight: 500;
-  color: var(--header-title-color);
-  width: max-content;
-}
-
-.flags {
   display: flex;
   align-items: center;
-  justify-self: end;
-  gap: 25px;
-  font-size: 1rem;
-  margin: 0 10px;
-  grid-column: span 2;
+  & img {
+    height: clamp(70px, calc(6vw + 4vh), 170px);
+  }
 }
 
-.flags select {
-  border: var(--first-color) 1px solid;
-  padding: 7px 15px;
-  background-color: transparent;
-  color: var(--first-color);
-  border-radius: 2px;
-  min-width: 180px;
+.logo-top .c_name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  & h1 {
+    font-size: clamp(1em, 2em, 3em);
+    font-weight: 600;
+    color: var(--header-title-color);
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  & p {
+    color: var(--header-subtitle-color);
+    font-size: clamp(1em, 2.6vw, 1.5em);
+  }
 }
 
-#headerCardPanel {
-  border-bottom: 1px solid #ddd;
-  background: white;
+header .lang {
+  grid-column: 5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: calc(5px + 1vw);
+  font-size: 1em;
+}
+
+#LoginPanel {
+  grid-column: 2 / 6;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: min-content;
+  gap: clamp(1rem, 1vw, 20px);
+  padding: calc(8px + 0.5rem) calc(8px + 1rem);
+  background: linear-gradient(250deg, #e3e3e3 5%, white 70%);
   border-radius: var(--card-radius);
-  box-shadow: 0 0 10px 0px #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 20px 25px;
-  margin: 13px;
-}
-
-@media screen and (max-width: 980px) {
-  header {
-    padding: 15px 8px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  header .logo-top {
-    order: 1;
-  }
-
-  #headerCardPanel {
-    order: 3;
-  }
-
-  .btn-ro {
-    height: calc(var(--btn-h) * 1.4);
-    width: 100%;
-  }
-
-  .flags {
-    align-self: flex-end;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  header .logo-top {
-    display: flex;
-    flex-direction: column;
-    order: 1;
-  }
-}
-
-@media screen and (max-width: 450px) {
+  box-shadow: 0 0 15px 0px #bbb;
+  border-right: 2px inset #f2f2f2;
+  overflow: hidden;
 }

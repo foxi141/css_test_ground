@@ -1,12 +1,29 @@
+:root {
+  --footer-content-width: clamp(20px, calc(10px + 7vw), 20vw);
+  --footer-address-bg-color: var(--first-color);
+  --footer-address-txt-color: whitesmoke;
+  --footer-sponsors-bg-color: white;
+  --footer-copyright-bg-color: white;
+}
+
 footer {
   margin: 30px 0 0;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
-  min-height: 300px;
-  box-shadow: 0 -12px 20px #eee;
+  min-height: 200px;
+  box-shadow: 0 -12px 20px #ccc;
+  font-size: x-small;
+}
+
+footer > div {
+  min-height: 180px;
+}
+
+footer .address h4 {
   font-size: small;
+  margin-bottom: 10px;
 }
 
 footer .sponsors {
@@ -14,47 +31,68 @@ footer .sponsors {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: var(--footer-content-width);
+  padding: 15px var(--footer-content-width);
   background-color: var(--footer-sponsors-bg-color);
+}
+
+footer .sponsors img {
+  max-width: 90vw;
 }
 
 footer .address {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   justify-content: space-evenly;
-  padding: var(--footer-content-width);
+  padding: 3vh var(--footer-content-width);
   background: var(--footer-address-bg-color);
-  color: lightgray;
 }
 
-footer .address h4 {
-  margin-bottom: 10px;
+footer .address > div {
+  flex: 0 0 20%;
+  color: var(--footer-address-txt-color);
+  align-content: center;
+  margin-left: auto;
 }
 
-footer .address ul {
-  text-indent: 12px;
-  list-style-position: inside;
-  line-height: 1.2em;
+footer .address > div a {
+  color: var(--footer-address-txt-color);
 }
 
-footer .address ul li > a {
-  color: lightgray;
+.social {
+  display: flex;
+  flex-direction: column;
+}
+
+.social > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ico-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+
+.ico-social img {
+  object-fit: contain;
+  width: 28px;
+  height: auto;
 }
 
 footer .copyright {
-  padding: var(--footer-content-width);
+  padding: 15px var(--footer-content-width);
   background: var(--footer-copyright-bg-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 footer .copyright img {
   height: 4vh;
   max-width: 220px;
-}
-
-@media screen and (max-width: 910px) {
 }
