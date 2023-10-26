@@ -3,15 +3,12 @@
   --header-title-color: var(--first-color);
   --header-subtitle-color: #a99861;
   --select-color: #fff;
+  --bg-header: radial-gradient(circle, rgba(251,57,97,1) 0%, rgba(181,0,42,1) 18%, rgba(23,31,40,1) 66%);
 }
 
 header {
-  padding: 1em 1.2em;
-  background: linear-gradient(
-    99deg,
-    rgba(23, 31, 40, 1) 31%,
-    rgba(255, 0, 60, 1) 100%
-  );
+  padding: 1.2em;
+  background: var(--bg-header);
   box-shadow: 0 -2px 0 inset rgba(204, 204, 204, 0.137);
 }
 
