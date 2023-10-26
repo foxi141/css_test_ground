@@ -1,5 +1,7 @@
-@import url("new-header.css");
-@import url("new-footer.css");
+@import url('global.css');
+@import url('new-header.css');
+@import url('new-footer.css');
+@import url('btns.css');
 
 :root {
   --first-color: #333666;
@@ -7,8 +9,8 @@
   --body-bg: #efefef;
   --main-top-padding: 3vh;
 
-  --basic-radius: 0.25rem; /* basic radius for card/boxes */
-  --btn-h: calc(1.4rem + 0.5vh + 0.6vw);
+  --basic-radius: 0.35em; /* basic radius for card/boxes */
+  --btn-h: calc(1.6rem + (0.5vh + 0.6vw));
   --btn-radius: var(--card-radius);
   --box-wrap-width: 78vw;
   --box-wrap-with-max: 1680px;
@@ -18,5 +20,7 @@ main {
   width: 100%;
   min-height: 100vh;
   padding: var(--main-top-padding) 10px;
-  background-color: #005923;
+  background: #222;
+  background-size: cover;
+  background-position: center;
 }

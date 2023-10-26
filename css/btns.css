@@ -1,0 +1,48 @@
+a.btn-ro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 1 1 auto;
+  background: linear-gradient(
+    115deg,
+    rgba(110, 113, 110, 1),
+    rgba(50, 45, 55, 0.95) 50%
+  );
+  color: white;
+  font-size: 0.7em;
+  height: var(--btn-h);
+  border-radius: var(--basic-radius);
+  text-transform: uppercase;
+  padding: 0 calc(var(--btn-h) / 1.5);
+  cursor: pointer;
+  word-break: keep-all;
+  white-space: nowrap;
+  width: min-content;
+}
+
+.btn-ro:hover {
+  background: linear-gradient(90deg, rgba(70, 70, 70, 1), rgba(30, 30, 30, 1));
+}
+
+.chips {
+  background-color: var(--first-color);
+  color: white;
+  border-radius: 1em;
+  padding: 0.35em 1em;
+  min-height: 32px;
+}
+
+a:has(i) {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+a {
+  color: #333;
+}
+
+a:hover:not(.btn-ro, .chips) {
+  color: green;
+}
