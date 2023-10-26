@@ -2,11 +2,16 @@
   --header-wrap-width: 88vw;
   --header-title-color: var(--first-color);
   --header-subtitle-color: #a99861;
+  --select-color: #fff;
 }
 
 header {
   padding: 1em 1.2em;
-  background: linear-gradient(135deg, #221b1b, #c5762b);
+  background: linear-gradient(
+    99deg,
+    rgba(23, 31, 40, 1) 31%,
+    rgba(255, 0, 60, 1) 100%
+  );
   box-shadow: 0 -2px 0 inset rgba(204, 204, 204, 0.137);
 }
 
@@ -56,18 +61,17 @@ header {
   align-items: center;
   gap: calc(5px + 1vw);
   font-size: 1em;
-  border: 1px solid;
 }
 
 header .lang select {
-  border: var(--first-color) 1px solid;
+  border: var(--select-color) 1px solid;
   padding: 0.4em 1em;
   text-align: center;
   background-color: transparent;
-  color: var(--first-color);
-  border-radius: calc(var(--btn-radius) / 1.5);
+  color: var(--select-color);
+  border-radius: calc(var(--btn-radius));
   width: min-content;
-  min-width: 15vw;
+  min-width: 100px;
   max-height: 36px;
 }
 
@@ -84,13 +88,13 @@ header .lang select {
   background: linear-gradient(
     250deg,
     #e3e3e3ea 2%,
-    rgba(255, 255, 255, 0.555) 90%
+    rgba(255, 255, 255, 0.7) 90%
   );
   border-radius: var(--basic-radius);
   box-shadow: 0 0 15px 0px rgba(10, 10, 10, 0.267);
 }
 
-@media screen and (width <= 1180px) {
+@media screen and (width <= 1280px) {
   .header-wrap {
     width: 95vw;
   }
@@ -106,13 +110,11 @@ header .lang select {
 
 @media screen and (width <= 980px) {
   .header-wrap {
-    width: 95vw;
   }
   #LoginPanel {
     grid-column: span 6;
     grid-row: 4;
-    justify-content: ;
-
+    justify-content: center;
     justify-self: unset;
     width: auto;
   }

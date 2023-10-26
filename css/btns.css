@@ -18,7 +18,6 @@ a.btn-ro {
   cursor: pointer;
   word-break: keep-all;
   white-space: nowrap;
-  width: min-content;
 }
 
 .btn-ro:hover {
