@@ -3,7 +3,7 @@
   --header-title-color: var(--first-color);
   --header-subtitle-color: #a99861;
   --select-color: #fff;
-  --bg-header: radial-gradient(circle, rgba(251,57,97,1) 0%, rgba(181,0,42,1) 18%, rgba(23,31,40,1) 66%);
+  --bg-header: #333;
 }
 
 header {
@@ -28,7 +28,7 @@ header {
   grid-row: span 2;
   display: flex;
   & img {
-    height: clamp(60px, calc(3vh + 4vw), 100px);
+    height: clamp(60px, calc(3vh + 4vw), 120px);
   }
 }
 
