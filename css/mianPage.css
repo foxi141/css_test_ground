@@ -10,11 +10,8 @@
   --main-top-padding: 3vh;
 
   --basic-radius: 0.35em; /* basic radius for card/boxes */
-  --btn-h: calc(1.6rem + (0.5vh + 0.6vw));
-  --btn-radius: var(--card-radius);
   --box-wrap-width: 78vw;
   --box-wrap-with-max: 1680px;
-  
 }
 
 main {
@@ -24,4 +21,6 @@ main {
   background: #222;
   background-size: cover;
   background-position: center;
+  padding: 0;
+  box-sizing: border-box;
 }

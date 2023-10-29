@@ -7,7 +7,7 @@
 }
 
 header {
-  padding: 1.2em;
+  padding: 1em;
   background: var(--bg-header);
   box-shadow: 0 -2px 0 inset rgba(204, 204, 204, 0.137);
 }
@@ -16,8 +16,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 10em 1fr;
   grid-template-rows: min-content 1fr;
-  justify-content: stretch;
-  align-content: stretch;
+  justify-content: start;
+  align-content: start;
   gap: 1vw;
   width: var(--header-wrap-width);
   margin: 0 auto;
@@ -28,7 +28,7 @@ header {
   grid-row: span 2;
   display: flex;
   & img {
-    height: clamp(60px, calc(3vh + 4vw), 120px);
+    height: clamp(60px, calc(3vh + 4.5vw), 120px);
   }
 }
 
@@ -58,6 +58,8 @@ header {
   align-items: center;
   gap: calc(5px + 1vw);
   font-size: 1em;
+  height: min-content;
+  padding: 8px;
 }
 
 .lang select {
@@ -67,8 +69,7 @@ header {
   background-color: transparent;
   color: var(--select-color);
   border-radius: calc(var(--btn-radius));
-  width: min-content;
-  min-width: 100px;
+  width: max-content;
   max-height: 36px;
 }
 
@@ -80,9 +81,9 @@ header {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   width: min-content;
-  gap: 0.7em;
+  gap: 1em;
   overflow: hidden;
-  padding: calc(8px + 0.5em) calc(8px + 0.7em);
+  padding: calc(7px + 0.5em) calc(7px + 0.7em);
   background: linear-gradient(
     250deg,
     #e3e3e3ea 2%,
@@ -122,10 +123,10 @@ header {
   }
 }
 
-@media screen and (width <= 580px) {
-  .header-wrap {
-  }
+@media screen and (width <= 550px) {
   .LoginPanel {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-column: span 6;
     grid-row: 4;
     justify-content: center;
@@ -133,11 +134,17 @@ header {
     width: auto;
   }
   .logo-top {
-    grid-column: 1;
+    grid-column: span 6;
     grid-row: 2;
+    justify-content: center;
+    & img {
+      height: 100px;
+    }
   }
   .lang {
-    grid-column: 2 / 6;
+    grid-column: span 6;
     grid-row: 1;
+  }
+  .lang select {
   }
 }
