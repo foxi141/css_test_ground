@@ -60,7 +60,7 @@ header {
   font-size: 1em;
 }
 
-header .lang select {
+.lang select {
   border: var(--select-color) 1px solid;
   padding: 0.4em 1em;
   text-align: center;
@@ -72,12 +72,13 @@ header .lang select {
   max-height: 36px;
 }
 
-#LoginPanel {
+.LoginPanel {
   grid-column: 3 / 6;
   grid-row: 2 / 3;
   justify-self: end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   width: min-content;
   gap: 0.7em;
   overflow: hidden;
@@ -95,7 +96,7 @@ header .lang select {
   .header-wrap {
     width: 95vw;
   }
-  #LoginPanel {
+  .LoginPanel {
     grid-column: 2 / 6;
     grid-row: 4;
   }
@@ -108,7 +109,7 @@ header .lang select {
 @media screen and (width <= 980px) {
   .header-wrap {
   }
-  #LoginPanel {
+  .LoginPanel {
     grid-column: span 6;
     grid-row: 4;
     justify-content: center;
@@ -117,6 +118,26 @@ header .lang select {
   }
   .logo-top {
     grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+@media screen and (width <= 580px) {
+  .header-wrap {
+  }
+  .LoginPanel {
+    grid-column: span 6;
+    grid-row: 4;
+    justify-content: center;
+    justify-self: unset;
+    width: auto;
+  }
+  .logo-top {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .lang {
+    grid-column: 2 / 6;
     grid-row: 1;
   }
 }
