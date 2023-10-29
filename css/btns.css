@@ -1,6 +1,6 @@
 :root {
   --btn-h: calc(1.8rem + (0.5vh + 0.6vw));
-  --btn-radius: var(--card-radius);
+  --btn-radius: var(--basic-radius);
 }
 
 a.btn-ro {
