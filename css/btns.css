@@ -1,5 +1,5 @@
 :root {
-  --btn-h: calc(1.8rem + (0.5vh + 0.6vw));
+  --btn-h: calc(1.5rem + (0.5vh + 0.6vw));
   --btn-radius: var(--basic-radius);
 }
 
