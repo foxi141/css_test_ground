@@ -150,8 +150,6 @@ header {
 
     & img {
       height: 110px;
-      border: 1px solid;
-      background-color: antiquewhite;
     }
     & .c_name p {
       line-height: 0.5;
