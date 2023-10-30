@@ -129,6 +129,7 @@ header {
 
 @media screen and (width <= 640px) {
   .header-wrap {
+    width: 96vw;
     gap: 1rem;
   }
   .LoginPanel {
