@@ -85,9 +85,9 @@ header {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   width: min-content;
-  gap: 1em;
+  gap: 1rem;
   overflow: hidden;
-  padding: calc(7px + 0.5em) calc(7px + 0.7em);
+  padding: calc(10px + 0.5rem) calc(7px + 0.7em);
   background: linear-gradient(
     250deg,
     #e3e3e3ea 2%,

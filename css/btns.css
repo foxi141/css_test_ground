@@ -1,6 +1,7 @@
 :root {
-  --btn-h: calc(1.5rem + (0.5vh + 0.5vw));
+  --btn-h: calc(1.8rem + (0.5vh + 0.5vw));
   --btn-radius: var(--basic-radius);
+  --btn-bg-action-color: ;
 }
 
 a.btn-ro {
@@ -17,6 +18,7 @@ a.btn-ro {
   color: white;
   font-size: 0.7em;
   height: var(--btn-h);
+  max-height: 48px;
   border-radius: var(--basic-radius);
   text-transform: uppercase;
   padding: 0 calc(var(--btn-h) / 1.5);
