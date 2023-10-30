@@ -21,11 +21,9 @@ header {
   gap: 1vw;
   width: var(--header-wrap-width);
   margin: 0 auto;
-  background-color: #a99861;
 }
 
 .logo-top {
-  background-color: green;
   grid-column: 1;
   grid-row: span 3;
   display: flex;
@@ -38,7 +36,7 @@ header {
 
 .logo-top .c_name {
   display: flex;
-  flex-direction: column;
+
   align-items: flex-start;
   gap: 0.4em;
   & h1 {
@@ -51,7 +49,7 @@ header {
 
   & p {
     color: var(--header-subtitle-color);
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1;
   }
 }
@@ -95,6 +93,7 @@ header {
     #e3e3e3ea 2%,
     rgba(255, 255, 255, 0.7) 90%
   );
+  background-color: yellow;
   border-radius: var(--basic-radius);
   box-shadow: 0 0 15px 0px rgba(10, 10, 10, 0.267);
 }
@@ -104,11 +103,9 @@ header {
 }
 
 @media screen and (width <= 1240px) {
-  .header-wrap {
-  }
   .LoginPanel {
     grid-column: 2 / 6;
-    grid-row: 4;
+    grid-row: 3 / 4;
   }
   .logo-top {
     grid-column: 1;
@@ -130,7 +127,7 @@ header {
   }
 }
 
-@media screen and (width <= 550px) {
+@media screen and (width <= 640px) {
   .LoginPanel {
     display: grid;
     grid-template-columns: 1fr;
@@ -147,14 +144,12 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &img {
-      height: 100px;
+    & img {
+      height: 120px;
     }
   }
   .lang {
     grid-column: span 6;
     grid-row: 1;
-  }
-  .lang select {
   }
 }
