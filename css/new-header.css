@@ -14,19 +14,22 @@ header {
 
 .header-wrap {
   display: grid;
-  grid-template-columns: 1fr 10px 1fr;
-  grid-template-rows: min-content 1fr;
+  grid-template-columns: 2fr 10px 1fr;
+  grid-template-rows: auto auto 1fr;
   justify-content: start;
   align-content: start;
   gap: 1vw;
   width: var(--header-wrap-width);
   margin: 0 auto;
+  background-color: #a99861;
 }
 
 .logo-top {
+  background-color: green;
   grid-column: 1;
-  grid-row: span 2;
+  grid-row: span 3;
   display: flex;
+  gap: 1rem;
   align-items: center;
   & img {
     height: clamp(60px, calc(3vh + 4.5vw), 120px);
@@ -48,7 +51,8 @@ header {
 
   & p {
     color: var(--header-subtitle-color);
-    font-size: 1rem;
+    font-size: 1.3em;
+    line-height: 1;
   }
 }
 
@@ -99,7 +103,7 @@ header {
   display: none;
 }
 
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1240px) {
   .header-wrap {
   }
   .LoginPanel {
