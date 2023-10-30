@@ -9,6 +9,7 @@
 header {
   background: var(--bg-header);
   box-shadow: 0 -2px 0 inset rgba(204, 204, 204, 0.137);
+  padding: 1rem 0;
 }
 
 .header-wrap {
