@@ -67,12 +67,12 @@ header {
 }
 
 .lang select {
-  border: var(--select-color) 1px solid;
+  border: #ccc 1px solid;
   padding: 0.4em 1em;
   text-align: center;
   background-color: transparent;
   color: var(--select-color);
-  border-radius: calc(var(--btn-radius));
+  border-radius: 0.2rem;
   width: max-content;
   max-height: 36px;
 }
