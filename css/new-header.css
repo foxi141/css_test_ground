@@ -149,7 +149,7 @@ header {
     justify-content: center;
 
     & img {
-      height: 110px;
+      height: 90px;
     }
     & .c_name p {
       line-height: 0.5;
