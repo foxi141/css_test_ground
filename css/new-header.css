@@ -128,12 +128,10 @@ header {
 }
 
 @media screen and (width <= 640px) {
-  header {
-    left: env(titlebar-area-x);
-    position: fixed;
-  }
+
   .header-wrap {
     gap: 1rem;
+    left: env(titlebar-area-x);
   }
   .LoginPanel {
     display: grid;
