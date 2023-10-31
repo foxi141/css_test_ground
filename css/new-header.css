@@ -36,7 +36,6 @@ header {
 
 .logo-top .c_name {
   display: flex;
-
   align-items: flex-start;
   gap: 0.4em;
   & h1 {
@@ -129,6 +128,7 @@ header {
 
 @media screen and (width <= 640px) {
   .header-wrap {
+    
     gap: 1rem;
   }
   .LoginPanel {
