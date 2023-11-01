@@ -83,12 +83,11 @@ footer .copyright {
   height: auto;
   background: var(--footer-copyright-bg-color);
 }
-.copyright .footer-lang {
-}
 
 .copyright .comp_logos {
   display: flex;
   flex-wrap: wrap;
+  gap: 1em;
   justify-content: space-between;
   width: 96%;
 }
@@ -96,4 +95,13 @@ footer .copyright {
 .comp_logos img {
   max-height: 50px;
   max-width: 220px;
+}
+
+@media (width <= 980px) {
+  .address > div {
+    padding-left: 0;
+  }
+  .copyright .comp_logos {
+    justify-content: center;
+  }
 }

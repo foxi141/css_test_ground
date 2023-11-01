@@ -12,6 +12,10 @@
   --basic-radius: calc(0.2em + 0.2vw); /* basic radius for card/boxes */
   --box-wrap-width: 80vw;
   --box-wrap-with-max: 1680px;
+
+  --screen-tab: 1280px;
+  --screen-mobile-new: 960px;
+  --screen-mobile-old: 640px;
 }
 
 main {
