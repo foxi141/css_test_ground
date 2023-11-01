@@ -31,21 +31,29 @@ footer .sponsors {
 
 footer .address {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 330px));
+  align-content: center;
+  justify-content: center;
   gap: 2rem;
   font-size: small;
   background: var(--footer-address-bg-color);
   padding: 1.5rem;
 }
 
+.address > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .address a,
-p {
+p,
+h4 {
   color: var(--footer-address-txt-color);
 }
 
 .social {
+  display: grid;
 }
 
 .social > div {
@@ -60,7 +68,7 @@ p {
 
 .ico-social img {
   object-fit: contain;
-  width: 28px;
+  width: 2em;
   height: auto;
 }
 
