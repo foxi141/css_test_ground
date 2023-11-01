@@ -16,7 +16,7 @@ a.btn-ro {
     rgba(50, 45, 55, 0.95) 50%
   );
   color: white;
-  font-size: 0.7em;
+  font-size: clamp(0.7rem, -0.3333rem + 1vw, 1.4rem);
   height: var(--btn-h);
   max-height: 48px;
   border-radius: var(--basic-radius);

@@ -48,7 +48,7 @@ header {
 
   & p {
     color: var(--header-subtitle-color);
-    font-size: 1.2em;
+    font-size: clamp(1rem, -0.3333rem + 2vw, 3rem);
     line-height: 1;
   }
 }
@@ -128,7 +128,6 @@ header {
 
 @media screen and (width <= 640px) {
   .header-wrap {
-    
     gap: 1rem;
   }
   .LoginPanel {
