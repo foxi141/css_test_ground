@@ -13,9 +13,21 @@
   --box-wrap-width: 80vw;
   --box-wrap-with-max: 1680px;
 
-  --screen-tab: 1280px;
-  --screen-mobile-new: 960px;
-  --screen-mobile-old: 640px;
+  --header-wrap-width: 88vw;
+  --header-title-color: var(--first-color);
+  --header-subtitle-color: #a99861;
+  --select-color: #fff;
+  --bg-header: #333;
+
+  --footer-content-width: 80vw;
+  --footer-address-bg-color: var(--first-color);
+  --footer-address-txt-color: whitesmoke;
+  --footer-sponsors-bg-color: white;
+  --footer-copyright-bg-color: white;
+
+  --btn-h: calc(1.8rem + (0.5vh + 0.5vw));
+  --btn-radius: var(--basic-radius);
+  --btn-bg-action-color: ;
 }
 
 main {

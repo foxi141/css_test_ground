@@ -1,9 +1,3 @@
-:root {
-  --btn-h: calc(1.8rem + (0.5vh + 0.5vw));
-  --btn-radius: var(--basic-radius);
-  --btn-bg-action-color: ;
-}
-
 a.btn-ro {
   display: flex;
   align-items: center;
@@ -31,12 +25,6 @@ a.btn-ro {
   background: linear-gradient(90deg, rgba(70, 70, 70, 1), rgba(30, 30, 30, 1));
 }
 
-@media screen and (width <= 640px) {
-  a.btn-ro {
-    height: calc(var(--btn-h) * 1.2);
-  }
-}
-
 .chips {
   background-color: var(--first-color);
   color: white;
@@ -57,4 +45,10 @@ a {
 
 a:hover:not(.btn-ro, .chips) {
   color: green;
+}
+
+@media (width <= 640px) {
+  a.btn-ro {
+    height: calc(var(--btn-h) * 1.2);
+  }
 }
