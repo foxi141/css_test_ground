@@ -23,27 +23,26 @@ footer .sponsors {
 }
 
 footer .address {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 330px));
-  align-content: center;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   font-size: small;
   background: var(--footer-address-bg-color);
-  padding: 1.5rem;
+  padding: 1.5rem 3rem;
 }
 
 .address > div {
   display: flex;
   flex-direction: column;
+  flex: 2 0 250px;
   gap: 10px;
-  padding-left: 20%;
+  padding-left: 10%;
 }
 
 .address .social > div {
   display: flex;
-  flex-direction: column;
-  gap: 7px;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
 .address a,
@@ -54,8 +53,9 @@ h4 {
 
 .ico-social {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   width: max-content;
 }
 
@@ -87,13 +87,4 @@ footer .copyright {
 .comp_logos img {
   max-height: 50px;
   max-width: 220px;
-}
-
-@media (width <= 980px) {
-  .address > div {
-    padding-left: 0;
-  }
-  .copyright .comp_logos {
-    justify-content: center;
-  }
 }
