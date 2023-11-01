@@ -21,6 +21,7 @@ footer .sponsors {
   justify-content: space-around;
   gap: 2rem;
   margin: 0 auto;
+  padding: 1.5rem;
   background-color: var(--footer-sponsors-bg-color);
   & img {
     display: block;
@@ -32,16 +33,14 @@ footer .address {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+  justify-content: space-around;
   gap: 2rem;
   font-size: small;
   background: var(--footer-address-bg-color);
+  padding: 1.5rem;
 }
 
-footer .address > div {
-  color: var(--footer-address-txt-color);
-}
-
-footer .address > div a {
+.address a , p {
   color: var(--footer-address-txt-color);
 }
 
