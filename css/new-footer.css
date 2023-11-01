@@ -40,7 +40,8 @@ footer .address {
   padding: 1.5rem;
 }
 
-.address a , p {
+.address a,
+p {
   color: var(--footer-address-txt-color);
 }
 
@@ -48,7 +49,6 @@ footer .address {
 }
 
 .social > div {
-  gap: 10px;
 }
 
 .ico-social {
