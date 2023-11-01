@@ -9,7 +9,7 @@
   --body-bg: #efefef;
   --main-top-padding: 3vh;
 
-  --basic-radius: 0.4em; /* basic radius for card/boxes */
+  --basic-radius: calc(0.2em + 0.2vw); /* basic radius for card/boxes */
   --box-wrap-width: 80vw;
   --box-wrap-with-max: 1680px;
 }
@@ -18,7 +18,6 @@ main {
   width: 100%;
   min-height: 100vh;
   padding: var(--main-top-padding) 10px;
-  background: #222;
   background-size: cover;
   background-position: center;
   padding: 0;
