@@ -63,7 +63,7 @@ header {
   text-align: center;
   background-color: transparent;
   color: var(--select-color);
-  border-radius: 0.2rem;
+  border-radius: calc(var(--basic-radius) / 1.5);
   width: max-content;
   max-height: 36px;
 }
