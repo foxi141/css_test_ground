@@ -4,11 +4,6 @@ a.btn-ro {
   justify-content: center;
   gap: 1rem;
   flex: 1 1 auto;
-  background: linear-gradient(
-    115deg,
-    rgba(110, 113, 110, 1),
-    rgba(50, 45, 55, 0.95) 50%
-  );
   color: white;
   font-size: clamp(0.7rem, -0.3333rem + 1vw, 1.4rem);
   height: var(--btn-h);
@@ -19,6 +14,22 @@ a.btn-ro {
   cursor: pointer;
   word-break: keep-all;
   white-space: nowrap;
+}
+
+a.btn-ro.normal {
+  background: radial-gradient(
+    circle,
+    rgba(51, 51, 51, 1) 10%,
+    rgba(50, 50, 50, 1) 100%
+  );
+}
+
+a.btn-ro.accent {
+  background: radial-gradient(
+    circle,
+    rgb(241, 1, 57) 10%,
+    rgb(221, 0, 48) 100%
+  );
 }
 
 .btn-ro:hover {
@@ -33,7 +44,7 @@ a.btn-ro {
   min-height: 32px;
 }
 
-a:has(i) {
+a.btn-ro:has(i) {
   display: flex;
   align-items: center;
   gap: 0.2em;
