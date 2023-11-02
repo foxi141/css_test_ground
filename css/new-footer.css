@@ -70,10 +70,14 @@ footer .copyright {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.8rem;
   padding: 1rem;
   height: auto;
   background: var(--footer-copyright-bg-color);
+}
+
+footer .copyright .footer-lang {
+  font-size: clamp(1rem, -0.3333rem + 1.6vw, 2rem);
 }
 
 .copyright .comp_logos {
@@ -90,13 +94,11 @@ footer .copyright {
 }
 
 @media (width <= 640px) {
-  .copyright .comp_logos{
+  .copyright .comp_logos {
     justify-content: center;
   }
   .copyright .footer-lang {
     align-items: center;
     align-content: center;
-  } 
-
+  }
 }
-
