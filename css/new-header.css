@@ -58,7 +58,7 @@ header {
 }
 
 .lang select {
-  border: #ccc 1px solid;
+  border: #ccc 1px solid !important;
   padding: 0.4em 1em;
   text-align: center;
   background-color: transparent;

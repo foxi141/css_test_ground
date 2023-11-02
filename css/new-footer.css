@@ -85,6 +85,18 @@ footer .copyright {
 }
 
 .comp_logos img {
-  max-height: 50px;
+  max-height: 40px;
   max-width: 220px;
 }
+
+@media (width <= 640px) {
+  .copyright .comp_logos{
+    justify-content: center;
+  }
+  .copyright .footer-lang {
+    align-items: center;
+    align-content: center;
+  } 
+
+}
+
