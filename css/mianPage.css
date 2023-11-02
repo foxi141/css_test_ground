@@ -9,7 +9,7 @@
   --body-bg: #efefef;
   --main-top-padding: 3vh;
 
-  --basic-radius: calc(0.2em + 0.2vw); /* basic radius for card/boxes */
+  --basic-radius: calc(0.2em + 0.1vw); /* basic radius for card/boxes */
   --box-wrap-width: 80vw;
   --box-wrap-with-max: 1680px;
 
@@ -43,5 +43,5 @@ main {
 .main-wrap {
   width: var(--box-wrap-width);
   max-width: var(--box-wrap-with-max);
-  margin: 2rem auto;
+  margin: 3rem auto;
 }
