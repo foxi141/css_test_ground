@@ -6,8 +6,8 @@ header {
 
 .header-wrap {
   display: grid;
-  grid-template-columns: 2fr 10px 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   justify-content: start;
   align-content: start;
   gap: 1vw;
@@ -16,8 +16,8 @@ header {
 }
 
 .logo-top {
-  grid-column: 1;
-  grid-row: span 3;
+  grid-column: 1 / 2;
+  grid-row: span 2;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -40,13 +40,13 @@ header {
 
   & p {
     color: var(--header-subtitle-color);
-    font-size: clamp(1rem, -0.3333rem + 2vw, 3rem);
+    font-size: clamp(1rem, -0.3333rem + 2vw, 2rem);
     line-height: 1;
   }
 }
 
 .lang {
-  grid-column: 3 / 6;
+  grid-column: 3 / 4;
   grid-row: 1;
   display: flex;
   justify-content: flex-end;
@@ -69,13 +69,13 @@ header {
 }
 
 .LoginPanel {
-  grid-column: 3 / 6;
+  grid-column: 2 / 4;
   grid-row: 2 / 3;
   justify-self: end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  width: min-content;
+  width: fit-content;
   gap: 1rem;
   overflow: hidden;
   padding: calc(10px + 0.5rem) calc(7px + 0.7em);
@@ -84,7 +84,7 @@ header {
     #e3e3e3ea 2%,
     rgba(255, 255, 255, 0.7) 90%
   );
-  background-color: rgb(231, 231, 154);
+  background-color: rgb(226, 226, 45);
   border-radius: var(--basic-radius);
   box-shadow: 0 0 15px 0px rgba(10, 10, 10, 0.267);
 }
@@ -93,9 +93,23 @@ header {
   display: none;
 }
 
+.LoginPanel[data-logged] {
+  background-color: red;
+  & .buttons > a {
+    width: fit-content;
+    word-break: keep-all;
+    color: red;
+    font-size: 0.9em;
+  }
+  & #cart_panel {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
 @media (width <= 1260px) {
   .LoginPanel {
-    grid-column: 2 / 6;
+    grid-column: 2 / 4;
     grid-row: 3 / 4;
   }
   .logo-top {
@@ -123,6 +137,7 @@ header {
     gap: 1rem;
     width: 96%;
   }
+
   .LoginPanel {
     display: grid;
     grid-template-columns: 1fr;
