@@ -31,7 +31,7 @@ footer .address {
   padding: 1.5rem 3rem;
 }
 
-.address > div {
+footer .address > div {
   display: flex;
   flex-direction: column;
   flex: 2 0 250px;
@@ -39,16 +39,18 @@ footer .address {
   padding-left: 10%;
 }
 
-.address .social > div {
+footer .address .social > div {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
 }
 
-.address a,
-p,
-h4 {
-  color: var(--footer-address-txt-color);
+footer .address {
+  & a,
+  p,
+  h4 {
+    color: var(--footer-address-txt-color);
+  }
 }
 
 .ico-social {

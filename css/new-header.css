@@ -104,12 +104,10 @@ header {
   & #cart_panel {
     grid-column: 2;
     grid-row: 2;
-    background-color: pink;
-  }
-  & .busket {
-    background-color: green;
     display: flex;
     justify-content: space-between;
+  }
+  & .busket {
   }
 }
 

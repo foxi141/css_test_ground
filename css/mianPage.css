@@ -39,3 +39,9 @@ main {
   padding: 0;
   box-sizing: border-box;
 }
+
+.main-wrap {
+  width: var(--box-wrap-width);
+  max-width: var(--box-wrap-with-max);
+  margin: 2rem auto;
+}
