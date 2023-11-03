@@ -103,4 +103,8 @@ footer .copyright .footer-lang {
     align-items: center;
     align-content: center;
   }
+  .comp_logos img {
+    max-height: 30px;
+    max-width: 40%;
+  }
 }
