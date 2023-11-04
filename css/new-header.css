@@ -79,7 +79,7 @@ header {
   grid-template-rows: auto;
   width: fit-content;
   height: min-content;
-  gap: 1rem;
+  column-gap: 1rem;
   overflow: hidden;
   padding: calc(10px + 0.5rem) calc(7px + 0.7em);
   background: linear-gradient(
