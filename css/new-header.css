@@ -170,9 +170,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    & .c_name p {
-      line-height: 0.5;
-    }
   }
   .lang {
     grid-column: span 6;
