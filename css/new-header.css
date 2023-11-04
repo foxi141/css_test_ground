@@ -19,6 +19,7 @@ header {
   grid-column: 1 / 2;
   grid-row: span 2;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.6rem;
   align-items: center;
   height: fit-content;
@@ -95,34 +96,6 @@ header {
   display: none;
 }
 
-.LoginPanel[data-logged] {
-  background-color: rgb(202, 74, 74);
-  & .buttons > a {
-    width: fit-content;
-    word-break: keep-all;
-    font-size: 0.9rem;
-  }
-  & #cart_panel {
-    grid-column: 2;
-    grid-row: 2;
-    display: flex;
-    justify-content: space-around;
-    align-content: start;
-    align-items: center;
-  }
-  & .busket {
-    & img {
-      width: 42px;
-      aspect-ratio: 1 / 1;
-    }
-    & a.cart_delete {
-      color: red;
-      position: relative;
-      bottom: 15px;
-    }
-  }
-}
-
 @media (width <= 1260px) {
   .LoginPanel {
     grid-column: 2 / 4;
@@ -174,5 +147,33 @@ header {
   .lang {
     grid-column: span 6;
     grid-row: 1;
+  }
+}
+
+.LoginPanel[data-logged] {
+  background-color: rgb(202, 74, 74);
+  & .buttons > a {
+    width: fit-content;
+    word-break: keep-all;
+    font-size: 0.9rem;
+  }
+  & #cart_panel {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-around;
+    align-content: start;
+    align-items: center;
+  }
+  & .busket {
+    & img {
+      width: 42px;
+      aspect-ratio: 1 / 1;
+    }
+    & a.cart_delete {
+      color: red;
+      position: relative;
+      bottom: 15px;
+    }
   }
 }
