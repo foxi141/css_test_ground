@@ -22,7 +22,7 @@ header {
   gap: 1rem;
   align-items: center;
   & img {
-    height: clamp(65px, calc(3vh + 4.5vw), 120px);
+    height: clamp(75px, calc(3vh + 4.5vw), 120px);
   }
 }
 
@@ -40,7 +40,7 @@ header {
 
   & p {
     color: var(--header-subtitle-color);
-    font-size: clamp(1rem, -0.3333rem + 2vw, 2rem);
+    font-size: clamp(1.3rem, -0.3333rem + 2vw, 2.6rem);
     line-height: 1;
   }
 }
