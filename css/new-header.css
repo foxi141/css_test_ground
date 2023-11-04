@@ -21,7 +21,6 @@ header {
   display: flex;
   column-gap: 0.6rem;
   align-items: center;
-  background-color: aqua;
   height: fit-content;
   overflow: hidden;
   & img {
