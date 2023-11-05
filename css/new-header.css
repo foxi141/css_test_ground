@@ -151,7 +151,6 @@ header {
 }
 
 .LoginPanel[data-logged] {
-  background-color: rgb(202, 74, 74);
   & .buttons > a {
     width: fit-content;
     word-break: keep-all;
@@ -164,16 +163,32 @@ header {
     justify-content: space-around;
     align-content: start;
     align-items: center;
+
+    & .clock {
+      background-color: pink;
+      font-size: 0.9rem;
+    }
   }
+
   & .busket {
+    display: flex;
     & img {
-      width: 42px;
+      width: 2rem;
       aspect-ratio: 1 / 1;
     }
-    & a.cart_delete {
-      color: red;
-      position: relative;
-      bottom: 15px;
-    }
   }
+  & a.cart_delete {
+    color: red;
+    position: relative;
+    bottom: 15px;
+  }
+}
+
+.busket > a.cart_count::after {
+  content: attr(data-cart_count);
+  font-size: 1rem;
+}
+
+.busket a.cart_count[data-cart_count=''] a.cart_delete {
+  background-color: green;
 }
