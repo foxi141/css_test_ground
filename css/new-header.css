@@ -156,39 +156,44 @@ header {
     word-break: keep-all;
     font-size: 0.9rem;
   }
-  & #cart_panel {
-    grid-column: 2;
-    grid-row: 2;
-    display: flex;
-    justify-content: space-around;
-    align-content: start;
-    align-items: center;
+}
 
-    & .clock {
-      background-color: pink;
-      font-size: 0.9rem;
-    }
-  }
+.LoginPanel[data-logged] #cart_panel {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-  & .busket {
-    display: flex;
-    & img {
-      width: 2rem;
-      aspect-ratio: 1 / 1;
-    }
-  }
-  & a.cart_delete {
-    color: red;
-    position: relative;
-    bottom: 15px;
+.LoginPanel[data-logged] #cart_panel .busket {
+  display: flex;
+  & img {
+    width: 1.6rem;
+    aspect-ratio: 1 / 1;
   }
 }
 
-.busket > a.cart_count::after {
+.LoginPanel[data-logged] #cart_panel .busket::after {
   content: attr(data-cart_count);
-  font-size: 1rem;
+  font-size: 0.8rem;
+  position: relative;
+  left: -3px;
+  top: -5px;
+  background-color: orange;
+  padding: 0.4rem;
+  clip-path: circle();
+  z-index: 10;
 }
 
-.busket a.cart_count[data-cart_count=''] a.cart_delete {
-  background-color: green;
+& .clock {
+  font-size: 0.9rem;
+}
+& #cart_panel[data-cart_count=''] a.cart_delete {
+  visibility: collapse;
+  position: relative;
+  bottom: 0.1lh;
 }
