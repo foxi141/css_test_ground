@@ -79,7 +79,7 @@ header {
   background: linear-gradient(
     250deg,
     #e3e3e3ea 2%,
-    rgba(255, 255, 255, 0.7) 90%
+    rgba(255, 255, 255, 0.5) 90%
   );
   background-color: rgba(250, 204, 79, 0.993);
   border-radius: var(--basic-radius);
@@ -136,6 +136,7 @@ header {
 /* header panel after login */
 
 .LoginPanel[data-logged] {
+  gap:1rem;
   & .buttons{
     display: flex;
     justify-content: flex-end;
@@ -147,15 +148,18 @@ header {
     font-size: var(--txt-small);
   }
   & .username{
-    display: flex;
-    flex-direction: column;
+    grid-column: 1;
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
     gap:3px;
     & h4{
       color:darkslateblue;
     }
     & .logout{
       font-size: var(--txt-small);
-      margin: 8px 0;
+      
     }
   }
 }
@@ -177,7 +181,6 @@ header {
     }
   }
 }
-
 .LoginPanel[data-logged] #cart_panel .busket:not([data-cart_count='']):after {
   content: attr(data-cart_count);
   font-size:var(--txt-small);
@@ -195,7 +198,36 @@ header {
   position: relative;
   bottom: 0.1lh;
 }
-
 & p.clock {
   font-size: var(--txt-small);
+}
+
+@media (width < 640px) {
+  .LoginPanel[data-logged]{
+
+    & .username{
+      grid-column: span 3;
+      grid-row: 1;
+      & h4{
+        grid-column: span 3;
+      }
+      & .membership{
+        grid-column: 1 / 3;
+        grid-row: 2;
+      }
+      & .logout{
+        justify-self: end;
+      }
+    }
+    & .buttons {
+      grid-column: span 3;
+      grid-row: 2;
+    }
+    & #cart_panel{
+      grid-column: span 3;
+      grid-row: 3;
+      justify-content:space-around;
+    }
+    
+  } 
 }
