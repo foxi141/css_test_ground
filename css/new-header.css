@@ -34,7 +34,7 @@ header {
   display: flex;
   gap: 0.4em;
   & h1 {
-    font-size: 2rem;
+    font-size: clamp(1.2rem, -0.3333rem + 1.7vw, 2.3rem);
     font-weight: 600;
     color: var(--header-title-color);
     text-transform: uppercase;
@@ -42,8 +42,8 @@ header {
   }
   & p {
     color: var(--header-subtitle-color);
-    font-size: clamp(1.3rem, -0.3333rem + 2vw, 2.6rem);
-    font-weight: 400;
+    font-size: clamp(1rem, -0.3333rem + 1.6vw, 2.3rem);
+    font-weight: 300;
   }
 }
 
@@ -155,6 +155,10 @@ header {
     width: fit-content;
     word-break: keep-all;
     font-size: 0.9rem;
+  }
+  & .username{
+    display: flex;
+    flex-direction: column;
   }
 }
 
