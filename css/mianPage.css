@@ -13,13 +13,13 @@
   --box-wrap-width: 80vw;
   --box-wrap-with-max: 1680px;
 
-  --header-wrap-width: 88vw;
+  --header-wrap-width: 80vw;
   --header-title-color: var(--first-color);
   --header-subtitle-color: #a99861;
   --select-color: #fff;
   --bg-header: #333;
 
-  --footer-content-width: 80vw;
+  --footer-content-width: 86vw;
   --footer-address-bg-color: var(--first-color);
   --footer-address-txt-color: whitesmoke;
   --footer-sponsors-bg-color: white;
@@ -36,7 +36,6 @@ main {
   padding: var(--main-top-padding) 10px;
   background-size: cover;
   background-position: center;
-  padding: 0;
   box-sizing: border-box;
 }
 
