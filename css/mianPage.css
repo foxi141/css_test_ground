@@ -11,9 +11,9 @@
 
   --basic-radius: calc(0.2em + 0.1vw); /* basic radius for card/boxes */
   --box-wrap-width: 80vw;
-  --box-wrap-with-max: 1680px;
+  --box-wrap-with-max: 1580px;
 
-  --header-wrap-width: 80vw;
+  --header-wrap-width: 88vw;
   --header-title-color: var(--first-color);
   --header-subtitle-color: #a99861;
   --select-color: #fff;
@@ -28,6 +28,8 @@
   --btn-h: calc(1.8rem + (0.5vh + 0.5vw));
   --btn-radius: var(--basic-radius);
   --btn-bg-action-color: ;
+
+  --txt-small: clamp(1rem, -0.3rem + 1.4vw, 1.6rem)
 }
 
 main {
