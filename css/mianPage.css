@@ -2,18 +2,19 @@
 @import url('new-header.css');
 @import url('new-footer.css');
 @import url('btns.css');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700;800&display=swap');
 
 :root {
   --first-color: #333666;
   --second-color: #005923;
-  --body-bg: #efefef;
-  --main-top-padding: 3vh;
+  --body-bg: #333;
+  --main-top-padding: 4vw;
 
-  --basic-radius: calc(0.2em + 0.1vw); /* basic radius for card/boxes */
+  --basic-radius: calc(0.2em + 0.3vw); /* basic radius for card/boxes */
   --box-wrap-width: 80vw;
   --box-wrap-with-max: 1580px;
 
-  --header-wrap-width: 88vw;
+  --header-wrap-width: 86vw;
   --header-title-color: var(--first-color);
   --header-subtitle-color: #a99861;
   --select-color: #fff;
@@ -29,7 +30,8 @@
   --btn-radius: var(--basic-radius);
   --btn-bg-action-color: ;
 
-  --txt-small: clamp(1rem, -0.3rem + 1.4vw, 1.6rem)
+  --txt-small: clamp(1rem, -0.3rem + 1.4vw, 1.6rem);
+  --txt-extra-small:clamp(0.8rem, -0.3rem + 1vw, 1.2rem)
 }
 
 main {
@@ -39,6 +41,9 @@ main {
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
+  background-image: url(https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/main_bg.jpg);
+  background-size: cover;
+  background-color: var(--body-bg);
 }
 
 .main-wrap {

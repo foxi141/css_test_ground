@@ -1,7 +1,7 @@
 header {
   background: var(--bg-header);
-  box-shadow: 0 -2px 0 inset rgba(204, 204, 204, 0.137);
-  padding: 1rem 0;
+  box-shadow: 0 -2px 5px inset rgba(204, 204, 204, 0.137);
+  padding-top: calc(10px + 1vw);
 }
 
 .header-wrap {
@@ -9,22 +9,21 @@ header {
   grid-template-columns: max-content 1fr;
   grid-template-rows: auto 1fr;
   align-items: start;
-  gap: calc(15px + 1vw);
+  gap: calc(10px + 1vw) 3rem;
   width: var(--header-wrap-width);
   margin: 0 auto;
 }
 
 .logo-top {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
+  grid-column: 1;
+  grid-row: span 3;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 1rem;
   align-items: center;
-  overflow: hidden;
+
   & img {
     height: clamp(60px, calc(3vh + 3vw), 120px);
-    max-width: 280px;
+    max-width: 290px;
   }
 }
 .logo-top .c_name {
@@ -50,19 +49,25 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: calc(5px + 1vw);
+  gap: calc(10px + 2vw);
   font-size: 1em;
 }
 
 .lang > select {
-  border: #ccc 1px solid !important;
-  padding: 0.5em 1em;
+  border:0px;
+  border-bottom: #bbb;
+  border-bottom-style: solid;
+  padding: 0.5em 3em;
   text-align: center;
   background-color: transparent;
   color: var(--select-color);
-  border-radius: calc(var(--basic-radius) / 1.5);
   width: max-content;
   max-height: 42px;
+}
+
+.lang > a {
+  color:#ccc;
+  font-size: var(--txt-small);
 }
 
 .LoginPanel {
@@ -75,7 +80,7 @@ header {
   height: min-content;
   column-gap: 1rem;
   overflow: hidden;
-  padding: calc(10px + 0.5rem) calc(7px + 0.7em);
+  padding: calc(10px + 0.2vw) calc(10px + 0.3vw);
   background: linear-gradient(
     250deg,
     #e3e3e3ea 2%,
@@ -86,15 +91,12 @@ header {
   box-shadow: 0 0 15px 0px rgba(10, 10, 10, 0.267);
 }
 
-#assignAccountContainer:empty {
-  display: none;
-}
 
-@media screen and (max-width:1260px) and (min-width:979px) {
+@media screen and (max-width:1260px) and (min-width:980px) {
  
 }
 
-@media screen and (max-width:980px) and (min-width:640px) {
+@media screen and (max-width:980px) and (min-width:620px) {
   .LoginPanel {
     grid-column: span 3;
     grid-row: 2;
@@ -108,9 +110,10 @@ header {
   }
 }
 
-@media (width < 640px) {
+@media (width < 620px) {
   .header-wrap {
     width: 96%;
+    gap: 1.7rem;
   }
   .logo-top {
     grid-column: span 3;
@@ -122,14 +125,15 @@ header {
   .lang {
     grid-column: span 3;
     grid-row: 1;
+    justify-content: space-between;
+    padding: 0.8rem;
   }
   .LoginPanel {
     grid-column: span 3;
     grid-row: 3;
     display: grid;
-    grid-template-columns: 1fr; 
-    row-gap: 1rem;
-    justify-self: unset; 
+    grid-template-columns: auto; 
+    justify-self:stretch; 
   }
 }
 
@@ -147,19 +151,26 @@ header {
     word-break: keep-all;
     font-size: var(--txt-small);
   }
-  & .username{
+  & .user {
     grid-column: 1;
     grid-row: span 2;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: auto;
-    gap:3px;
-    & h4{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    gap:0.3rem 0.5rem;
+
+    & .username{
+      font-size: 1.1rem;
       color:darkslateblue;
+      font-weight: 600;
+      width: max-content;
     }
     & .logout{
-      font-size: var(--txt-small);
-      
+      font-size: var(--txt-extra-small);
+    }
+    & .membership{
+  
     }
   }
 }
@@ -173,7 +184,7 @@ header {
   align-content: start;
   align-items: center;
   gap: 8px;
-  & .busket{
+  & .bucket{
     display: flex;
     & img {
       width: 1.6rem;
@@ -181,9 +192,9 @@ header {
     }
   }
 }
-.LoginPanel[data-logged] #cart_panel .busket:not([data-cart_count='']):after {
+.LoginPanel[data-logged] #cart_panel .bucket:not([data-cart_count='']):after {
   content: attr(data-cart_count);
-  font-size:var(--txt-small);
+  font-size:var(--txt-extra-small);
   position: relative;
   left: -3px;
   top: -5px;
@@ -193,31 +204,20 @@ header {
   z-index: 15;
 }
 
-.LoginPanel[data-logged] #cart_panel .busket[data-cart_count=''] ~ a.cart_delete {
+.LoginPanel[data-logged] #cart_panel .bucket[data-cart_count=''] ~ a.cart_delete {
   visibility: collapse;
   position: relative;
   bottom: 0.1lh;
 }
 & p.clock {
-  font-size: var(--txt-small);
+  font-size: var(--txt-extra-small);
 }
 
-@media (width < 640px) {
+@media (width < 620px) {
   .LoginPanel[data-logged]{
-
-    & .username{
+    & .user{
       grid-column: span 3;
       grid-row: 1;
-      & h4{
-        grid-column: span 3;
-      }
-      & .membership{
-        grid-column: 1 / 3;
-        grid-row: 2;
-      }
-      & .logout{
-        justify-self: end;
-      }
     }
     & .buttons {
       grid-column: span 3;
@@ -226,7 +226,7 @@ header {
     & #cart_panel{
       grid-column: span 3;
       grid-row: 3;
-      justify-content:space-around;
+      justify-content:end;
     }
     
   } 

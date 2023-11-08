@@ -5,7 +5,7 @@ a.btn-ro {
   gap: 1rem;
   flex: 1 1 auto;
   color: white;
-  font-size: clamp(0.7rem, -0.3333rem + 1vw, 1.4rem);
+  font-size: clamp(0.6em, 0.8em, 1.7em);
   height: var(--btn-h);
   max-height: 48px;
   border-radius: calc(var(--basic-radius) / 1.3);
@@ -16,25 +16,30 @@ a.btn-ro {
   white-space: nowrap;
 }
 
-a.btn-ro.normal {
+.normal {
   background: radial-gradient(
     circle,
-    rgba(51, 51, 51, 1) 10%,
+    rgba(51, 51, 51, 0.8) 10%,
     rgba(50, 50, 50, 1) 100%
   );
+  border:solid 1px rgba(50, 50, 50, 1);
+  &:hover {
+    background-color: rgba(50, 50, 50, 1) ;
+  }
 }
 
-a.btn-ro.accent {
+.accent {
   background: radial-gradient(
     circle,
-    rgb(231, 2, 55) 10%,
+    rgba(231, 2, 56, 0.8) 10%,
     rgb(175, 5, 42) 100%
   );
+  border:solid 1px rgb(175, 5, 42);
+  &:hover{
+    background-color:rgb(175, 5, 42);
+  }
 }
 
-.btn-ro:hover {
-  background: linear-gradient(90deg, rgba(70, 70, 70, 1), rgba(30, 30, 30, 1));
-}
 
 .chips {
   background-color: var(--first-color);
@@ -58,7 +63,7 @@ a:hover:not(.btn-ro, .chips) {
   color: green;
 }
 
-@media (width <= 640px) {
+@media (width < 620px) {
   a.btn-ro {
     height: calc(var(--btn-h) * 1.2);
   }
