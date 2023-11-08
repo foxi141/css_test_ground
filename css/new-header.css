@@ -169,9 +169,6 @@ header {
     & .logout{
       font-size: var(--txt-extra-small);
     }
-    & .membership{
-  
-    }
   }
 }
 
