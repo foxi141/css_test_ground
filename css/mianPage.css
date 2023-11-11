@@ -10,7 +10,7 @@
   --body-bg: #333;
   --main-top-padding: 4vw;
 
-  --basic-radius: calc(0.2em + 0.3vw); /* basic radius for card/boxes */
+  --basic-radius: calc(0.2rem + 0.2vw); /* basic radius for card/boxes */
   --box-wrap-width: 80vw;
   --box-wrap-with-max: 1580px;
 
@@ -26,12 +26,14 @@
   --footer-sponsors-bg-color: white;
   --footer-copyright-bg-color: white;
 
-  --btn-h: calc(1.8rem + (0.5vh + 0.5vw));
+  --btn-h: calc(28px + (1vh + 1vw));
   --btn-radius: var(--basic-radius);
   --btn-bg-action-color: ;
 
+
   --txt-small: clamp(1rem, -0.3rem + 1.4vw, 1.6rem);
-  --txt-extra-small:clamp(0.8rem, -0.3rem + 1vw, 1.2rem)
+  --txt-extra-small:clamp(0.8rem, -0.3rem + 1vw, 1.2rem);
+  --txt-norm: clamp(1rem, 1lvw + 1rem, 1.6rem);
 }
 
 main {
