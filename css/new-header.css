@@ -1,6 +1,6 @@
 header {
   background: rgb(166,158,142);
-  background: linear-gradient(0deg, rgba(166,158,142,1) 0%, rgba(116,96,96,1) 2%, rgba(111,88,82,1) 9%, rgba(51,51,51,1) 75%);
+  background: linear-gradient(180deg, rgb(70 79 145) 2%, rgb(69 80 121) 15%, rgba(51,51,51,1) 86%);
   padding: 0.5rem 0 1rem 0;
 }
 
@@ -18,39 +18,40 @@ header {
   grid-column: 1;
   grid-row: span 3;
   display: flex;
-  gap:0 0.8rem;
   align-items: center;
-  justify-content: center;
-  & img {
-    height: clamp(60px, 60px + 3vh + 3vw, 126px);
+  justify-items: flex-end;
+}
+.logo-top > img {
+  height: clamp(60px, 60px + 3vh + 3vw, 126px);
     max-width: 300px;
-  }
+    margin: 10px;
 }
 .logo-top .c_name {
   display: flex;
   gap: 0.4em;
-  & h1 {
-    font-size: clamp(1.2rem, 2lvw + 1rem , 2.5rem);
+}
+
+.logo-top .c_name h1{
+  font-size: clamp(1.2rem, 2lvw + 1rem , 2.5rem);
     font-weight: 600;
     color: var(--header-title-color);
     text-transform: uppercase;
     line-height: 1;
-  }
-  & p {
-    color: var(--header-subtitle-color);
-    font-size: clamp(1rem, 0.5lvw + 1rem, 2.3rem);
-    font-weight: 300;
-  }
 }
-
+.logo-top .c_name p {
+  color: var(--header-subtitle-color);
+  font-size: var(--txt-small);
+  font-weight: 500;
+}
 .lang {
   grid-column: 2 / 3;
   grid-row: 1;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
   gap: calc(10px + 2vw);
   font-size: 1rem;
-  width: auto;;
+  width: auto;
 }
 
 .lang > select {
@@ -68,7 +69,7 @@ header {
 
 .lang > a {
   color:#ccc;
-  font-size: var(--txt-small);
+  font-size: var(--txt-extra-small);
   display: flex;
   gap:10px;
 }
@@ -84,24 +85,15 @@ header {
   width: min-content;
   gap:0.6rem 1rem;
   overflow: hidden;
-  padding: calc(10px + 0.4vw) calc(10px + 0.4vw);
-  background: linear-gradient(
-    250deg,
-    #e3e3e3ea 2%,
-    rgba(255, 255, 255, 0.5) 90%
-  );
-  background-color: rgba(250, 204, 79, 0.993);
+  padding: var(--box-padding);
+  background: var(--loginPanel-bg);
   border-radius: var(--basic-radius);
-  box-shadow: 0 0 15px 0px rgba(10, 10, 10, 0.267);
 }
-
-
 @media screen and (max-width:1260px) and (min-width:980px) {
   .logo-top {
     flex-wrap: wrap;
   }
 }
-
 @media screen and (max-width:980px) and (min-width:620px) {
   .logo-top {
     grid-column: span 3;
@@ -120,13 +112,12 @@ header {
     justify-content: center;
     justify-self: stretch;
     width: auto;
-  }
-  
+  }  
 }
 
-@media (width < 620px) {
+@media (max-width:620px) {
   .header-wrap {
-    width: 96%;
+    width: 90svw;
     gap: 1.7rem;
   }
   .logo-top {
@@ -135,15 +126,16 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    & img{
-      max-width: 70vw;
-    }
   }
-
+  .logo-top > img {
+    max-width: 67vw;
+  }
   .lang{
+    grid-column: span 3;
+    grid-row: 1;
     justify-content: space-between;
+    width: auto;
   }
- 
   .LoginPanel {
     grid-column: span 3;
     grid-row: 3;
@@ -151,48 +143,47 @@ header {
     grid-template-columns: auto; 
     justify-self:stretch;
     width: auto; 
+    row-gap: 1rem;
   }
 }
 
-/* header panel after login */
+/* HEADER PANEL AFTER LOGIN */
 
-.LoginPanel[data-logged]{
-  gap:1rem;
-  & .buttons{
-    display: flex;
-    justify-content: flex-end;
-    gap:5px;
-  }
-  & .buttons > a {
-    width: max-content;
-    word-break: keep-all;
-    font-size: var(--txt-small);
-    border: 1px solid #333;
-    padding: 0.15rem 1rem;
-    border-radius: 2rem;
-  }
-  & .user {
-    grid-column: 1;
+.LoginPanel[data-logged=''] {
+  gap:0.8rem;
+}
+.LoginPanel[data-logged=''] .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap:5px;
+}
+.LoginPanel[data-logged=''] .buttons > a {
+  width: max-content;
+  word-break: keep-all;
+  font-size: var(--txt-extra-small);
+  border: 1px solid #444;
+  padding: 0.15rem 1rem;
+  border-radius: 2rem;
+}
+.LoginPanel[data-logged=''] .user {
+  grid-column: 1;
     grid-row: span 2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     align-content: flex-start;
     gap:0.3rem 0.5rem;
-
-    & .username{
-      font-size: 1.1rem;
-      color:darkslateblue;
-      font-weight: 600;
-      width: max-content;
-    }
-    & .logout{
-      font-size: var(--txt-extra-small);
-    }
-  }
 }
-
-.LoginPanel[data-logged] #cart_panel {
+.LoginPanel[data-logged=''] .user .username {
+    font-size: 1.1rem;
+    color:rgb(61, 66, 139);
+    font-weight: 600;
+    width: max-content;
+} 
+.LoginPanel[data-logged=''] .user .logout {
+  font-size: var(--txt-extra-small);
+}
+.LoginPanel[data-logged=''] #cart_panel {
   grid-column: 2;
   grid-row: 2;
   display: flex;
@@ -201,64 +192,73 @@ header {
   align-content: start;
   align-items: center;
   gap: 8px;
-  & .bucket{
-    display: flex;
-    & img {
-      width: 1.6rem;
-      aspect-ratio: 1 / 1;
-    }
-  }
 }
-.LoginPanel[data-logged] #cart_panel .bucket:not([data-cart_count='']):after {
+.LoginPanel[data-logged=''] #cart_panel .bucket{
+  display: flex;
+}
+.LoginPanel[data-logged=''] #cart_panel .bucket img {
+  width: calc(1rem + 1svw);
+  aspect-ratio: 1 / 1;
+}
+.LoginPanel[data-logged=''] #cart_panel p.clock{
+  font-size: var(--txt-extra-small);
+}
+.LoginPanel[data-logged=''] #cart_panel .bucket:not([data-cart_count='']):after {
   content: attr(data-cart_count);
   font-size:var(--txt-extra-small);
   position: relative;
-  left: -3px;
+  left: -6px;
   top: -5px;
-  background-color: orange;
-  padding: 0.4rem;
+  padding: 0.45rem;
+  background-color: rgb(86, 196, 52);
   clip-path: circle();
   z-index: 15;
+  display: flex;
+  align-items: center;
 }
-
-.LoginPanel[data-logged] #cart_panel .bucket[data-cart_count=''] ~ a.cart_delete {
+.LoginPanel[data-logged=''] #cart_panel .bucket[data-cart_count=''] ~ a.cart_delete {
   visibility: collapse;
   position: relative;
-  bottom: 0.1lh;
 }
-& p.clock {
-  font-size: var(--txt-extra-small);
-}
-
-@media (width < 620px) {
-  .LoginPanel[data-logged]{
-    & .user{
-      grid-column: span 3;
-      grid-row: 1;
-      justify-content: space-between;
-    }
-    & .buttons {
-      grid-column: span 3;
-      grid-row: 2;
-      justify-content: space-between;
-    }
-    & #cart_panel{
-      grid-column: span 3;
-      grid-row: 3;
-      justify-content:space-around;
-      & a.cart_delete {
-        align-self: flex-start;
-      }
-    }
-    
-  } 
+@media (max-width:620px) {
+  .LoginPanel[data-logged=''] .user {
+    grid-column: span 3;
+    grid-row: 1;
+    justify-content: space-between;
+  }
+  .LoginPanel[data-logged=''] .buttons {
+    grid-column: span 3;
+    grid-row: 2;
+    justify-content: space-between;
+  }
+  .LoginPanel[data-logged=''] #cart_panel {
+    grid-column: span 3;
+    grid-row: 3;
+    justify-content:space-around;
+    align-items: center;
+  }
 }
 
-@media (width < 620px) and (min-resolution:250dpi ) {
-  .LoginPanel[data-logged]{
-    & .buttons > a {
-      font-size: var(--txt-norm);
-    }
+@media (max-width:620px) and (min-resolution:250dpi ) {
+
+  .LoginPanel[data-logged=''] .buttons > a {
+    font-size: var(--txt-small);
+  }
+
+  .LoginPanel[data-logged=''] #cart_panel .bucket img{
+    width: 2rem;
+  }
+
+  .LoginPanel[data-logged=''] #cart_panel .bucket:not([data-cart_count='']):after {
+    font-size:var(--txt-small);
+  }
+
+  .LoginPanel[data-logged=''] #cart_panel a.cart_delete{
+    font-size:var(--txt-norm); 
+  }
+
+  .LoginPanel[data-logged=''] #cart_panel p.clock {
+    font-size: var(--txt-small);
   }
 
 }

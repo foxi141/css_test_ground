@@ -4,12 +4,14 @@ a.btn-ro {
   justify-content: center;
   gap: 1rem;
   color: white;
-  font-size: clamp(0.8rem, 0.2lvw + 1rem, 2rem);
+  //background-color: #c2c2c2;
+  font-size: clamp(0.8rem, 0.2lvw + 0.8rem, 2rem);
   height: var(--btn-h);
   max-height: 48px;
+  min-width: 100px;
   width: auto;
   border-radius: calc(var(--basic-radius) / 1.3);
-  padding: 0 calc(var(--btn-h) / 1.5);
+  padding: 0 clamp(2rem,2rem + 2vw, 4rem);
   cursor: pointer;
   word-break: keep-all;
   white-space: nowrap;
@@ -18,7 +20,7 @@ a.btn-ro {
 .normal {
   background: radial-gradient(
     circle,
-    rgba(51, 51, 51, 0.8) 10%,
+    rgba(51, 51, 51, 0.6) 10%,
     rgba(50, 50, 50, 1) 100%
   );
   border:solid 1px rgba(50, 50, 50, 1);
@@ -30,7 +32,7 @@ a.btn-ro {
 .accent {
   background: radial-gradient(
     circle,
-    rgba(175, 5, 42, 0.75) 10%,
+    rgba(175, 5, 42, 0.6) 10%,
     rgba(175, 5, 42, 0.95) 100%
   );
   border:solid 1px rgb(175, 5, 42);
@@ -38,8 +40,6 @@ a.btn-ro {
     background-color:rgb(175, 5, 42);
   }
 }
-
-
 
 .chips {
   background-color: var(--first-color);
@@ -55,16 +55,9 @@ a.btn-ro:has(i) {
   gap: 0.2em;
 }
 
-a {
-  color: #333;
-}
-
-a:hover:not(.btn-ro, .chips) {
-  color: rgb(227, 162, 41);
-}
-
-@media (width < 620px) {
+@media (max-width:620px) {
   a.btn-ro {
     height: calc(var(--btn-h) * 1.3);
+    font-size: clamp(0.8rem, 0.3lvw + 0.8rem, 2rem);
   }
 }
