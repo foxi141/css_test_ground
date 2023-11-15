@@ -1,29 +1,30 @@
 @import url('new-header.css');
 @import url('new-footer.css');
 @import url('btns.css');
+@import url('override.css');
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700;800&display=swap');
 
 :root {
-  --first-color: #333666;
+  --first-color: #4e5185;
   --second-color: #005923;
-  --body-bg: #333;
+  --body-bg: #323745;
   --main-top-padding: 4vw;
 
   --basic-radius: calc(0.2rem + 0.2vw);  /* basic radius for card/boxes */
-  --box-wrap-width: 80vw;
+  --box-wrap-width: 68vw;
   --box-wrap-with-max: 1580px;
   --box-padding:calc(10px + 0.4vw) calc(10px + 0.4vw);
 
-  --header-wrap-width: 86vw;
+  --header-wrap-width: 80vw;
   --header-title-color: var(--first-color);
   --header-subtitle-color: #a99861;
   --select-color: #fff;
   --bg-header: #333;
 
-  --loginPanel-bg: linear-gradient(90deg, rgba(255,250,159,0.6293110994397759) 0%, rgba(255,255,255,1) 75%);
-  --loginPanel-bg-color:rgba(253, 224, 107, 0.7);
+  --loginPanel-bg: linear-gradient(90deg, rgba(206, 236, 255, 0.629) 0%, rgba(255,255,255,1) 75%);
+  --loginPanel-bg-color:rgba(217, 244, 245, 0.7);
 
-  --footer-content-width: 80vw;
+  --footer-content-width: 78vw;
   --footer-address-bg-color: var(--first-color);
   --footer-address-txt-color: whitesmoke;
   --footer-sponsors-bg-color: white;
@@ -33,7 +34,7 @@
   --btn-radius: var(--basic-radius);
   --btn-bg-action-color: ;
 
-  --txt-extra-small:  clamp(0.8rem, 0.25vw + 0.8rem, 1.2rem);
+  --txt-extra-small:  clamp(0.7rem, 0.25vw + 0.7rem, 1.2rem);
   --txt-small:        clamp(0.8rem, 0.5vw + 1rem, 1.6rem);
   --txt-norm:         clamp(1rem, 0.5vw + 1.2rem, 1.8rem);
 }
@@ -58,8 +59,9 @@ main {
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
-  //background-image: url(https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/main_bg.jpg);
+  background-image: url('https://robostaticcontent.s3.eu-central-1.amazonaws.com/Content/SF/Images/sun_bg_24.jpg');
   background-size: cover;
+  background-blend-mode: color-dodge;
   background-color: var(--body-bg);
 }
 
@@ -70,7 +72,7 @@ main {
 }
 
 a:where(:not(.btn-ro, .chips, .LoginPanel)){
-  color: rgb(110, 163, 229) !important;
+  color: rgb(160, 193, 233);
 }
 
 @media (max-width:620px) {

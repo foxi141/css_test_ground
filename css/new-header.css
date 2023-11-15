@@ -1,6 +1,6 @@
 header {
   background: rgb(166,158,142);
-  background: linear-gradient(180deg, rgb(70 79 145) 2%, rgb(69 80 121) 15%, rgba(51,51,51,1) 86%);
+  background: linear-gradient(180deg, rgb(70 79 145) 2%, rgb(69 80 121) 15%, rgb(53 62 79));
   padding: 0.5rem 0 1rem 0;
 }
 
@@ -20,6 +20,7 @@ header {
   display: flex;
   align-items: center;
   justify-items: flex-end;
+  gap:0.4rem 1.2rem;
 }
 .logo-top > img {
   height: clamp(60px, 60px + 3vh + 3vw, 126px);
@@ -28,7 +29,7 @@ header {
 }
 .logo-top .c_name {
   display: flex;
-  gap: 0.4em;
+  gap: 0.5em;
 }
 
 .logo-top .c_name h1{
@@ -125,10 +126,9 @@ header {
     grid-row: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
   .logo-top > img {
-    max-width: 67vw;
+    max-width: 55vw;
   }
   .lang{
     grid-column: span 3;
@@ -149,8 +149,11 @@ header {
 
 /* HEADER PANEL AFTER LOGIN */
 
-.LoginPanel[data-logged=''] {
+.LoginPanel[data-logged='']{
   gap:0.8rem;
+}
+.LoginPanel[data-logged=''] a {
+  color: rgb(54, 59, 74) !important;
 }
 .LoginPanel[data-logged=''] .buttons {
   display: flex;
@@ -176,9 +179,10 @@ header {
 }
 .LoginPanel[data-logged=''] .user .username {
     font-size: 1.1rem;
-    color:rgb(61, 66, 139);
+    color:rgb(48, 50, 58);
     font-weight: 600;
     width: max-content;
+    min-width: 15ch;
 } 
 .LoginPanel[data-logged=''] .user .logout {
   font-size: var(--txt-extra-small);
@@ -210,7 +214,8 @@ header {
   left: -6px;
   top: -5px;
   padding: 0.45rem;
-  background-color: rgb(86, 196, 52);
+  background-color: rgb(169, 155, 52);
+  color:#fff;
   clip-path: circle();
   z-index: 15;
   display: flex;
@@ -221,6 +226,20 @@ header {
   position: relative;
 }
 @media (max-width:620px) {
+  header .header-wrap .logo-top {
+    gap: 0;
+    grid-row: 1;
+  }
+  header .header-wrap .logo-top img {
+    margin: 0;
+  }
+  header .header-wrap .lang{
+    grid-row: inherit;
+  }
+  .LoginPanel[data-logged=''] {
+    grid-row: 2;
+  }
+
   .LoginPanel[data-logged=''] .user {
     grid-column: span 3;
     grid-row: 1;
@@ -229,12 +248,12 @@ header {
   .LoginPanel[data-logged=''] .buttons {
     grid-column: span 3;
     grid-row: 2;
-    justify-content: space-between;
+    justify-content: end;
   }
   .LoginPanel[data-logged=''] #cart_panel {
     grid-column: span 3;
     grid-row: 3;
-    justify-content:space-around;
+  justify-content:end;
     align-items: center;
   }
 }
