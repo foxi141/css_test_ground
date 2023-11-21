@@ -21,7 +21,7 @@
   --select-color: #fff;
   --bg-header: #333;
 
-  --loginPanel-bg: linear-gradient(90deg, rgba(206, 236, 255, 0.629) 0%, rgba(255,255,255,1) 75%);
+  --loginPanel-bg: linear-gradient(90deg, rgba(176, 218, 245, 0.7) 0%, rgba(255,255,255,0.7) 55%);
   --loginPanel-bg-color:rgba(217, 244, 245, 0.7);
 
   --footer-content-width: 78vw;
@@ -30,7 +30,7 @@
   --footer-sponsors-bg-color: white;
   --footer-copyright-bg-color: white;
 
-  --btn-h: calc(28px + (0.5vh + 0.5vw));
+  --btn-h: calc(28px + (0.5vh + 0.7vw));
   --btn-radius: var(--basic-radius);
   --btn-bg-action-color: ;
 
@@ -65,7 +65,7 @@ main {
   background-color: var(--body-bg);
 }
 
-.main-wrap {
+.main-wrap, .box-wrap {
   width: var(--box-wrap-width);
   max-width: var(--box-wrap-with-max);
   margin: 2rem auto;
@@ -80,4 +80,21 @@ a:where(:not(.btn-ro, .chips, .LoginPanel)){
     width: 92svw;
     margin: 1rem auto;
   }
+}
+
+#box picture img {
+  transition: all ease 1s; 
+}
+#box picture img:hover {
+  transform: scale(1.1);
+  filter: saturate(3);
+  transition: all ease 0.5s;  
+} 
+
+#box .stripe:hover{
+  filter:saturate(1.3);
+}
+
+#box{
+  filter: drop-shadow(0 2px 8px rgba(17, 17, 17, 0.355));
 }

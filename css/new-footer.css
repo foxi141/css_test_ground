@@ -125,7 +125,7 @@
   max-width: 220px;
 }
 
-@media (max-width:620px) {
+@media (max-width:640px) {
   .footerNew .address > div {
     flex: auto;
     padding-left: 5%;
@@ -138,8 +138,8 @@
     flex-direction: column;
   }
   .footerNew .ico-social img {
-    width: 1.5em;
-    max-width: 40px;
+    width: 2rem;
+    max-width:55px;
   }
   .footerNew .address > div{
     padding-left: 0;
@@ -159,3 +159,4 @@
     text-align: center;
   }
 }
+
