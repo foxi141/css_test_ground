@@ -211,7 +211,7 @@ header {
 .LoginPanel[data-logged=''] #cart_panel .bucket{
   display: flex;
 }
-.LoginPanel[data-logged=''] #cart_panel .bucket img {
+.LoginPanel[data-logged=''] #cart_panel .bucket span {
   width: 1rem;
   aspect-ratio: 1 / 1;
 }

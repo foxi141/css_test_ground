@@ -20,23 +20,20 @@
     word-break: keep-all;
     white-space: nowrap;
   }
+a.btn-ro:hover{
+  filter:contrast(1.35);
+}
   .normal {
     background: radial-gradient(
-      circle,var(--prime-color-lt),var(--prime-color)
-    );
+    circle,var(--prime-color-lt),var(--prime-color));
     color:#fff;
-  }
-  .normal:hover{
-    background:var(--accent-color);
   }
 
   .accent {
     background: radial-gradient(circle,var(--accent-color-lt), var(--accent-color));
+    color:#fff;
   }
-  .accent:hover{
-      background:var(--accent-color);
-  }
-  
+ 
   a.btn-ro:has(i) {
     gap: 0.2em;
   }

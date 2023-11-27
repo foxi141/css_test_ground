@@ -56,8 +56,8 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(3, auto);
-  padding: var(--box-padding);
-  row-gap: 1rem;
+  padding: 1rem;
+  gap: 1rem;
   align-content:stretch;
   background-color: rgb(77, 48, 124);
 }

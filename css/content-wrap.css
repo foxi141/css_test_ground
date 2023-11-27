@@ -18,6 +18,13 @@ border-radius: calc(var(--basic-radius) / 1.5);
 overflow: hidden;
 border: 1px solid;
 align-content: stretch;
+container-type: inline-size;
+}
+
+@media (width <= 640px) {
+.item-box{
+  flex-direction: column;
+}  
 }
 
 .item-box picture {
@@ -63,7 +70,7 @@ padding: 1rem;
    grid-template-columns: auto; 
 }
 
-.footer-item .btn-ro{
+.content-footer .btn-ro{
 grid-column: 4;
 width: min-content;
 justify-self: end;

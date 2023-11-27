@@ -13,11 +13,11 @@
   --main-top-padding: 2rem;
 
   --basic-radius: calc(0.2rem + 0.2vw);  /* basic radius for card/boxes */
-  --box-wrap-width: 68vw;
-  --box-wrap-with-max: 1580px;
+  --box-wrap-width: 86vw;
+  --box-wrap-with-max: 1860px;
   --box-padding:max(10px,0.7rem);
 
-  --header-wrap-width: 80vw;
+  --header-wrap-width: 88vw;
   --header-title-color: var(--first-color);
   --header-subtitle-color: #a99861;
   --select-color: #fff;
@@ -47,8 +47,6 @@ html {
   text-rendering: geometricPrecision;
 }
 
-body  { font-size: 100%; }
-
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +58,14 @@ picture{
 }
 img {
   display: block;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 main {
@@ -96,7 +102,6 @@ a:where(:not(.btn-ro, .chips, .LoginPanel)){
   }
 }
 
-
 #box picture img {
   transition: all ease 1s; 
 }
@@ -107,9 +112,6 @@ a:where(:not(.btn-ro, .chips, .LoginPanel)){
   transition: all ease 0.5s;  
 } 
 
-#box .stripe:hover{
-  filter:saturate(1.3);
-}
 
 #box{
   filter: drop-shadow(0 2px 8px rgba(17, 17, 17, 0.355));
