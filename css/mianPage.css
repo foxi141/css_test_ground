@@ -32,7 +32,7 @@
   --footer-sponsors-bg-color: white;
   --footer-copyright-bg-color: white;
 
-  --btn-h: max(9vi,58px);
+  --btn-h: min(calc(33px + 1vb),48px);
   --btn-radius: var(--basic-radius);
   --btn-bg-action-color: ;
 
@@ -95,10 +95,10 @@ a:where(:not(.btn-ro, .chips, .LoginPanel)){
   color: rgb(40, 136, 255);
 }
 
-@media (max-width:620px) {
+@media (max-width:640px) {
   .main-wrap{
     width: 92svw;
-    margin: 1rem auto;
+    margin: 0 auto;
   }
 }
 

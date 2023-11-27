@@ -13,7 +13,7 @@
     justify-content: center;
     font-size: 100%;
     height: var(--btn-h);
-    max-height: 46px;
+    //max-height: 46px;
     border-radius: calc(var(--basic-radius) / 1.5);
     padding: 0 max(2ch,3.6ch);
     cursor: pointer;
@@ -38,9 +38,11 @@ a.btn-ro:hover{
     gap: 0.2em;
   }
   
+  @media screen and (resolution > 270dpi){
   @media (max-width:640px) {
     a.btn-ro {
-      height: calc(var(--btn-h) * 1.3);
+      height: calc(var(--btn-h) * 1.25);
     }
   }
+}
   

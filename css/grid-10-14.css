@@ -2,7 +2,7 @@
 
 .box-wrap {
   display: grid;
-  grid-gap: min(2rem,3svw);
+  grid-gap: min(2rem,4vb);
   justify-content: center;
 }
 
