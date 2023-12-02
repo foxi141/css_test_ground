@@ -1,0 +1,120 @@
+@import url('new-header.css');
+@import url('new-footer.css');
+@import url('btns.css');
+@import url('content-wrap.css');
+@import url('override.css');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700;800&display=swap');
+
+:root {
+  --first-color: #4e5185;
+  --second-color: #005923;
+  --body-bg-color: #323745;
+  --content-box-bg:#fff;
+  --main-top-padding: 2rem;
+
+  --basic-radius: calc(0.2rem + 0.2vw);  /* basic radius for card/boxes */
+  --box-wrap-width: 86vw;
+  --box-wrap-with-max: 1860px;
+  --box-padding:max(10px,0.7rem);
+
+  --header-wrap-width: 88vw;
+  --header-title-color: var(--first-color);
+  --header-subtitle-color: #a99861;
+  --select-color: #fff;
+  --bg-header: #333;
+
+  --loginPanel-bg: linear-gradient(90deg, rgba(176, 218, 245, 0.7) 0%, rgba(255,255,255,0.7) 55%);
+  --loginPanel-bg-color:rgba(217, 244, 245, 0.7);
+
+  --footer-content-width: 78vw;
+  --footer-address-bg-color: var(--first-color);
+  --footer-address-txt-color: whitesmoke;
+  --footer-sponsors-bg-color: white;
+  --footer-copyright-bg-color: white;
+
+  --btn-h: min(calc(33px + 1vb),48px);
+  --btn-radius: var(--basic-radius);
+  --btn-bg-action-color: ;
+
+  --txt-extra-small:  clamp(0.7rem, 0.25vw + 0.7rem, 1.2rem);
+  --txt-small:        clamp(0.8rem, 0.5vw + 1rem, 1.6rem);
+  --txt-norm:         clamp(1rem, 0.5vw + 1.2rem, 1.8rem);
+
+  --mainBG: url('https://robostaticcontent.s3.eu-central-1.amazonaws.com/Content/SunFestival/Images/mainBG.jpg');
+}
+
+html {
+  width: 100%;
+  font-family: 'Prompt', sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+picture{
+  overflow: hidden;
+}
+img {
+  display: block;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+main {
+  width: 100%;
+  min-height: 90svh;
+  padding: var(--main-top-padding) 10px;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  background-image: var(--mainBG)
+  background-size: cover;
+  background-blend-mode: color-dodge;
+  background-color: var(--body-bg-color);
+  overflow-y: visible;
+}
+
+.main-wrap, .box-wrap {
+  width: var(--box-wrap-width);
+  max-width: var(--box-wrap-with-max);
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+a:where(:not(.btn-ro, .chips, .LoginPanel)){
+  color: rgb(40, 136, 255);
+}
+
+@media (max-width:640px) {
+  .main-wrap{
+    width: 92svw;
+    margin: 0 auto;
+  }
+}
+
+#box picture img {
+  transition: all ease 1s; 
+}
+
+#box picture img:hover {
+  transform: scale(1.1);
+  filter: saturate(3);
+  transition: all ease 0.5s;  
+} 
+
+
+#box{
+  filter: drop-shadow(0 2px 8px rgba(17, 17, 17, 0.355));
+}

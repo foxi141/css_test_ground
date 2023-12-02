@@ -1,0 +1,122 @@
+/* INDEX BOX LAYOUT DEFINITION */
+
+.box-wrap {
+  display: grid;
+  grid-gap: min(2rem,4vb);
+  justify-content: center;
+}
+
+@media (width <= 650px) {
+  .box-wrap{
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    width:98%;
+  }
+}
+@media (width > 650px) and (width <= 1250px) {
+  .box-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+@media (width > 1250px) {
+  .box-wrap{
+    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+  }
+}
+
+
+
+/* INDEX BOX LAYOUT DEFINITION */
+
+/* INDEX BOX/CARD DEFINITION */
+
+#box{
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  aspect-ratio: 10 / 14;
+  overflow: hidden;
+  filter: drop-shadow(0 2px 8px rgba(17, 17, 17, 0.355));
+  font-family: 'Prompt', sans-serif;
+  container-type:inline-size;
+}
+
+#box picture {
+    overflow: hidden;
+    flex: auto;  
+  } 
+
+  #box picture img {
+      width: 100%;
+      object-fit:contain;
+      object-position: bottom;  
+  } 
+ 
+#box .stripe {
+  flex: 0 0 45%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  padding: 1rem;
+  gap: 1rem;
+  align-content:stretch;
+  background-color: rgb(77, 48, 124);
+}
+
+#box .stripe > p {
+text-overflow:ellipsis;
+overflow: hidden;
+letter-spacing: 0.1ch;
+line-height: 1.3;
+text-wrap: balance;
+}
+
+#box .stripe .day{
+    grid-column: span 2;
+    grid-row: 1;
+    font-weight: 700; 
+    color: #fff;    
+} 
+
+#box .stripe .short-dsc {
+  grid-column: span 2;
+  grid-row: 2;
+  font-weight: 400;
+  color: #ccc; 
+}
+
+#box .stripe .btn-ro {
+  grid-column: span 2;
+  grid-row: 3;
+  justify-self: center;
+} 
+
+@media (width <= 640px) {
+  #box {
+    max-width: unset;
+  }
+}
+
+ @container (width > 300px){
+  #box .stripe .day {
+   font-size:x-large;
+   }
+   #box .stripe .short-dsc{
+     font-size: large;
+   }
+ } 
+ 
+
+ @media screen and (resolution > 270dpi) {
+  @container (width > 300px){
+    #box .stripe .day {
+     font-size: x-large;
+     color: goldenrod !important;
+     }
+     #box .stripe .short-dsc{
+       font-size:large;
+     }
+   } 
+ }
+
+
+ 

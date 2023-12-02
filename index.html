@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/mianPage.css" />
-    <link rel="stylesheet" href="css/grid-10-14.css" />
+    <link rel="stylesheet" href="css/SF/mianPage.css" />
+    <link rel="stylesheet" href="css/SF/grid-10-14.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
     <title>css_test_ground</title>
@@ -25,7 +25,7 @@
       </a>
 
       <div class="lang">
-        <a href="#"><i class="gg-info"></i>Information</a>
+        <a href="#">Information</a>
         <select>
           <option value="English">EN</option>
           <option value="Dansk">HE</option>
@@ -36,70 +36,16 @@
       </div>
 
       <div class="LoginPanel">
-        <a class="btn-ro accent" href="new-header.html"
-          >
-          Login</a
-        >
-        <a class="btn-ro normal" href="/">
-          New</a
-        >
-      </div>
+        <a class="btn-ro accent" href="" hx-get="/loggedIn.html" hx-target=".LoginPanel" hx-swap="outerHTML">Login</a>
+        <a class="btn-ro normal" href="/"> New</a></div>
       <div>
+
     </header>
 
     <main>
-     
-      <div class="box-wrap">
-
-        <div class="one" id="box">
-          <picture>
-          <source srcset="https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/sr1.webp"/>
-          <img src="https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/sr1.webp" alt="" />
-          </picture>
-           <div class="stripe"> 
-           <!-- <p class="title">Crazy beats in the middle of the night.</p> -->
-            <p class="day">Sunday-Niedziela-Sobota, 22 July 2024</p>
-            <p class="short-dsc">Karnet Standard-300PLN | Karnet VIP-1500PLN</p>
-            <a class="btn-ro normal" href="merch.html">BUY TICKET</a>   
-         </div>
-         </div>
-
-        <div class="two" id="box">
-          <picture>
-          <source srcset="https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/sr1.webp"/>
-          <img src="https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/sr1.webp" alt="" />
-          </picture>
-           <div class="stripe"> 
-            <p class="day">Piątek, 22.07.2024</p>
-            <p class="short-dsc">Karnet Standard-300PLN | Karnet VIP-1500PLN</p>
-            <a class="btn-ro normal" href="" hx-get="/mainWrap.html" hx-target=".box-wrap" hx-swap="outerHTML">KUP</a>   
-         </div>
-         </div>
-
-         <div id="box">
-          <picture>
-          <source srcset="https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/sr1.webp"/>
-          <img src="https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/sr1.webp" alt="" />
-          </picture>
-           <div class="stripe"> 
-              <p class="title">Ten koncert odbedzie się na polu namiotowym po południu.</p>
-            <p class="day">Piątek, 22.07.2024</p>
-            <a class="btn-ro normal" href="/">KUP</a>   
-         </div>
-         </div> 
-
-         
-         <div id="box">
-          <picture>
-          <source srcset="https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/sr1.webp"/>
-          <img src="https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/sr1.webp" alt="" />
-          </picture>
-           <div class="stripe"> 
-              <p class="title">Ten koncert odbedzie się na polu namiotowym po południu.</p>
-            <p class="day">Piątek, 22.07.2024</p>
-            <a class="btn-ro normal" href="/">KUP</a>   
-         </div>
-         </div> 
+      <div class="box-wrap" hx-get="/productsMain.html" hx-trigger="load">
+        
+        
 
       </div>
 

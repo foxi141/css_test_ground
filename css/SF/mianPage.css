@@ -8,7 +8,7 @@
 :root {
   --first-color: #4e5185;
   --second-color: #005923;
-  --body-bg: #323745;
+  --body-bg-color: #323745;
   --content-box-bg:#fff;
   --main-top-padding: 2rem;
 
@@ -39,6 +39,8 @@
   --txt-extra-small:  clamp(0.7rem, 0.25vw + 0.7rem, 1.2rem);
   --txt-small:        clamp(0.8rem, 0.5vw + 1rem, 1.6rem);
   --txt-norm:         clamp(1rem, 0.5vw + 1.2rem, 1.8rem);
+
+  --mainBG: url('https://robostaticcontent.s3.eu-central-1.amazonaws.com/Content/SunFestival/Images/mainBG.jpg');
 }
 
 html {
@@ -75,10 +77,10 @@ main {
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
-  background-image: url('https://robostaticcontent.s3.eu-central-1.amazonaws.com/Content/SF/Images/sun_bg_24.jpg');
+  background-image: var(--mainBG)
   background-size: cover;
   background-blend-mode: color-dodge;
-  background-color: var(--body-bg);
+  background-color: var(--body-bg-color);
   overflow-y: visible;
 }
 
