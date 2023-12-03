@@ -3,12 +3,12 @@
 @import url('btns.css');
 @import url('content-wrap.css');
 @import url('override.css');
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700;800&display=swap');
+@import url('');
 
 :root {
-  --first-color: #4e5185;
-  --second-color: #005923;
-  --body-bg-color: #323745;
+  --first-color: #FF5438;
+  --second-color: #FDB900;
+  --body-bg-color: #fff;
   --content-box-bg:#fff;
   --main-top-padding: 2rem;
 
@@ -19,9 +19,12 @@
 
   --header-wrap-width: 88vw;
   --header-title-color: var(--first-color);
-  --header-subtitle-color: #a99861;
-  --select-color: #fff;
-  --bg-header: #333;
+  --header-subtitle-color: var(--first-color);
+  --select-color: #666;
+  --header-bg:#fff;
+  --header-bg-color:#fff;
+
+  --mainBg: url('/SUN/static/mainBg.jpg');
 
   --loginPanel-bg: linear-gradient(90deg, rgba(176, 218, 245, 0.7) 0%, rgba(255,255,255,0.7) 55%);
   --loginPanel-bg-color:rgba(217, 244, 245, 0.7);
@@ -40,12 +43,12 @@
   --txt-small:        clamp(0.8rem, 0.5vw + 1rem, 1.6rem);
   --txt-norm:         clamp(1rem, 0.5vw + 1.2rem, 1.8rem);
 
-  --mainBG: url('https://robostaticcontent.s3.eu-central-1.amazonaws.com/Content/SunFestival/Images/mainBG.jpg');
+ 
 }
 
 html {
   width: 100%;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   text-rendering: geometricPrecision;
 }
 
@@ -77,9 +80,9 @@ main {
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
-  background-image: var(--mainBG)
+  background-image: var(--mainBg);
   background-size: cover;
-  background-blend-mode: color-dodge;
+  //background-blend-mode: color-dodge;
   background-color: var(--body-bg-color);
   overflow-y: visible;
 }

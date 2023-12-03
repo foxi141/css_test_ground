@@ -21,7 +21,8 @@
   --header-title-color: var(--first-color);
   --header-subtitle-color: #a99861;
   --select-color: #fff;
-  --bg-header: #333;
+  --header-bg:linear-gradient(80deg,rgb(60 64 78), rgb(66 61 88) 4%, rgb(54 59 88) 65%, rgb(60 64 78));
+  --header-bg-color:#fff;
 
   --loginPanel-bg: linear-gradient(90deg, rgba(176, 218, 245, 0.7) 0%, rgba(255,255,255,0.7) 55%);
   --loginPanel-bg-color:rgba(217, 244, 245, 0.7);

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/SF/mianPage.css" />
-    <link rel="stylesheet" href="css/SF/grid-10-14.css" />
+    <link rel="stylesheet" href="SUN/mianPage.css" />
+    <link rel="stylesheet" href="SUN/grid-10-14.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
     <title>css_test_ground</title>
@@ -16,7 +16,7 @@
       <div class="header-wrap">
       <a class="logo-top" href="/">
         <img
-          src="https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/emblem-top-nav.svg"
+          src="/SUN/static/emblem-top-nav.png"
           alt="logo"
         />
         <div class="c_name">
@@ -36,7 +36,7 @@
       </div>
 
       <div class="LoginPanel">
-        <a class="btn-ro accent" href="" hx-get="/loggedIn.html" hx-target=".LoginPanel" hx-swap="outerHTML">Login</a>
+        <a class="btn-ro accent" href="" hx-get="/loginPanelIn.html" hx-target=".LoginPanel" hx-swap="outerHTML">Login</a>
         <a class="btn-ro normal" href="/"> New</a></div>
       <div>
 
@@ -44,8 +44,6 @@
 
     <main>
       <div class="box-wrap" hx-get="/productsMain.html" hx-trigger="load">
-        
-        
 
       </div>
 
@@ -72,7 +70,6 @@
       </div>
 
       <div class="address">
-       
         <div>
           <h4>Adress</h4>
           <a href="/">Lorem ipsum dolor sit amet.</a>
@@ -130,8 +127,6 @@
       </div>
 
       <div class="copyright">
-      
-
         <div class="footer-lang">
           Dansk / Deutsch / English / Français / Nynorsk / Polski
         </div>

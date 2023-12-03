@@ -1,7 +1,7 @@
 header {
-  background: rgb(166,158,142);
-  background: linear-gradient(80deg,rgb(60 64 78), rgb(66 61 88) 4%, rgb(54 59 88) 65%, rgb(60 64 78));
-  padding: 0.5rem 0 1rem 0;
+  background-color:var(--header-bg-color);
+  background:var(--header-bg);
+  padding: 0.5rem 0 0 0;
 }
 
 @media (width <= 650px) {
@@ -29,8 +29,8 @@ header {
   gap:0.4rem 1.2rem;
 }
 .logo-top > img {
-  height: clamp(60px, 60px + 3vh + 3vw, 126px);
-    max-width: 300px;
+  max-height: clamp(60px, 60px + 3vh + 3vw, 126px);
+    max-width: 360px;
     margin: 10px;
 }
 .logo-top .c_name {
@@ -208,11 +208,16 @@ header {
   align-items: center;
   gap: 8px;
 }
+
+.LoginPanel[data-logged=''] #cart_panel a.cart_delete img{
+  width: 1rem;
+  }
+
 .LoginPanel[data-logged=''] #cart_panel .bucket{
   display: flex;
 }
 .LoginPanel[data-logged=''] #cart_panel .bucket span {
-  width: 1rem;
+  width: 1.3rem;
   aspect-ratio: 1 / 1;
 }
 .LoginPanel[data-logged=''] #cart_panel p.clock{
@@ -224,7 +229,7 @@ header {
   position: relative;
   left: -6px;
   top: -5px;
-  padding: 0.45rem;
+  padding: 0.35rem;
   background-color: rgb(169, 155, 52);
   color:#fff;
   clip-path: circle();
