@@ -1,12 +1,14 @@
 header {
   background-color:var(--header-bg-color);
-  background:var(--header-bg);
-  padding: 0.5rem 0 0 0;
+  background:var(--headerBgImg);
+  background-position: top;
+  background-size: 135%;
+  padding: 0.5rem 4px 0 4px;
 }
 
 @media (width <= 650px) {
   header {
-    padding: 0;
+    padding-top: 0.5rem;
   }
 }
 
@@ -15,7 +17,7 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content 1fr;
   align-items: center;
-  gap: calc(10px + 1rem) 0;
+  gap: calc(10px + 0.7rem) 0;
   width: var(--header-wrap-width);
   margin: 0 auto;
 }
@@ -26,7 +28,7 @@ header {
   display: flex;
   align-items: center;
   justify-items: flex-end;
-  gap:0.4rem 1.2rem;
+  gap:0.5rem 1.2rem;
 }
 .logo-top > img {
   max-height: clamp(60px, 60px + 3vh + 3vw, 126px);
@@ -64,7 +66,7 @@ header {
 
 .lang > select {
   border:0px !important;
-  border-bottom: #bbb !important;
+  border-bottom: #666 !important;
   border-bottom-style: solid !important;
   padding: 0.5em 3em;
   text-align: center;
@@ -76,7 +78,7 @@ header {
 }
 
 .lang > a {
-  color:#ccc;
+  color:var(--header-info); /* information */
   font-size: var(--txt-extra-small);
   display: flex;
   gap:10px;
@@ -103,7 +105,7 @@ header {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width:980px) and (min-width:620px) {
+@media screen and (max-width:980px) and (min-width:640px) {
   .logo-top {
     grid-column: span 3;
     grid-row: 2;
@@ -124,10 +126,10 @@ header {
   }  
 }
 
-@media (max-width:620px) {
+@media (max-width:640px) {
   .header-wrap {
-    width: 90svw;
-    gap: 1.7rem;
+    width: 96svw;
+    gap: 1rem;
   }
   .logo-top {
     grid-column: span 3;
@@ -136,7 +138,7 @@ header {
     flex-direction: column;
   }
   .logo-top > img {
-    max-width: 55vw;
+    max-width: 75vw;
   }
   .lang{
     grid-column: span 3;
@@ -158,10 +160,10 @@ header {
 /* HEADER PANEL AFTER LOGIN */
 
 .LoginPanel[data-logged='']{
-  gap:0.3rem;
+  gap:0.5rem 0.8rem;
 }
 .LoginPanel[data-logged=''] a {
-  color: rgb(54, 59, 74);
+  color: var(--dark-txt);
 }
 .LoginPanel[data-logged=''] .buttons {
   display: flex;
@@ -172,12 +174,16 @@ header {
   width: max-content;
   word-break: keep-all;
   font-size: var(--txt-extra-small);
-  border: 1px solid #666;
+  border: 1px solid var(--dark-base-color);
   padding: 0.1rem 1rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   display: flex;
   align-items: center;
 }
+.LoginPanel[data-logged=''] .buttons > a:hover{
+  color: var(--third-color);
+}
+
 .LoginPanel[data-logged=''] .user {
   grid-column: 1;
     grid-row: span 2;
@@ -189,7 +195,7 @@ header {
 }
 .LoginPanel[data-logged=''] .user .username {
     font-size: 1.1rem;
-    color:rgb(48, 50, 58);
+    color:var(--dark-txt);
     font-weight: 600;
     width: max-content;
     min-width: 15ch;
@@ -212,7 +218,6 @@ header {
 .LoginPanel[data-logged=''] #cart_panel a.cart_delete img{
   width: 1rem;
   }
-
 .LoginPanel[data-logged=''] #cart_panel .bucket{
   display: flex;
 }
@@ -227,7 +232,7 @@ header {
   content: attr(data-cart_count);
   font-size:var(--txt-extra-small);
   position: relative;
-  left: -6px;
+  left: -4px;
   top: -5px;
   padding: 0.35rem;
   background-color: rgb(169, 155, 52);
@@ -236,14 +241,17 @@ header {
   z-index: 15;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .LoginPanel[data-logged=''] #cart_panel .bucket[data-cart_count=''] ~ a.cart_delete {
   visibility: collapse;
   position: relative;
 }
-@media (max-width:620px) {
+
+@media (max-width:640px) {
+
   header .header-wrap .logo-top {
-    gap: 0;
+    gap:0.8rem 0;
     grid-row: 1;
   }
   header .header-wrap .logo-top img {
@@ -269,7 +277,7 @@ header {
   .LoginPanel[data-logged=''] #cart_panel {
     grid-column: span 3;
     grid-row: 3;
-  justify-content:end;
+    justify-content:end;
     align-items: center;
   }
 }

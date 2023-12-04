@@ -110,7 +110,6 @@ text-wrap: balance;
   @container (width > 300px){
     #box .stripe .day {
      font-size: x-large;
-     color: goldenrod !important;
      }
      #box .stripe .short-dsc{
        font-size:large;

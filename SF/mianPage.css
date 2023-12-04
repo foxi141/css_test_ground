@@ -3,14 +3,21 @@
 @import url('btns.css');
 @import url('content-wrap.css');
 @import url('override.css');
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700;800&display=swap');
+@import url('grid-10-14.css');  /* layout for productMain.html */
+@import url('');                /* font */
 
 :root {
-  --first-color: #4e5185;
-  --second-color: #005923;
-  --body-bg-color: #323745;
-  --content-box-bg:#fff;
-  --main-top-padding: 2rem;
+  --first-color: hsl(355, 85%, 55%);
+  --second-color: hsl(44, 96%, 50%);
+  --third-color: hsl(261, 20%, 30%);
+  --dark-base-color: hsl(240, 30%, 22%);
+  --light-base-color:hsl(255,100%,100%);
+
+  --first-color-tint: hsl(8, 65%, 55%);
+
+  --body-bg-color: hsl(261, 20%, 30%);
+  --content-box-bg:hsl(255,100%,100%);
+  --main-top-padding: 1rem;
 
   --basic-radius: calc(0.2rem + 0.2vw);  /* basic radius for card/boxes */
   --box-wrap-width: 86vw;
@@ -19,16 +26,21 @@
 
   --header-wrap-width: 88vw;
   --header-title-color: var(--first-color);
-  --header-subtitle-color: #a99861;
-  --select-color: #fff;
-  --header-bg:linear-gradient(80deg,rgb(60 64 78), rgb(66 61 88) 4%, rgb(54 59 88) 65%, rgb(60 64 78));
-  --header-bg-color:#fff;
+  --header-subtitle-color: var(--first-color);
+  --select-color: var(--light-base-color);
+  --header-bg:var(--light-base-color);
+  --header-bg-color:var(--dark-base-color);
+  --header-info:var(--light-base-color);
 
-  --loginPanel-bg: linear-gradient(90deg, rgba(176, 218, 245, 0.7) 0%, rgba(255,255,255,0.7) 55%);
+
+  --mainBgImg: url('./static/mainBg.jpg');
+  --headerBgImg:url('./static/mainBg.jpg');
+
+  --loginPanel-bg: linear-gradient(90deg, hsl(118, 95%, 85%) 0%, hsl(248, 35%, 90%) 55%);
   --loginPanel-bg-color:rgba(217, 244, 245, 0.7);
 
   --footer-content-width: 78vw;
-  --footer-address-bg-color: var(--first-color);
+  --footer-address-bg-color: var(--dark-base-color);
   --footer-address-txt-color: whitesmoke;
   --footer-sponsors-bg-color: white;
   --footer-copyright-bg-color: white;
@@ -37,16 +49,16 @@
   --btn-radius: var(--basic-radius);
   --btn-bg-action-color: ;
 
-  --txt-extra-small:  clamp(0.7rem, 0.25vw + 0.7rem, 1.2rem);
+  --txt-extra-small:  clamp(0.7rem, 0.25vb + 0.7rem, 1.2rem);
   --txt-small:        clamp(0.8rem, 0.5vw + 1rem, 1.6rem);
   --txt-norm:         clamp(1rem, 0.5vw + 1.2rem, 1.8rem);
 
-  --mainBG: url('https://robostaticcontent.s3.eu-central-1.amazonaws.com/Content/SunFestival/Images/mainBG.jpg');
+ 
 }
 
 html {
   width: 100%;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   text-rendering: geometricPrecision;
 }
 
@@ -63,6 +75,10 @@ img {
   display: block;
 }
 
+a:where(:not(.btn-ro, .chips, .LoginPanel)){
+  color: rgb(40, 136, 255);
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -74,33 +90,31 @@ img {
 main {
   width: 100%;
   min-height: 90svh;
-  padding: var(--main-top-padding) 10px;
+  padding: var(--main-top-padding) 8px;
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
-  background-image: var(--mainBG)
+  background-image: var(--mainBgImg);
   background-size: cover;
-  background-blend-mode: color-dodge;
+  //background-blend-mode: color-dodge;
   background-color: var(--body-bg-color);
   overflow-y: visible;
 }
 
-.main-wrap, .box-wrap {
+.main-wrap, .box-wrap{
   width: var(--box-wrap-width);
   max-width: var(--box-wrap-with-max);
   margin: 2rem auto;
-  display: flex;
-  flex-direction: column;
   gap:1rem;
 }
-
-a:where(:not(.btn-ro, .chips, .LoginPanel)){
-  color: rgb(40, 136, 255);
+.main-wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width:640px) {
-  .main-wrap{
-    width: 92svw;
+  .main-wrap, .box-wrap{
+    width:unset;
     margin: 0 auto;
   }
 }
@@ -114,7 +128,6 @@ a:where(:not(.btn-ro, .chips, .LoginPanel)){
   filter: saturate(3);
   transition: all ease 0.5s;  
 } 
-
 
 #box{
   filter: drop-shadow(0 2px 8px rgba(17, 17, 17, 0.355));
