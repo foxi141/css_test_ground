@@ -33,8 +33,8 @@
   --header-info:var(--dark-base-color);
 
 
-  --mainBgImg: url('./static/mainBg.jpg');
-  --headerBgImg:url('./static/headerBg.svg');
+  --mainBgImg: url('https://robostaticcontent.s3.eu-central-1.amazonaws.com/Content/SunFestival/Images/mainBg.jpg');
+  --headerBgImg:url('https://robostaticcontent.s3.eu-central-1.amazonaws.com/Content/SunFestival/Images/headerBg.svg');
 
   --loginPanel-bg: linear-gradient(90deg, hsl(8, 95%, 85%) 0%, hsl(248, 35%, 90%) 55%);
   --loginPanel-bg-color:rgba(217, 244, 245, 0.7);
