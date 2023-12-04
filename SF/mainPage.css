@@ -11,7 +11,7 @@
   --second-color: hsl(44, 96%, 50%);
   --third-color: hsl(261, 20%, 30%);
   --dark-base-color: hsl(240, 30%, 22%);
-  --light-base-color:hsl(255,100%,100%);
+  --light-base-color:hsl(255,100%,95%);
 
   --first-color-tint: hsl(8, 65%, 55%);
 
@@ -33,8 +33,8 @@
   --header-info:var(--light-base-color);
 
 
-  --mainBgImg: url('./static/mainBg.jpg');
-  --headerBgImg:url('./static/mainBg.jpg');
+  --mainBgImg: url('https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/mainBg.jpg');
+  --headerBgImg:url('https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/mainBg.jpg');
 
   --loginPanel-bg: linear-gradient(90deg, hsl(118, 95%, 85%) 0%, hsl(248, 35%, 90%) 55%);
   --loginPanel-bg-color:rgba(217, 244, 245, 0.7);
