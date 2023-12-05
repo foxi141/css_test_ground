@@ -1,0 +1,44 @@
+a.btn-ro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  font-size: clamp(0.8rem, 0.2lvw + 0.8rem, 2rem);
+  height: 120px;
+  width: auto;
+  border-radius: 0;
+  padding: 0.8rem clamp(2rem, 2rem + 2vw, 4rem);
+  cursor: pointer;
+  word-break: keep-all;
+  white-space: nowrap;
+  background: var(--accent-color);
+  height: min-content;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+a.btn-ro:hover {
+  filter: contrast(1.35);
+}
+
+.normal {
+  background: var(--dark-base-color);
+  color: var(--light-base-color);
+}
+.accent {
+  background: var(--third-color);
+  color: var(--light-base-color);
+}
+a.btn-ro:has(i) {
+  gap: 0.2em;
+}
+
+@media screen and (resolution > 270dpi) {
+  @media (max-width: 640px) {
+    a.btn-ro {
+      height: calc(var(--btn-h) * 1.25);
+    }
+  }
+}

@@ -1,0 +1,120 @@
+
+/* INDEX BOX LAYOUT DEFINITION */
+
+
+.sixteen-nine.box-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+  width: var(--box-wrap-width);
+  max-width: var(--box-wrap-width-max);
+  grid-column-gap: calc(15px + 2svw);
+  grid-row-gap: calc(15px + 3svw);
+  margin: 0 auto;
+  justify-content: center;
+
+}
+
+@media screen and (max-width:620px) {
+  .sixteen-nine.box-wrap {
+    grid-template-columns: auto; 
+  }
+}
+
+/* INDEX BOX LAYOUT DEFINITION */
+
+/* INDEX BOX/CARD DEFINITION */
+.sixteen-nine#box{
+  display: flex;
+  flex-direction: row;
+  border-radius: 6px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  container-type:inline-size;
+}
+
+.sixteen-nine#box picture {
+    overflow: hidden;
+    flex: 1 0 50%;  
+  } 
+
+  .sixteen-nine#box picture img {
+      width: 100%;
+      object-fit:cover;
+      object-position: center;  
+  } 
+ 
+  .sixteen-nine#box .stripe {
+  flex: 0 0 50%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  padding: var(--box-padding);
+  font-family: 'Prompt', sans-serif;
+  row-gap: 2vh;
+  align-content: stretch;
+  background-color: rgb(187, 0, 255);
+}
+
+#box .stripe .title{
+    grid-column: span 2;
+    grid-row: 1;
+    font-weight: 700;
+    line-height: 1.1;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    color: lemonchiffon;
+    font-size: var(--txt-norm);
+    word-wrap:wrap;
+}
+
+#box .stripe .day{
+    grid-column: span 2;
+    grid-row: 1;
+    font-weight: 700;
+    color: #ccc;
+    line-height: 1.1;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    font-size: var(--txt-norm);  
+} 
+
+#box .stripe a.btn-ro {
+  grid-column: span 2;
+  grid-row: 3;
+  color: #fff;
+  justify-self: center;
+} 
+
+@media screen and (max-width:620px){
+  .sixteen-nine#box{
+    flex-direction: column;
+    aspect-ratio: 10 / 14;
+  }
+  .sixteen-nine#box {
+    width: 94svw;
+  }
+  .sixteen-nine#box .stripe{
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width:620px) and (min-resolution:250dpi) {
+  .sixteen-nine#box .stripe .title{
+    font-size: clamp(1rem, 1rem + 1svh, 2.5rem);
+  }
+  .sixteen-nine#box .stripe .day{
+    font-size: clamp(1rem, 1rem + 1svh, 2.5rem);
+  }
+}
+
+
+@container (max-width:420px){
+  #box .stripe .title {
+    font-size: clamp(1rem, 1rem + 1svh, 2.5rem);
+  }
+  #box .stripe .day {
+  font-size: clamp(1rem, 1rem + 1svh, 2.5rem);
+  }
+} 
+
+
