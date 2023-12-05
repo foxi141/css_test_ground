@@ -1,38 +1,42 @@
-  a.btn-ro {
-    display: flex;
-    place-items: center;
-    justify-content: center;
-    font-size: 100%;
-    height: var(--btn-h);
-    max-height: 45px;
-    border-radius: calc(var(--basic-radius) / 1.5);
-    padding: 0 max(2ch,3.6ch);
-    cursor: pointer;
-    word-break: keep-all;
-    white-space: nowrap;
-  }
-
+a.btn-ro {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  font-size: 100%;
+  font-weight: 400;
+  height: var(--btn-h);
+  max-height: 45px;
+  border-radius: calc(var(--basic-radius) / 1.5);
+  padding: 0 max(2ch,3.6ch);
+  cursor: pointer;
+  word-break: keep-all;
+  white-space: nowrap;
+}
 a.btn-ro:hover{
-  filter:contrast(1.35);
+filter:contrast(1.35);
 }
 
-  .normal {
-    background: var(--dark-base-color);
-    color:var(--light-base-color);
-  }
-  .accent {
-    background:var(--third-color);
-    color:var(--light-base-color);
-  }
-  a.btn-ro:has(i) {
-    gap: 0.2em;
-  }
+.LoginPanel > .normal {
+  background: var(--third-color);
+  color:var(--light-base-color);
+}
 
-  @media screen and (resolution > 270dpi){
-  @media (max-width:640px) {
-    a.btn-ro {
-      height: calc(var(--btn-h) * 1.25);
-    }
+#box .stripe > .normal {
+  background: var(--light-base-color);
+  color:var(--dark-base-color);
+}
+.accent {
+  background:var(--first-color);
+  color:var(--light-base-color);
+}
+a.btn-ro:has(i) {
+  gap: 0.2em;
+}
+
+@media screen and (resolution > 270dpi){
+@media (max-width:640px) {
+  a.btn-ro {
+    height: calc(var(--btn-h) * 1.25);
   }
 }
-  
+}

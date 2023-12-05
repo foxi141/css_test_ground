@@ -17,7 +17,7 @@
 
   --body-bg-color: hsl(255,100%,100%);
   --content-box-bg:hsl(255,100%,100%);
-  --main-top-padding: 1rem;
+  --main-top-padding: 1.5vw;
 
   --basic-radius: calc(0.2rem + 0.2vw);  /* basic radius for card/boxes */
   --box-wrap-width: 86vw;
@@ -104,7 +104,7 @@ main {
 .main-wrap, .box-wrap{
   width: var(--box-wrap-width);
   max-width: var(--box-wrap-with-max);
-  margin: 2rem auto;
+  margin: 0 auto;
   gap:1rem;
 }
 .main-wrap {

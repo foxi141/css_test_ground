@@ -15,7 +15,7 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content 1fr;
   align-items: center;
-  gap: calc(10px + 0.7rem) 0;
+  gap: calc(10px + 0.7vw) 0;
   width: var(--header-wrap-width);
   margin: 0 auto;
 }
@@ -24,13 +24,13 @@ header {
   grid-column: 1;
   grid-row: span 3;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-items: flex-end;
   gap:0.4rem 1.2rem;
 }
 .logo-top > img {
   max-height: clamp(60px, 60px + 3vh + 3vw, 126px);
-    max-width: 360px;
+    max-width: 380px;
     margin: 10px;
 }
 .logo-top .c_name {
