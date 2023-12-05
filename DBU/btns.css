@@ -1,4 +1,16 @@
-a.btn-ro {
+button {
+  background: none;
+  display: flex;
+  border: none;
+  background-color: var(--accent-color);
+  align-items: center;
+  justify-content: center;
+}
+
+button > img {
+  height: 24px;
+}
+.btn-ro {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,30 +21,27 @@ a.btn-ro {
   height: 120px;
   width: auto;
   border-radius: 0;
-  padding: 0.8rem clamp(2rem, 2rem + 2vw, 4rem);
+  padding: 0.8rem clamp(1rem, 1rem + 1vw, 2rem);
   cursor: pointer;
   word-break: keep-all;
   white-space: nowrap;
   background: var(--accent-color);
-  height: min-content;
+  height: var(--btn-h);
   text-transform: uppercase;
   font-weight: 600;
 }
 
-a.btn-ro:hover {
+btn-ro:hover {
   filter: contrast(1.35);
 }
 
 .normal {
-  background: var(--dark-base-color);
+  background: var(--accent-color);
   color: var(--light-base-color);
 }
 .accent {
-  background: var(--third-color);
+  background: var(--accent-color);
   color: var(--light-base-color);
-}
-a.btn-ro:has(i) {
-  gap: 0.2em;
 }
 
 @media screen and (resolution > 270dpi) {
