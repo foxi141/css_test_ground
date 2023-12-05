@@ -31,6 +31,10 @@ button > img {
   font-weight: 600;
 }
 
+.LoginPanel > button {
+  height: 112px;
+}
+
 btn-ro:hover {
   filter: contrast(1.35);
 }
