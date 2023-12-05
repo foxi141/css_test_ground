@@ -17,7 +17,7 @@
   background-color: var(--footer-sponsors-bg-color);
 }
 
-.footerNew .sponsors img{
+.footerNew .sponsors img {
   display: block;
   max-width: 240px;
   max-height: 50px;
@@ -32,7 +32,7 @@
 }
 
 .footerNew .address a {
-  color: rgb(160, 193, 233)
+  color: rgb(160, 193, 233);
 }
 .footerNew .address > div {
   display: flex;
@@ -42,13 +42,13 @@
   padding-left: 5%;
   font-size: var(--txt-extra-small);
 }
-.footerNew .address > div:first-child div{
+.footerNew .address > div:first-child div {
   display: flex;
   flex-direction: column;
 }
 .footerNew .address > div:nth-child(2) {
   font-size: var(--txt-extra-small);
-  color:var(--footer-address-txt-color); 
+  color: var(--footer-address-txt-color);
 }
 .footerNew .address > div:nth-child(2) div {
   display: flex;
@@ -58,22 +58,22 @@
 .footerNew .address > div:nth-child(2) div div {
   display: inline;
   word-wrap: normal;
-  white-space:pre-line;
+  white-space: pre-line;
   line-height: 1.3;
 }
 
-.footerNew .address p, 
+.footerNew .address p,
 .footerNew .address div h4 {
   color: var(--footer-address-txt-color);
 }
 
-.footerNew .address > div h4{
-  font-size:var(--txt-small);
+.footerNew .address > div h4 {
+  font-size: var(--txt-small);
   margin-bottom: 0.2rem;
   font-weight: 500;
 }
 .footerNew .address p {
-  font-size:var(--txt-extra-small);
+  font-size: var(--txt-extra-small);
 }
 .footerNew .address .social > div {
   display: flex;
@@ -107,6 +107,7 @@
   margin: 0 auto;
   height: min-content;
   background: var(--footer-copyright-bg-color);
+  width: 100vw;
 }
 .footerNew .copyright .footer-lang {
   font-size: var(--txt-extra-small);
@@ -125,7 +126,7 @@
   max-width: 220px;
 }
 
-@media (max-width:640px) {
+@media (max-width: 640px) {
   .footerNew .address > div {
     flex: auto;
     padding-left: 5%;
@@ -134,14 +135,14 @@
   .footerNew .address > div:nth-child(2) {
     font-size: var(--txt-small);
   }
-  .footerNew .address{
+  .footerNew .address {
     flex-direction: column;
   }
   .footerNew .ico-social img {
     width: 2rem;
-    max-width:55px;
+    max-width: 55px;
   }
-  .footerNew .address > div{
+  .footerNew .address > div {
     padding-left: 0;
   }
   .footerNew .copyright .comp_logos {
@@ -159,4 +160,3 @@
     text-align: center;
   }
 }
-

@@ -29,7 +29,6 @@
 #box{
   display: flex;
   flex-direction: column;
-  border-radius: 6px;
   aspect-ratio: 10 / 14;
   overflow: hidden;
   filter: drop-shadow(0 2px 8px rgba(17, 17, 17, 0.355));
