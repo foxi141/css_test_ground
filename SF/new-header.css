@@ -1,6 +1,6 @@
 header {
-  background-color:var(--header-bg-color);
-  background:var(--headerBgImg);
+  background-color: var(--header-bg-color);
+  background: var(--headerBgImg);
   background-position: top;
   background-size: 135%;
   padding: 0.5rem 4px 0 4px;
@@ -28,24 +28,24 @@ header {
   display: flex;
   align-items: center;
   justify-items: flex-end;
-  gap:0.5rem 1.2rem;
+  gap: 0.5rem 1.2rem;
 }
 .logo-top > img {
   max-height: clamp(60px, 60px + 3vh + 3vw, 126px);
-    max-width: 360px;
-    margin: 10px;
+  max-width: 360px;
+  margin: 10px;
 }
 .logo-top .c_name {
   display: flex;
   gap: 0.5em;
 }
 
-.logo-top .c_name h1{
-  font-size: clamp(1.2rem, 2lvw + 1rem , 2.5rem);
-    font-weight: 600;
-    color: var(--header-title-color);
-    text-transform: uppercase;
-    line-height: 1;
+.logo-top .c_name h1 {
+  font-size: clamp(1.2rem, 2lvw + 1rem, 2.5rem);
+  font-weight: 600;
+  color: var(--header-title-color);
+  text-transform: uppercase;
+  line-height: 1;
 }
 .logo-top .c_name p {
   color: var(--header-subtitle-color);
@@ -65,7 +65,7 @@ header {
 }
 
 .lang > select {
-  border:0px !important;
+  border: 0px !important;
   border-bottom: #666 !important;
   border-bottom-style: solid !important;
   padding: 0.5em 3em;
@@ -78,10 +78,10 @@ header {
 }
 
 .lang > a {
-  color:var(--header-info); /* information */
+  color: var(--header-info); /* information */
   font-size: var(--txt-extra-small);
   display: flex;
-  gap:10px;
+  gap: 10px;
 }
 
 .LoginPanel {
@@ -93,19 +93,19 @@ header {
   grid-template-rows: auto;
   height: min-content;
   width: min-content;
-  gap:0.5rem 1rem;
+  gap: 0.5rem 1rem;
   overflow: hidden;
   padding: var(--box-padding);
   background: var(--loginPanel-bg);
   border-radius: var(--basic-radius);
 }
 
-@media screen and (max-width:1260px) and (min-width:980px) {
+@media screen and (max-width: 1260px) and (min-width: 980px) {
   .logo-top {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width:980px) and (min-width:640px) {
+@media screen and (max-width: 980px) and (min-width: 640px) {
   .logo-top {
     grid-column: span 3;
     grid-row: 2;
@@ -123,10 +123,10 @@ header {
     justify-content: center;
     justify-self: stretch;
     width: auto;
-  }  
+  }
 }
 
-@media (max-width:640px) {
+@media (max-width: 640px) {
   .header-wrap {
     width: 96svw;
     gap: 1rem;
@@ -140,7 +140,7 @@ header {
   .logo-top > img {
     max-width: 75vw;
   }
-  .lang{
+  .lang {
     grid-column: span 3;
     grid-row: 1;
     justify-content: space-between;
@@ -150,27 +150,27 @@ header {
     grid-column: span 3;
     grid-row: 3;
     display: grid;
-    grid-template-columns: auto; 
-    justify-self:stretch;
-    width: auto; 
+    grid-template-columns: auto;
+    justify-self: stretch;
+    width: auto;
     row-gap: 0.7rem;
   }
 }
 
 /* HEADER PANEL AFTER LOGIN */
 
-.LoginPanel[data-logged='']{
-  gap:0.5rem 0.8rem;
+.LoginPanel[data-logged=""] {
+  gap: 0.5rem 0.8rem;
 }
-.LoginPanel[data-logged=''] a {
+.LoginPanel[data-logged=""] a {
   color: var(--dark-txt);
 }
-.LoginPanel[data-logged=''] .buttons {
+.LoginPanel[data-logged=""] .buttons {
   display: flex;
   justify-content: flex-end;
-  gap:5px;
+  gap: 5px;
 }
-.LoginPanel[data-logged=''] .buttons > a {
+.LoginPanel[data-logged=""] .buttons > a {
   width: max-content;
   word-break: keep-all;
   font-size: var(--txt-extra-small);
@@ -180,31 +180,31 @@ header {
   display: flex;
   align-items: center;
 }
-.LoginPanel[data-logged=''] .buttons > a:hover{
+.LoginPanel[data-logged=""] .buttons > a:hover {
   color: var(--third-color);
 }
 
-.LoginPanel[data-logged=''] .user {
+.LoginPanel[data-logged=""] .user {
   grid-column: 1;
-    grid-row: span 2;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: flex-start;
-    gap:0.3rem 0.5rem;
+  grid-row: span 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  gap: 0.3rem 0.5rem;
 }
-.LoginPanel[data-logged=''] .user .username {
-    font-size: 1.1rem;
-    color:var(--dark-txt);
-    font-weight: 600;
-    width: max-content;
-    min-width: 15ch;
-} 
-.LoginPanel[data-logged=''] .user .logout {
+.LoginPanel[data-logged=""] .user .username {
+  font-size: 1.1rem;
+  color: var(--dark-txt);
+  font-weight: 600;
+  width: max-content;
+  min-width: 15ch;
+}
+.LoginPanel[data-logged=""] .user .logout {
   font-size: var(--txt-extra-small);
   visibility: hidden;
 }
-.LoginPanel[data-logged=''] #cart_panel {
+.LoginPanel[data-logged=""] #cart_panel {
   grid-column: 2;
   grid-row: 2;
   display: flex;
@@ -215,93 +215,97 @@ header {
   gap: 8px;
 }
 
-.LoginPanel[data-logged=''] #cart_panel a.cart_delete img{
+.LoginPanel[data-logged=""] #cart_panel a.cart_delete img {
   width: 1rem;
-  }
-.LoginPanel[data-logged=''] #cart_panel .bucket{
+}
+.LoginPanel[data-logged=""] #cart_panel .bucket {
   display: flex;
 }
-.LoginPanel[data-logged=''] #cart_panel .bucket span {
+.LoginPanel[data-logged=""] #cart_panel .bucket span {
   width: 1.3rem;
   aspect-ratio: 1 / 1;
 }
-.LoginPanel[data-logged=''] #cart_panel p.clock{
+.LoginPanel[data-logged=""] #cart_panel p.clock {
   font-size: var(--txt-extra-small);
 }
-.LoginPanel[data-logged=''] #cart_panel .bucket:not([data-cart_count='']):after {
+.LoginPanel[data-logged=""]
+  #cart_panel
+  .bucket:not([data-cart_count=""]):after {
   content: attr(data-cart_count);
-  font-size:var(--txt-extra-small);
+  font-size: var(--txt-extra-small);
   position: relative;
   left: -4px;
   top: -5px;
   padding: 0.35rem;
   background-color: rgb(169, 155, 52);
-  color:#fff;
+  color: #fff;
   clip-path: circle();
   z-index: 15;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.LoginPanel[data-logged=''] #cart_panel .bucket[data-cart_count=''] ~ a.cart_delete {
+.LoginPanel[data-logged=""]
+  #cart_panel
+  .bucket[data-cart_count=""]
+  ~ a.cart_delete {
   visibility: collapse;
   position: relative;
 }
 
-@media (max-width:640px) {
-
+@media (max-width: 640px) {
   header .header-wrap .logo-top {
-    gap:0.8rem 0;
+    gap: 0.8rem 0;
     grid-row: 1;
   }
   header .header-wrap .logo-top img {
     margin: 0;
   }
-  header .header-wrap .lang{
+  header .header-wrap .lang {
     grid-row: inherit;
   }
-  .LoginPanel[data-logged=''] {
+  .LoginPanel[data-logged=""] {
     grid-row: 2;
   }
 
-  .LoginPanel[data-logged=''] .user {
+  .LoginPanel[data-logged=""] .user {
     grid-column: span 3;
     grid-row: 1;
     justify-content: space-between;
   }
-  .LoginPanel[data-logged=''] .buttons {
+  .LoginPanel[data-logged=""] .buttons {
     grid-column: span 3;
     grid-row: 2;
     justify-content: end;
   }
-  .LoginPanel[data-logged=''] #cart_panel {
+  .LoginPanel[data-logged=""] #cart_panel {
     grid-column: span 3;
     grid-row: 3;
-    justify-content:end;
+    justify-content: end;
     align-items: center;
   }
 }
 
-@media (max-width:620px) and (min-resolution:250dpi ) {
-
-  .LoginPanel[data-logged=''] .buttons > a {
+@media (max-width: 620px) and (min-resolution: 250dpi) {
+  .LoginPanel[data-logged=""] .buttons > a {
     font-size: var(--txt-small);
   }
 
-  .LoginPanel[data-logged=''] #cart_panel .bucket img{
+  .LoginPanel[data-logged=""] #cart_panel .bucket img {
     width: 2rem;
   }
 
-  .LoginPanel[data-logged=''] #cart_panel .bucket:not([data-cart_count='']):after {
-    font-size:var(--txt-small);
-  }
-
-  .LoginPanel[data-logged=''] #cart_panel a.cart_delete{
-    font-size:var(--txt-norm); 
-  }
-
-  .LoginPanel[data-logged=''] #cart_panel p.clock {
+  .LoginPanel[data-logged=""]
+    #cart_panel
+    .bucket:not([data-cart_count=""]):after {
     font-size: var(--txt-small);
   }
 
+  .LoginPanel[data-logged=""] #cart_panel a.cart_delete {
+    font-size: var(--txt-norm);
+  }
+
+  .LoginPanel[data-logged=""] #cart_panel p.clock {
+    font-size: var(--txt-small);
+  }
 }

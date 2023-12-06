@@ -6,12 +6,16 @@ header {
   header {
     padding: 0;
   }
+  .header-wrap .logo-top {
+    width: 100%;
+  }
 }
 
 .header-wrap {
-  height: 112px;
+  min-height: 112px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
   margin: 0 auto;
   padding: 0 0 0 24px;
@@ -19,8 +23,9 @@ header {
 
 .logo-top {
   grid-column: 1;
-  grid-row: span 3;
+  grid-row: span 1;
   display: flex;
+  width: clamp(20rem, 20vw + 10rem, 24rem);
   align-items: center;
   justify-items: flex-end;
   gap: 1rem;
@@ -49,39 +54,42 @@ header {
   line-height: 1;
 }
 .lang {
+  flex-wrap: wrap;
+  max-height: min-content;
   grid-column: 2 / 3;
-  grid-row: 1;
-  display: none;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: calc(10px + 2vw);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.3rem calc(10px + 2vw);
+  align-content: space-between;
   font-size: 1rem;
   width: auto;
+  padding-right: calc(10px + 2vw);
 }
 
 .lang > select {
   border: 0px !important;
-  border-bottom: #fff !important;
-  border-bottom-style: solid !important;
-  padding: 0.5em 3em;
+  padding: 0.5em 0.5em;
   text-align: center;
   background-color: var(--first-color);
   color: var(--select-color);
   width: max-content;
   max-height: 42px;
   border-radius: 0 !important;
+  font-weight: 600;
+  font-size: var(--txt-extra-small);
 }
 
 .lang > a {
   color: var(--header-info); /* information */
-  font-size: var(--txt-extra-small);
+  font-size: var(--txt-small);
+  font-weight: 600;
   display: flex;
   gap: 10px;
 }
 
 .LoginPanel {
-  grid-column: 2 / 3;
-  grid-row: 2;
+  grid-column: 3/4;
   justify-self: end;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -100,34 +108,41 @@ header {
   }
 }
 @media screen and (max-width: 980px) and (min-width: 640px) {
+  .header-wrap {
+    padding: 1rem;
+    gap: 1rem;
+  }
   .logo-top {
-    grid-column: span 3;
-    grid-row: 2;
-    justify-content: center;
+    grid-column: span 2;
+    grid-row: 1;
+    justify-content: flex-start;
   }
   .lang {
-    grid-column: span 3;
+    grid-column: span 2;
     grid-row: 1;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0.8rem;
   }
   .LoginPanel {
-    grid-column: span 2;
-    grid-row: 3;
+    grid-column: span 4;
+    grid-row: 2;
     justify-content: center;
     justify-self: stretch;
     width: auto;
+  }
+  .LoginPanel > button.btn-ro {
+    height: 50px;
   }
 }
 
 @media (max-width: 640px) {
   .header-wrap {
-    width: 96svw;
+    padding: 1rem;
     gap: 1rem;
   }
   .logo-top {
     grid-column: span 3;
-    grid-row: 2;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -137,7 +152,7 @@ header {
   }
   .lang {
     grid-column: span 3;
-    grid-row: 1;
+    grid-row: 2;
     justify-content: space-between;
     width: auto;
   }
@@ -149,6 +164,9 @@ header {
     justify-self: stretch;
     width: auto;
     row-gap: 0.7rem;
+  }
+  .LoginPanel > button.btn-ro {
+    height: 50px;
   }
 }
 
@@ -182,11 +200,11 @@ header {
 
 .LoginPanel[data-logged=""] .user {
   grid-column: 1;
-  grid-row: span 2;
+  grid-row: 1/3;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  align-content: flex-start;
+  align-content: space-between;
   gap: 0.3rem 0.5rem;
 }
 .LoginPanel[data-logged=""] .user .username {
@@ -198,7 +216,6 @@ header {
 }
 .LoginPanel[data-logged=""] .user .logout {
   font-size: var(--txt-extra-small);
-  visibility: hidden;
 }
 .LoginPanel[data-logged=""] #cart_panel {
   grid-column: 2;
@@ -212,7 +229,7 @@ header {
 }
 
 .LoginPanel[data-logged=""] #cart_panel a.cart_delete img {
-  width: 1rem;
+  width: 1.5rem;
 }
 .LoginPanel[data-logged=""] #cart_panel .bucket {
   display: flex;
@@ -253,6 +270,7 @@ header {
   header .header-wrap .logo-top {
     gap: 0;
     grid-row: 1;
+    gap: 1rem;
   }
   header .header-wrap .logo-top img {
     margin: 0;
@@ -261,22 +279,29 @@ header {
     grid-row: inherit;
   }
   .LoginPanel[data-logged=""] {
-    grid-row: 2;
+    grid-row: 3;
   }
 
   .LoginPanel[data-logged=""] .user {
-    grid-column: span 3;
-    grid-row: 1;
+    grid-column: span 4;
+    grid-row: 3;
+    display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    align-content: end;
   }
   .LoginPanel[data-logged=""] .buttons {
-    grid-column: span 3;
-    grid-row: 2;
-    justify-content: end;
+    grid-column: span 4;
+    grid-row: 4;
+    justify-content: space-between;
+  }
+  .LoginPanel > .buttons > a {
+    flex: 1;
+    justify-content: center;
   }
   .LoginPanel[data-logged=""] #cart_panel {
-    grid-column: span 3;
-    grid-row: 3;
+    grid-column: span 4;
+    grid-row: 5;
     justify-content: end;
     align-items: center;
   }
