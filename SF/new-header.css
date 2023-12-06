@@ -4,6 +4,7 @@ header {
   background-position: top;
   background-size: 135%;
   padding: 0.5rem 4px 0 4px;
+  border-bottom: solid 1px #444;
 }
 
 @media (width <= 650px) {
