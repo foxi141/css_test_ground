@@ -21,7 +21,7 @@
   --main-top-padding: 4vw;
 
   --basic-radius: 0;
-  --box-wrap-width: 68vw;
+  --box-wrap-width: 76vw;
   --box-wrap-with-max: 1580px;
   --box-padding: calc(10px + 0.4vw) calc(10px + 0.4vw);
 
@@ -33,8 +33,8 @@
   --header-bg: #333;
   --header-bg-color: var(--first-color);
 
-  --mainBgImg: url("https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/DBUDK/Images/mainBg.jpg");
-  --headerBgImg: url("https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/DBUDK/Images/mainBg.jpg");
+  --mainBgImg: url("https://robostaticcontent.s3.amazonaws.com/Content/DBUDK/Images/dk.jpg");
+  --headerBgImg: url("https://robostaticcontent.s3.amazonaws.com/Content/DBUDK/Images/dk.jpg");
 
   --loginPanel-bg: var(--first-color);
   --loginPanel-bg-color: var(--first-color);
@@ -85,14 +85,16 @@ main {
   width: 100%;
   min-height: 90svh;
   padding: var(--main-top-padding) 8px;
-  background-size: cover;
   background-position: center;
   box-sizing: border-box;
   background-image: var(--mainBgImg);
-  background-size: cover;
-  //background-blend-mode: color-dodge;
+  /* background-size: cover; */
   background-color: var(--body-bg-color);
   overflow-y: visible;
+  background-size: 100%;
+  background-position-y: 0;
+  background-repeat-y: no-repeat;
+  background-attachment: fixed;
 }
 
 .main-wrap,
@@ -100,7 +102,7 @@ main {
   width: var(--box-wrap-width);
   max-width: var(--box-wrap-with-max);
   margin: 2rem auto;
-  gap: 1rem;
+  gap: 4rem;
 }
 .main-wrap {
   display: flex;

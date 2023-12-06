@@ -1,7 +1,6 @@
 
 .content-wrap{
   background-color: var(--content-box-bg);
-  display:block;
   border-radius: var(--basic-radius);
   padding: var(--box-padding); 
   display: flex;
