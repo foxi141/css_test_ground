@@ -14,7 +14,7 @@ header {
 .header-wrap {
   min-height: 112px;
   display: grid;
-  grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: auto 1fr auto;
   grid-template-rows: 1fr;
   align-items: center;
   margin: 0 auto;
@@ -58,9 +58,9 @@ header {
   max-height: min-content;
   grid-column: 2 / 3;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  gap: 0.3rem calc(10px + 2vw);
+  gap: 0.3rem calc(8px + 1vw);
   align-content: space-between;
   font-size: 1rem;
   width: auto;
@@ -76,14 +76,12 @@ header {
   width: max-content;
   max-height: 42px;
   border-radius: 0 !important;
-  font-weight: 600;
   font-size: var(--txt-extra-small);
 }
 
 .lang > a {
   color: var(--header-info); /* information */
   font-size: var(--txt-small);
-  font-weight: 600;
   display: flex;
   gap: 10px;
 }
