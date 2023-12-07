@@ -33,7 +33,7 @@
   --header-bg: #333;
   --header-bg-color: var(--first-color);
 
-  --mainBgImg: url("https://robostaticcontent.s3.amazonaws.com/Content/DBUDK/Images/dk.jpg");
+  /* --mainBgImg: url("https://robostaticcontent.s3.amazonaws.com/Content/DBUDK/Images/dk.jpg"); */
   --headerBgImg: url("https://robostaticcontent.s3.amazonaws.com/Content/DBUDK/Images/dk.jpg");
 
   --loginPanel-bg: var(--first-color);
