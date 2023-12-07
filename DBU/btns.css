@@ -19,7 +19,7 @@
   font-weight: 600;
 }
 
-.LoginPanel {
+.LoginPanel[data-logged="false"] {
   :first-child::before {
     content: url("../assets/icons/login.svg");
     display: inline-block;
@@ -34,7 +34,7 @@
   }
 }
 
-.LoginPanel a {
+.LoginPanel[data-logged="false"] a {
   height: 112px;
 }
 
