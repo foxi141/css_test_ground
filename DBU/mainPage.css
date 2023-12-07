@@ -122,7 +122,6 @@ main {
 }
 
 #box picture img:hover {
-  transform: scale(1.1);
   filter: saturate(3);
   transition: all ease 0.5s;
 }
