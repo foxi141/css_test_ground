@@ -1,15 +1,3 @@
-button {
-  background: none;
-  display: flex;
-  border: none;
-  background-color: var(--accent-color);
-  align-items: center;
-  justify-content: center;
-}
-
-button > img {
-  height: 24px;
-}
 .btn-ro {
   display: flex;
   align-items: center;
@@ -31,7 +19,7 @@ button > img {
   font-weight: 600;
 }
 
-.LoginPanel button {
+.LoginPanel a {
   height: 112px;
 }
 

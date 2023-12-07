@@ -107,7 +107,7 @@ header {
 }
 @media screen and (max-width: 980px) and (min-width: 640px) {
   .header-wrap {
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     gap: 1rem;
   }
   .logo-top {
@@ -128,14 +128,14 @@ header {
     justify-self: stretch;
     width: auto;
   }
-  .LoginPanel > button.btn-ro {
+  .LoginPanel > a.btn-ro {
     height: 50px;
   }
 }
 
 @media (max-width: 640px) {
   .header-wrap {
-    padding: 1rem;
+    padding: 8px;
     gap: 1rem;
   }
   .logo-top {
@@ -161,9 +161,9 @@ header {
     grid-template-columns: auto;
     justify-self: stretch;
     width: auto;
-    row-gap: 0.7rem;
+    row-gap: 3px;
   }
-  .LoginPanel > button.btn-ro {
+  .LoginPanel > a.btn-ro {
     height: 50px;
   }
 }
