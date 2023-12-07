@@ -96,7 +96,7 @@ header {
   grid-template-rows: auto;
   height: min-content;
   width: min-content;
-  gap: 0.5rem 1rem;
+  gap: 0rem 2px;
   overflow: hidden;
   padding: 0;
   background: var(--loginPanel-bg);
