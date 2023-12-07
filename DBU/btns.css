@@ -19,6 +19,21 @@
   font-weight: 600;
 }
 
+.LoginPanel {
+  :first-child::before {
+    content: url("../assets/icons/login.svg");
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+  :last-child::before {
+    content: url("../assets/icons/registration.svg");
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+}
+
 .LoginPanel a {
   height: 112px;
 }
