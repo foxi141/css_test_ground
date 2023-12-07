@@ -119,6 +119,7 @@ main {
 
 #box picture img {
   transition: all ease 1s;
+  cursor: pointer;
 }
 
 #box picture img:hover {
