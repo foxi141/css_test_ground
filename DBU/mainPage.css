@@ -119,11 +119,11 @@ main {
 
 #box picture img {
   transition: all ease 1s;
+  cursor: pointer;
 }
 
 #box picture img:hover {
   transform: scale(1.1);
-  filter: saturate(3);
   transition: all ease 0.5s;
 }
 
