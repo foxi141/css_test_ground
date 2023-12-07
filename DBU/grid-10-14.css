@@ -4,13 +4,6 @@
   grid-template-columns: 1fr;
 }
 
-@media (width <= 640px) {
-  .box-wrap {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    width: 98%;
-  }
-}
-
 /* INDEX BOX/CARD DEFINITION */
 
 .fade-in {
@@ -32,8 +25,8 @@
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  aspect-ratio: 21/9;
+  grid-template-columns: auto auto 1fr;
+  height: 65vh;
   overflow: hidden;
   filter: drop-shadow(0 2px 8px rgba(17, 17, 17, 0.355));
   font-family: "Helvetica", "Arial", sans-serif;
@@ -52,11 +45,14 @@
 }
 
 #box .stripe {
+  width: 25vw;
+  min-width: min-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   background-color: var(--third-color);
+  padding: 1rem;
 }
 
 #box .stripe > p {
@@ -88,9 +84,19 @@
   justify-self: center;
 }
 
-@media (width <= 640px) {
+@media (width <= 1024px) {
+  .box-wrap {
+    width: 98%;
+  }
   #box {
     max-width: unset;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    height: 65vh;
+  }
+  #box .stripe {
+    width: 100%;
+    gap: 1rem;
   }
 }
 
