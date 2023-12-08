@@ -6,7 +6,6 @@
   color: rgb(255, 255, 255);
   background-color: transparent;
   font-size: clamp(0.8rem, 0.2lvw + 0.8rem, 2rem);
-  height: 120px;
   width: auto;
   border-radius: 0;
   padding: 0.8rem clamp(1rem, 1rem + 1vw, 2rem);
@@ -19,7 +18,7 @@
   font-weight: 600;
 }
 
-.LoginPanel[data-logged="false"] {
+.LoginPanel:not([data-logged]) {
   :first-child::before {
     content: url("../assets/icons/login.svg");
     display: inline-block;
@@ -34,7 +33,7 @@
   }
 }
 
-.LoginPanel[data-logged="false"] a {
+.LoginPanel:not([data-logged]) a {
   height: 112px;
 }
 
