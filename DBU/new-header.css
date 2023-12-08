@@ -116,10 +116,7 @@ header {
     justify-content: flex-start;
   }
   .lang {
-    grid-column: span 2;
-    grid-row: 1;
-    justify-content: flex-end;
-    padding: 0.8rem;
+    display: none;
   }
   .LoginPanel {
     grid-column: span 4;
@@ -149,10 +146,7 @@ header {
     max-width: 75vw;
   }
   .lang {
-    grid-column: span 3;
-    grid-row: 2;
-    justify-content: space-between;
-    width: auto;
+    display: none;
   }
   .LoginPanel {
     grid-column: span 3;
@@ -252,7 +246,7 @@ header {
   background-color: var(--accent-color);
   color: #fff;
   clip-path: circle();
-  z-index: 15;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;

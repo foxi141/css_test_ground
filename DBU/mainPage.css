@@ -1,4 +1,5 @@
 @import url("new-header.css");
+@import url("burger-menu.css");
 @import url("new-footer.css");
 @import url("btns.css");
 @import url("content-wrap.css");
@@ -74,7 +75,7 @@ img {
 }
 
 a:where(:not(.btn-ro, .chips, .LoginPanel)) {
-  color: rgb(40, 136, 255);
+  color:  var(--light-base-color);;
 }
 
 .material-symbols-outlined {

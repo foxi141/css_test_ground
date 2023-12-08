@@ -88,6 +88,10 @@
   .box-wrap {
     width: 98%;
   }
+  #box picture img {
+    width: 100%;
+    object-fit: cover;
+  }
   #box {
     max-width: unset;
     grid-template-columns: 1fr;

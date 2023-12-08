@@ -33,8 +33,10 @@
   }
 }
 
-.LoginPanel:not([data-logged]) a {
-  height: 112px;
+@media screen and (min-width: 980px) {
+  .LoginPanel:not([data-logged]) a {
+    height: 112px;
+  }
 }
 
 btn-ro:hover {
