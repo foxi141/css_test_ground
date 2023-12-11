@@ -7,24 +7,26 @@
 @import url('');                /* font */
 
 :root {
-  --first-color: hsl(355, 85%, 55%);
+  --first-color: hsl(345, 85%, 45%);
+  --first-color-tint: hsl(8, 65%, 55%);
   --second-color: hsl(44, 96%, 50%);
   --third-color: hsl(261, 20%, 30%);
   --dark-base-color: hsl(240, 30%, 22%);
   --light-base-color:hsl(255,100%,95%);
 
-  --first-color-tint: hsl(8, 65%, 55%);
-
   --body-bg-color: hsl(261, 20%, 30%);
+  --main-wrap-bg-color: hsl(250, 100%, 98%);
   --content-box-bg:hsl(255,100%,100%);
-  --main-top-padding: 1rem;
+
+  --main-top-padding: 1vw;
 
   --basic-radius: calc(0.2rem + 0.2vw);  /* basic radius for card/boxes */
   --box-wrap-width: 86vw;
   --box-wrap-with-max: 1860px;
-  --box-padding:max(10px,0.7rem);
+  --box-padding:min(10px,1rem);
 
-  --header-wrap-width: 88vw;
+  --header-wrap-width: 92vw;
+  --header-wrap-width-max: 1780px;
   --header-title-color: var(--first-color);
   --header-subtitle-color: var(--first-color);
   --select-color: var(--light-base-color);
@@ -36,7 +38,7 @@
   --mainBgImg: url('https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/mainBg.jpg');
   --headerBgImg:url('https://robostaticcontent71830.s3.eu-central-1.amazonaws.com/Content/SF/Images/mainBg.jpg');
 
-  --loginPanel-bg: linear-gradient(90deg, hsl(118, 95%, 85%) 0%, hsl(248, 35%, 90%) 55%);
+  --loginPanel-bg: linear-gradient(90deg, hsla(248, 60%, 85%, 0.7) 0%, hsl(248, 35%, 90%) 55%);
   --loginPanel-bg-color:rgba(217, 244, 245, 0.7);
 
   --footer-content-width: 78vw;
@@ -53,14 +55,18 @@
   --txt-small:        clamp(0.8rem, 0.5vw + 1rem, 1.6rem);
   --txt-norm:         clamp(1rem, 0.5vw + 1.2rem, 1.8rem);
 
- 
+}
+
+body{
+  background:var(--headerBgImg);
+  background-size: cover;
 }
 
 html {
-  width: 100%;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family:'Prompt', 'Helvetica', 'Arial', sans-serif;
   text-rendering: geometricPrecision;
 }
+
 
 * {
   margin: 0;
@@ -71,8 +77,9 @@ html {
 picture{
   overflow: hidden;
 }
+
 img {
-  display: block;
+display: block;
 }
 
 a:where(:not(.btn-ro, .chips, .LoginPanel)){
@@ -87,6 +94,13 @@ a:where(:not(.btn-ro, .chips, .LoginPanel)){
   'opsz' 24
 }
 
+#dialog{
+  width: 70vw;
+  max-width: 1500px;
+  position: absolute;
+  margin: 30% auto;
+}
+
 main {
   width: 100%;
   min-height: 90svh;
@@ -94,10 +108,7 @@ main {
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
-  background-image: var(--mainBgImg);
   background-size: cover;
-  //background-blend-mode: color-dodge;
-  background-color: var(--body-bg-color);
   overflow-y: visible;
 }
 
@@ -110,17 +121,20 @@ main {
 .main-wrap {
   display: flex;
   flex-direction: column;
+  background-color: var(--main-wrap-bg-color);
+  border-radius: var(--basic-radius);
 }
 
 @media (max-width:640px) {
   .main-wrap, .box-wrap{
-    width:unset;
-    margin: 0 auto;
+  width:unset;
+  margin: 0 auto;
   }
 }
 
 #box picture img {
-  transition: all ease 1s; 
+  transition: all ease 1s;
+  filter: saturate(0.8); 
 }
 
 #box picture img:hover {

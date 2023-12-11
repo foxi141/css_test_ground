@@ -16,16 +16,16 @@ a.btn-ro:hover{
 filter:contrast(1.35);
 }
 
-.LoginPanel > .normal {
+.btn-ro.normal {
   background: var(--third-color);
   color:var(--light-base-color);
 }
 
-#box .stripe > .normal {
+#box .stripe > .btn-ro.normal {
   background: var(--light-base-color);
   color:var(--dark-base-color);
 }
-.accent {
+.btn-ro.accent {
   background:var(--first-color);
   color:var(--light-base-color);
 }

@@ -16,6 +16,7 @@
   --first-color-tint: hsl(8, 65%, 55%);
 
   --body-bg-color: hsl(255,100%,100%);
+  --mainWrap-bg-color: hsl(250 100% 98%);
   --content-box-bg:hsl(255,100%,100%);
   --main-top-padding: 1.5vw;
 
@@ -114,6 +115,7 @@ main {
 .main-wrap {
   display: flex;
   flex-direction: column;
+  background-color: var(--mainWrap-bg-color);
 }
 
 @media (max-width:640px) {

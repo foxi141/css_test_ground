@@ -1,0 +1,38 @@
+<div class="main-wrap">
+
+<div class="content-wrap">
+
+        <div class="item-box">
+                <picture>
+                    <source srcset="https://robostaticcontent71830.s3.amazonaws.com/Content/SF/Images/Ticket_srennab/468_Medium_pl-PL?nocache=661fad94a5f14be0908a2faed50173e8" />
+                    <img src="@Model.BannerImg" alt="event img" />
+                </picture> 
+            <div class="item-dsc">  
+                <div class="title">Title of the product.</div>
+                <div class="place">Los Alamos, Sat 22 2025</div>
+                <div class="full-dsc">
+                    The culprit is abnormal hemoglobin, the protein that carries oxygen through the body. The problem arises from a mutation in the HBB gene. Everyone has two copies of the gene—one from each parent. Children born with sickle cell disease inherit a copy of the mutated gene from both parents.
+                </div>  
+            </div>
+            
+            <div data-sectorid="@sector.Id" class="item-picker">
+                <label for="ticketNum">Set number of tickets:</label>
+                <div class="prod-qnt">
+                    <button _="on click if value of #qnt > 0 decrement value of #qnt by 1 ">-</button>
+                    <input id="qnt" for="ticketNum" placeholder="0" type="number" value="" min="1" />
+              <button _="on click increment value of #qnt by 1">+</button>
+                </div>
+            </div>
+
+            
+
+        </div>
+    
+
+<div class="content-footer">
+        <a class="btn-ro normal" id="fnProcessSeats">Next</a>
+    </div>
+
+</div>
+
+</div>
