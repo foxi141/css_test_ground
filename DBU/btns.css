@@ -18,21 +18,6 @@
   font-weight: 600;
 }
 
-.LoginPanel:not([data-logged]) {
-  :first-child::before {
-    content: url("../assets/icons/login.svg");
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-  }
-  :last-child::before {
-    content: url("../assets/icons/registration.svg");
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-  }
-}
-
 @media screen and (min-width: 980px) {
   .LoginPanel:not([data-logged]) a {
     height: 112px;
